@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Elementary Particle",
+    "icon": {
+      "value": "Blocks.BUBBLE_COLUMN"
+    },
+    "showSearch": true
+  }
+}

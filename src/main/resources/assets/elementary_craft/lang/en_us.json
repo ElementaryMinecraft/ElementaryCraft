@@ -1,1 +1,7 @@
-{}
+{
+  "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
+  "itemGroup.tabquantumfield": "Quantumfield",
+  "itemGroup.tabelementary_particle": "Elementary Particle",
+  "item.elementary_craft.antineutrino": "Antineutrino",
+  "item.elementary_craft.neutrino": "Neutrino"
+}
