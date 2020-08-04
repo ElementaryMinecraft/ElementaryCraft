@@ -1,5 +1,8 @@
 # ElementaryCraft
 
+A Minecraft mod that introduces elementary particles to both educate and entertain.
+
+
 Getting Started
 ===============
 Download MCreator van https://mcreator.net/download (Gebruik versie 2020.4 of later voor ondersteuning van git!)
