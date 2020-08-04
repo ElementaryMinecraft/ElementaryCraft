@@ -41,7 +41,3 @@ Voer nu aanpassingen uit in het project (zoals het toevoegen van blocks en items
 Telkens wanneer je begint met werken, kan je best rechtsboven klikken op de blauwe pijl 'pull change from remote workspace'. Indien iemand aanpassingen heeft 'gecommit', dan trek je die zo binnen op jouw lokale computer.
 
 Wanneer je linksonder op het branching-icoontje klikt, kan je ook veranderen naar een andere branch (die nog open is). Je kan bijvoorbeeld de branch bekijken die ik heb gemaakt 'neutrino'. Let wel op, wanneer je naar een andere branch gaat, dan zullen de aanpassingen die je op de huidige branch hebt gemaakt verloren gaan. Om dit te voorkomen moet je eerst jouw aanpassingen comitten (groene pijl rechtsboven)
-
-
-Message #gettingstarted
-Return to sendShift + Return to add a new line
