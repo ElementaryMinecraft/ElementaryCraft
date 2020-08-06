@@ -10,7 +10,8 @@ Download MCreator van https://mcreator.net/download (Gebruik versie 2020.4 of la
 Onder de downloadknop kan je kiezen voor Linux, Mac of Windows.Onder de tab 'How to install on: Windows Mac Linux' zijn instructies voor download en installatie
 Eens MCreator is opgestart, klik je op 'Clone Remote'Bij 'Remote Git repository HTTPS URL' geef je volgende link in:
 
-https://github.com/ElementaryCraftMod/ElementaryCraft
+https://github.com/ElementaryMinecraft/ElementaryCraft
+
 
 Geef jouw gebruikersnaam en wachtwoordKlik op 'Setup remote repository''Workspace setup for selected generator' download de files automatisch.
 
