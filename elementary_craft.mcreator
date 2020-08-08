@@ -45,6 +45,35 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "antineutrino"
+    },
+    {
+      "name": "NeutirnoQuantumFieldDrop",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutirno_quantum_field_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
