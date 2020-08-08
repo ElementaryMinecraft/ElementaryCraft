@@ -91,7 +91,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "NeutirnoQuantumFieldDrop"
+      "name": "NeutrinoQuantumfieldDrop"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

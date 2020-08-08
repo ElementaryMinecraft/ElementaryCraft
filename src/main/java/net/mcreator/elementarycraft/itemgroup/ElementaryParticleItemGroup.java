@@ -1,9 +1,17 @@
 
 package net.mcreator.elementarycraft.itemgroup;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.elementarycraft.ElementaryCraftModElements;
+
 @ElementaryCraftModElements.ModElement.Tag
 public class ElementaryParticleItemGroup extends ElementaryCraftModElements.ModElement {
-
 	public ElementaryParticleItemGroup(ElementaryCraftModElements instance) {
 		super(instance, 1);
 	}
@@ -23,7 +31,5 @@ public class ElementaryParticleItemGroup extends ElementaryCraftModElements.ModE
 			}
 		}.setBackgroundImageName("item_search.png");
 	}
-
 	public static ItemGroup tab;
-
 }

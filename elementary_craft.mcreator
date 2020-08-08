@@ -11,35 +11,6 @@
       "registry_name": "quantumfield"
     },
     {
-      "name": "NeutirnoQuantumFieldDrop",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "neutirno_quantum_field_drop",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "ElementaryParticle",
       "type": "tab",
       "sortid": 1,
@@ -76,22 +47,13 @@
       "registry_name": "antineutrino"
     },
     {
-      "name": "Electron",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electron"
-    },
-    {
-      "name": "ElectronquantumfieldBlockDrop",
+      "name": "NeutrinoQuantumfieldDrop",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "electronquantumfield_block_drop",
+      "registry_name": "neutrino_quantumfield_drop",
       "metadata": {
         "dependencies": [
           {
@@ -112,24 +74,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "Positron",
-      "type": "item",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "positron"
-    },
-    {
-      "name": "Electronquantumfieldblock",
-      "type": "block",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electronquantumfieldblock"
     }
   ],
   "variable_elements": [],
