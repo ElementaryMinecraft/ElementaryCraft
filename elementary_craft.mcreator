@@ -1,10 +1,62 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "ElementaryParticle",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "elementary_particle"
+    },
+    {
+      "name": "Quantumfield",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quantumfield"
+    },
+    {
+      "name": "NeutrinoQuantumfield",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino_quantumfield"
+    },
+    {
+      "name": "Neutrino",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino"
+    },
+    {
+      "name": "Antineutrino",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "antineutrino"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
+      "itemGroup.tabquantumfield": "Quantumfield",
+      "itemGroup.tabelementary_particle": "Elementary Particle",
+      "item.elementary_craft.antineutrino": "Antineutrino",
+      "item.elementary_craft.neutrino": "Neutrino"
+    }
   },
   "workspaceSettings": {
     "modid": "elementary_craft",
