@@ -2,15 +2,6 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "ElementaryParticle",
-      "type": "tab",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "elementary_particle"
-    },
-    {
       "name": "Quantumfield",
       "type": "tab",
       "sortid": 2,
@@ -18,33 +9,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "quantumfield"
-    },
-    {
-      "name": "NeutrinoQuantumfield",
-      "type": "block",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "neutrino_quantumfield"
-    },
-    {
-      "name": "Neutrino",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "neutrino"
-    },
-    {
-      "name": "Antineutrino",
-      "type": "item",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "antineutrino"
     },
     {
       "name": "NeutirnoQuantumFieldDrop",
@@ -74,6 +38,98 @@
           }
         ]
       }
+    },
+    {
+      "name": "ElementaryParticle",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "elementary_particle"
+    },
+    {
+      "name": "NeutrinoQuantumfield",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino_quantumfield"
+    },
+    {
+      "name": "Neutrino",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino"
+    },
+    {
+      "name": "Antineutrino",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "antineutrino"
+    },
+    {
+      "name": "Electron",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electron"
+    },
+    {
+      "name": "ElectronquantumfieldBlockDrop",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfield_block_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Positron",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron"
+    },
+    {
+      "name": "Electronquantumfieldblock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfieldblock"
     }
   ],
   "variable_elements": [],
