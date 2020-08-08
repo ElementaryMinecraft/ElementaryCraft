@@ -1,10 +1,71 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Electron",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electron"
+    },
+    {
+      "name": "Positron",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron"
+    },
+    {
+      "name": "Electronquantumfieldblock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfieldblock"
+    },
+    {
+      "name": "ElectronquantumfieldBlockDrop",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfield_block_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.elementary_craft.positron": "Positron",
+      "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
+      "item.elementary_craft.electron": "Electron"
+    }
   },
   "workspaceSettings": {
     "modid": "elementary_craft",

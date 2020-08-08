@@ -1,1 +1,5 @@
-{}
+{
+  "item.elementary_craft.positron": "Positron",
+  "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
+  "item.elementary_craft.electron": "Electron"
+}
