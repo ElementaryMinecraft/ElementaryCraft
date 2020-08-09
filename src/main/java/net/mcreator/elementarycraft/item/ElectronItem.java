@@ -2,13 +2,13 @@
 package net.mcreator.elementarycraft.item;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class AntiUpQuarkRedItem extends ElementaryCraftModElements.ModElement {
+public class ElectronItem extends ElementaryCraftModElements.ModElement {
 
-	@ObjectHolder("elementary_craft:anti_up_quark_red")
+	@ObjectHolder("elementary_craft:electron")
 	public static final Item block = null;
 
-	public AntiUpQuarkRedItem(ElementaryCraftModElements instance) {
-		super(instance, 4);
+	public ElectronItem(ElementaryCraftModElements instance) {
+		super(instance, 1);
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class AntiUpQuarkRedItem extends ElementaryCraftModElements.ModElement {
 
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
-			setRegistryName("anti_up_quark_red");
+			setRegistryName("electron");
 		}
 
 		@Override
