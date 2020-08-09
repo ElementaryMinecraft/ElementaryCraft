@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "elektron2345",
+    "texture": "electron",
     "customModelName": "Normal",
     "name": "Electron",
     "creativeTab": {

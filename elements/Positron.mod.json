@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "positron2345",
+    "texture": "positron",
     "customModelName": "Normal",
     "name": "Positron",
     "creativeTab": {
