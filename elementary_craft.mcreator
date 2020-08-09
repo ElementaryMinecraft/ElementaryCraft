@@ -96,71 +96,19 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_red"
-    },
-    {
-      "name": "Electron",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electron"
-    },
-    {
-      "name": "ElectronquantumfieldBlockDrop",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electronquantumfield_block_drop",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Positron",
-      "type": "item",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "positron"
-    },
-    {
-      "name": "Electronquantumfieldblock",
-      "type": "block",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electronquantumfieldblock"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.elementary_craft.positron": "Positron",
-      "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
-      "item.elementary_craft.electron": "Electron"
+      "item.elementary_craft.up_quark_green": "Upquark (Green)",
+      "block.elementary_craft.up_quark_field": "Up Quark Field",
+      "item.elementary_craft.up_quark_red": "Upquark (Red)",
+      "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
+      "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
+      "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
+      "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)"
     }
   },
   "workspaceSettings": {
