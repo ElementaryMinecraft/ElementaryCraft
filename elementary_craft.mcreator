@@ -1,10 +1,65 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "WeakGaugeBoson",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_boson"
+    },
+    {
+      "name": "WeakGaugeField",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_field"
+    },
+    {
+      "name": "DropWeakGaugeBoson",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_weak_gauge_boson",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
+      "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson"
+    }
   },
   "workspaceSettings": {
     "modid": "elementary_craft",

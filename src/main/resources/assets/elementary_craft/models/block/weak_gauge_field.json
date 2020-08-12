@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/weakgaugefieldtexture",
+    "up": "elementary_craft:blocks/weakgaugefieldtexture",
+    "north": "elementary_craft:blocks/weakgaugefieldtexture",
+    "east": "elementary_craft:blocks/weakgaugefieldtexture",
+    "south": "elementary_craft:blocks/weakgaugefieldtexture",
+    "west": "elementary_craft:blocks/weakgaugefieldtexture",
+    "particle": "elementary_craft:blocks/weakgaugefieldtexture"
+  }
+}
