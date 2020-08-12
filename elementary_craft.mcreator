@@ -98,15 +98,6 @@
       "registry_name": "up_quark_red"
     },
     {
-      "name": "DownQuarkGreen",
-      "type": "item",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "down_quark_green"
-    },
-    {
       "name": "AntiDownQuarkGreen",
       "type": "item",
       "sortid": 9,
@@ -114,15 +105,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_down_quark_green"
-    },
-    {
-      "name": "AntiDownQuarkRed",
-      "type": "item",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_red"
     },
     {
       "name": "AntiDownQuarkBlue",
@@ -143,6 +125,15 @@
       "registry_name": "down_quark_blue"
     },
     {
+      "name": "AntiDownQuarkRed",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_red"
+    },
+    {
       "name": "DownQuarkRed",
       "type": "item",
       "sortid": 13,
@@ -159,6 +150,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "down_quark_field"
+    },
+    {
+      "name": "DownQuarkGreen",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_green"
     },
     {
       "name": "DropDownQuark",
