@@ -29,7 +29,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.DropUpQuarkProcedure;
+import net.mcreator.elementarycraft.procedures.DropDownQuarkProcedure;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Random;
@@ -39,11 +39,11 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class UpQuarkFieldBlock extends ElementaryCraftModElements.ModElement {
-	@ObjectHolder("elementary_craft:up_quark_field")
+public class DownQuarkFieldBlock extends ElementaryCraftModElements.ModElement {
+	@ObjectHolder("elementary_craft:down_quark_field")
 	public static final Block block = null;
-	public UpQuarkFieldBlock(ElementaryCraftModElements instance) {
-		super(instance, 7);
+	public DownQuarkFieldBlock(ElementaryCraftModElements instance) {
+		super(instance, 14);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class UpQuarkFieldBlock extends ElementaryCraftModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(0.3f, 10f).lightValue(0));
-			setRegistryName("up_quark_field");
+			setRegistryName("down_quark_field");
 		}
 
 		@Override
@@ -78,7 +78,7 @@ public class UpQuarkFieldBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				DropUpQuarkProcedure.executeProcedure($_dependencies);
+				DropDownQuarkProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -97,7 +97,7 @@ public class UpQuarkFieldBlock extends ElementaryCraftModElements.ModElement {
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("up_quark_field", "up_quark_field", blockAt -> {
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("down_quark_field", "down_quark_field", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;

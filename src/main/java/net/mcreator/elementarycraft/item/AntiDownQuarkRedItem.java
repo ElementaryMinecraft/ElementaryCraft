@@ -11,11 +11,11 @@ import net.minecraft.block.BlockState;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class AntiUpQuarkRedItem extends ElementaryCraftModElements.ModElement {
-	@ObjectHolder("elementary_craft:anti_up_quark_red")
+public class AntiDownQuarkRedItem extends ElementaryCraftModElements.ModElement {
+	@ObjectHolder("elementary_craft:anti_down_quark_red")
 	public static final Item block = null;
-	public AntiUpQuarkRedItem(ElementaryCraftModElements instance) {
-		super(instance, 4);
+	public AntiDownQuarkRedItem(ElementaryCraftModElements instance) {
+		super(instance, 10);
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class AntiUpQuarkRedItem extends ElementaryCraftModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
-			setRegistryName("anti_up_quark_red");
+			setRegistryName("anti_down_quark_red");
 		}
 
 		@Override
