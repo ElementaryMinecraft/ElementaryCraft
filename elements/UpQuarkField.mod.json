@@ -57,9 +57,9 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "STONE"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -108,7 +108,7 @@
     ],
     "frequencyPerChunks": 20,
     "frequencyOnChunk": 16,
-    "minGenerateHeight": 63,
-    "maxGenerateHeight": 128
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 63
   }
 }
