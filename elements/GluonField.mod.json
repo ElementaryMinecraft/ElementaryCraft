@@ -24,7 +24,7 @@
     "Mz": 1.0,
     "name": "Gluon Field",
     "specialInfo": [],
-    "hardness": 3.0,
+    "hardness": 0.3,
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
