@@ -2,13 +2,13 @@
 package net.mcreator.elementarycraft.item;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class GluonItem extends ElementaryCraftModElements.ModElement {
+public class AntiUpQuarkBlueItem extends ElementaryCraftModElements.ModElement {
 
-	@ObjectHolder("elementary_craft:gluon")
+	@ObjectHolder("elementary_craft:anti_up_quark_blue")
 	public static final Item block = null;
 
-	public GluonItem(ElementaryCraftModElements instance) {
-		super(instance, 1);
+	public AntiUpQuarkBlueItem(ElementaryCraftModElements instance) {
+		super(instance, 5);
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class GluonItem extends ElementaryCraftModElements.ModElement {
 
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
-			setRegistryName("gluon");
+			setRegistryName("anti_up_quark_blue");
 		}
 
 		@Override
@@ -36,12 +36,6 @@ public class GluonItem extends ElementaryCraftModElements.ModElement {
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
-		}
-
-		@Override
-		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
-			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("a gluon is the exchange particle for the strong force between quarks"));
 		}
 
 	}
