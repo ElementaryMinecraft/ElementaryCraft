@@ -115,6 +115,15 @@
       }
     },
     {
+      "name": "GluonField",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon_field"
+    },
+    {
       "name": "UpQuarkGreen",
       "type": "item",
       "sortid": 3,
@@ -122,6 +131,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_green"
+    },
+    {
+      "name": "Gluon",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon"
     },
     {
       "name": "UpQuarkField",
@@ -247,24 +265,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "electronquantumfieldblock"
-    },
-    {
-      "name": "GluonField",
-      "type": "block",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "gluon_field"
-    },
-    {
-      "name": "Gluon",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "gluon"
     }
   ],
   "variable_elements": [],
