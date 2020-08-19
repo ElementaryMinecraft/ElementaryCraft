@@ -11,7 +11,7 @@
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": true,
@@ -26,7 +26,7 @@
     "specialInfo": [
       "From the neutrino quantumfield pairs of neutrino and anti-neutrino can be extracted"
     ],
-    "hardness": 1.0,
+    "hardness": 3.0,
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
@@ -61,7 +61,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": true,
     "soundOnStep": {
-      "value": "SLIME"
+      "value": "STONE"
     },
     "luminance": 0.07,
     "unbreakable": false,
@@ -90,7 +90,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
+    "onDestroyedByPlayer": {
       "name": "NeutrinoQuantumfieldDrop"
     },
     "spawnWorldTypes": [],
