@@ -3,6 +3,7 @@ package net.mcreator.elementarycraft.procedures;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -47,20 +48,22 @@ public class DropWeakGaugeBosonProcedure extends ElementaryCraftModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
-				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
-			if (!world.getWorld().isRemote) {
-				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakGaugeFieldBlock.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
-				world.addEntity(entityToSpawn);
+		if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
+			if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
+					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
+				if (!world.getWorld().isRemote) {
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakGaugeFieldBlock.block, (int) (1)));
+					entityToSpawn.setPickupDelay(10);
+					world.addEntity(entityToSpawn);
+				}
+			} else {
+				if (!world.getWorld().isRemote) {
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakGaugeBosonItem.block, (int) (1)));
+					entityToSpawn.setPickupDelay(10);
+					world.addEntity(entityToSpawn);
+				}
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeakGaugeFieldBlock.block.getDefaultState(), 3);
 			}
-		} else {
-			if (!world.getWorld().isRemote) {
-				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakGaugeBosonItem.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
-				world.addEntity(entityToSpawn);
-			}
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeakGaugeFieldBlock.block.getDefaultState(), 3);
 		}
 	}
 }
