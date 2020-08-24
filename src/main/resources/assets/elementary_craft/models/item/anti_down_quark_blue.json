@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elementary_craft:items/blueantidownquark"
+    "layer0": "elementary_craft:items/quark_down_antiblue"
   }
 }

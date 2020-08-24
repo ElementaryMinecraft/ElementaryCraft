@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "blueupquark",
+    "texture": "quark_up_blue",
     "customModelName": "Normal",
     "name": "Upquark (Blue)",
     "creativeTab": {

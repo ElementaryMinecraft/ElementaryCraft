@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "blueantidownquark",
+    "texture": "quark_down_antiblue",
     "customModelName": "Normal",
     "name": "Anti Downquark (Rlue)",
     "creativeTab": {
