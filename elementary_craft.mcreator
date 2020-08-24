@@ -2,6 +2,15 @@
   "id_map": {},
   "mod_elements": [
     {
+      "name": "UpQuarkGreen",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_green"
+    },
+    {
       "name": "AntiUpQuarkGreen",
       "type": "item",
       "sortid": 6,
@@ -11,22 +20,13 @@
       "registry_name": "anti_up_quark_green"
     },
     {
-      "name": "DownQuarkBlue",
-      "type": "item",
-      "sortid": 12,
+      "name": "UpQuarkField",
+      "type": "block",
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "down_quark_blue"
-    },
-    {
-      "name": "DownQuarkRed",
-      "type": "item",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "down_quark_red"
+      "registry_name": "up_quark_field"
     },
     {
       "name": "AntiUpQuarkRed",
@@ -36,6 +36,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_up_quark_red"
+    },
+    {
+      "name": "AntiUpQuarkBlue",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_up_quark_blue"
+    },
+    {
+      "name": "UpQuarkBlue",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_blue"
     },
     {
       "name": "DropUpQuark",
@@ -69,6 +87,69 @@
           }
         ]
       }
+    },
+    {
+      "name": "UpQuarkRed",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_red"
+    },
+    {
+      "name": "AntiDownQuarkGreen",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_green"
+    },
+    {
+      "name": "AntiDownQuarkBlue",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_blue"
+    },
+    {
+      "name": "DownQuarkBlue",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_blue"
+    },
+    {
+      "name": "DownQuarkRed",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_red"
+    },
+    {
+      "name": "AntiDownQuarkRed",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_red"
+    },
+    {
+      "name": "DownQuarkField",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_field"
     },
     {
       "name": "DownQuarkGreen",
@@ -113,85 +194,88 @@
       }
     },
     {
-      "name": "AntiDownQuarkGreen",
-      "type": "item",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_green"
-    },
-    {
-      "name": "AntiDownQuarkBlue",
-      "type": "item",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_blue"
-    },
-    {
-      "name": "UpQuarkGreen",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "up_quark_green"
-    },
-    {
-      "name": "AntiDownQuarkRed",
-      "type": "item",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_red"
-    },
-    {
-      "name": "DownQuarkField",
+      "name": "GluonField",
       "type": "block",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "down_quark_field"
-    },
-    {
-      "name": "UpQuarkField",
-      "type": "block",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "up_quark_field"
-    },
-    {
-      "name": "AntiUpQuarkBlue",
-      "type": "item",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_up_quark_blue"
-    },
-    {
-      "name": "UpQuarkBlue",
-      "type": "item",
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "up_quark_blue"
+      "registry_name": "gluon_field"
     },
     {
-      "name": "UpQuarkRed",
+      "name": "DropGluon",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_gluon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gluon",
       "type": "item",
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "up_quark_red"
+      "registry_name": "gluon"
+    },
+    {
+      "name": "ElectronquantumfieldblockBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfieldblock_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
