@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "quarkfield_o",
+    "texture": "quarkfield_o_alternative",
     "textureTop": "quarkfield_b",
     "textureLeft": "quarkfield_l_up",
     "textureFront": "quarkfield_v_up",

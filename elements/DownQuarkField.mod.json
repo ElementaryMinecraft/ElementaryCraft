@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "quarkfield_o",
-    "textureTop": "quarkfield_b",
+    "textureTop": "quarkfield_b_alternative",
     "textureLeft": "quarkfield_l_down",
     "textureFront": "quarkfield_v_down",
     "textureRight": "quarkfield_r_down",
