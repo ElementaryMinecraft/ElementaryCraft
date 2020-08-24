@@ -23,7 +23,7 @@
       "name": "UpQuarkField",
       "type": "block",
       "sortid": 7,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_field"
@@ -59,7 +59,7 @@
       "name": "DropUpQuark",
       "type": "procedure",
       "sortid": 7,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "drop_up_quark",
@@ -164,94 +164,10 @@
       "name": "DropDownQuark",
       "type": "procedure",
       "sortid": 15,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "drop_down_quark",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GluonField",
-      "type": "block",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "gluon_field"
-    },
-    {
-      "name": "DropGluon",
-      "type": "procedure",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "drop_gluon",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Gluon",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "gluon"
-    },
-    {
-      "name": "ElectronquantumfieldblockBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electronquantumfieldblock_block_destroyed_by_player",
       "metadata": {
         "dependencies": [
           {
@@ -285,10 +201,17 @@
       "item.elementary_craft.positron": "Positron",
       "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.up_quark_field": "Up Quark Field",
+      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "item.elementary_craft.up_quark_red": "Upquark (Red)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
+      "item.elementary_craft.anti_down_quark_red": "Anti Downquark (Red)",
       "item.elementary_craft.electron": "Electron",
       "item.elementary_craft.photon": "Photon",
+      "block.elementary_craft.down_quark_field": "Down Quark Field",
+      "item.elementary_craft.down_quark_red": "Downquark (Red)",
+      "item.elementary_craft.down_quark_green": "Downquark (Green)",
+      "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
       "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
