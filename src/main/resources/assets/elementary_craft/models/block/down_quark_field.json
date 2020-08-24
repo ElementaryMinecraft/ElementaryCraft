@@ -3,10 +3,10 @@
   "textures": {
     "down": "elementary_craft:blocks/quarkfield_o",
     "up": "elementary_craft:blocks/quarkfield_b",
-    "north": "elementary_craft:blocks/quarkfield_a_down",
-    "east": "elementary_craft:blocks/quarkfield_r_down",
-    "south": "elementary_craft:blocks/quarkfield_v_down",
-    "west": "elementary_craft:blocks/quarkfield_l_down",
+    "north": "elementary_craft:blocks/quarkfield_v_down",
+    "east": "elementary_craft:blocks/quarkfield_l_down",
+    "south": "elementary_craft:blocks/quarkfield_a_down",
+    "west": "elementary_craft:blocks/quarkfield_r_down",
     "particle": "elementary_craft:blocks/quarkfield_o"
   }
 }
