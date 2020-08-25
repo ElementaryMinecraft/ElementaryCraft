@@ -14,7 +14,7 @@
       "name": "DropGluon",
       "type": "procedure",
       "sortid": 2,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "drop_gluon",
@@ -98,7 +98,7 @@
       "name": "DownQuarkBlue",
       "type": "item",
       "sortid": 12,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "down_quark_blue"
@@ -125,7 +125,7 @@
       "name": "AntiUpQuarkRed",
       "type": "item",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_up_quark_red"
@@ -134,7 +134,7 @@
       "name": "DropUpQuark",
       "type": "procedure",
       "sortid": 7,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "drop_up_quark",
@@ -167,7 +167,7 @@
       "name": "DownQuarkGreen",
       "type": "item",
       "sortid": 8,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "down_quark_green"
@@ -185,7 +185,7 @@
       "name": "DropDownQuark",
       "type": "procedure",
       "sortid": 15,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "drop_down_quark",
@@ -227,7 +227,7 @@
       "name": "AntiDownQuarkBlue",
       "type": "item",
       "sortid": 11,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_down_quark_blue"
@@ -236,7 +236,7 @@
       "name": "UpQuarkGreen",
       "type": "item",
       "sortid": 3,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_green"
@@ -245,7 +245,7 @@
       "name": "AntiDownQuarkRed",
       "type": "item",
       "sortid": 10,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_down_quark_red"
@@ -263,7 +263,7 @@
       "name": "UpQuarkField",
       "type": "block",
       "sortid": 7,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_field"
@@ -290,7 +290,7 @@
       "name": "UpQuarkRed",
       "type": "item",
       "sortid": 1,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_red"
@@ -425,15 +425,6 @@
       }
     },
     {
-      "name": "Electronquantumfieldblock",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electronquantumfieldblock"
-    },
-    {
       "name": "Electron",
       "type": "item",
       "sortid": 3,
@@ -452,13 +443,22 @@
       "registry_name": "positron"
     },
     {
-      "name": "ElectronquantumfieldblockBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 8,
-      "compiles": false,
+      "name": "ElectronField",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "electronquantumfieldblock_block_destroyed_by_player",
+      "registry_name": "electron_field"
+    },
+    {
+      "name": "DropElectronPositron",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_electron_positron",
       "metadata": {
         "dependencies": [
           {
@@ -490,10 +490,10 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
-      "item.elementary_craft.positron": "Positron",
       "block.elementary_craft.photon_field": "Photon Field",
-      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "item.elementary_craft.positron": "Positron",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "item.elementary_craft.electron": "Electron",
       "item.elementary_craft.photon": "Photon",
@@ -507,13 +507,13 @@
       "itemGroup.tabelementary_particle": "Elementary Particle",
       "item.elementary_craft.antineutrino": "Antineutrino",
       "block.elementary_craft.up_quark_field": "Up Quark Field",
+      "block.elementary_craft.electron_field": "Electron Field",
       "item.elementary_craft.up_quark_red": "Upquark (Red)",
       "item.elementary_craft.anti_down_quark_red": "Anti Downquark (Red)",
       "item.elementary_craft.neutrino": "Neutrino",
       "block.elementary_craft.down_quark_field": "Down Quark Field",
       "item.elementary_craft.down_quark_red": "Downquark (Red)",
       "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
-      "item.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
       "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
