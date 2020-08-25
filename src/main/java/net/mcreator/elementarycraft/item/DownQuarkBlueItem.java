@@ -1,12 +1,19 @@
 
 package net.mcreator.elementarycraft.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.block.BlockState;
+
+import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
+import net.mcreator.elementarycraft.ElementaryCraftModElements;
+
 @ElementaryCraftModElements.ModElement.Tag
 public class DownQuarkBlueItem extends ElementaryCraftModElements.ModElement {
-
 	@ObjectHolder("elementary_craft:down_quark_blue")
 	public static final Item block = null;
-
 	public DownQuarkBlueItem(ElementaryCraftModElements instance) {
 		super(instance, 12);
 	}
@@ -15,9 +22,7 @@ public class DownQuarkBlueItem extends ElementaryCraftModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(ElementaryParticleItemGroup.tab).maxStackSize(64));
 			setRegistryName("down_quark_blue");
@@ -37,7 +42,5 @@ public class DownQuarkBlueItem extends ElementaryCraftModElements.ModElement {
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
 		}
-
 	}
-
 }

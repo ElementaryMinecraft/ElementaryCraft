@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elementary_craft:blocks/quarkfield_o_alternative",
-    "up": "elementary_craft:blocks/quarkfield_b",
-    "north": "elementary_craft:blocks/quarkfield_v_up",
-    "east": "elementary_craft:blocks/quarkfield_l_up",
-    "south": "elementary_craft:blocks/quarkfield_a",
-    "west": "elementary_craft:blocks/quarkfield_r_up",
-    "particle": "elementary_craft:blocks/quarkfield_o_alternative"
+    "down": "elementary_craft:blocks/quarkfield_v_simpel",
+    "up": "elementary_craft:blocks/quarkfield_b_simpel",
+    "north": "elementary_craft:blocks/quarkfield_up_v_simpel",
+    "east": "elementary_craft:blocks/quarkfield_up_l_simpel",
+    "south": "elementary_craft:blocks/quarkfield_up_a_simpel",
+    "west": "elementary_craft:blocks/quarkfield_up_r_simpel",
+    "particle": "elementary_craft:blocks/quarkfield_v_simpel"
   }
 }
