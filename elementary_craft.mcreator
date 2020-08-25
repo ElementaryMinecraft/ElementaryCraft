@@ -380,7 +380,6 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-
       "registry_name": "neutrino"
     },
     {
@@ -395,7 +394,7 @@
     {
       "name": "NeutrinoQuantumfieldDrop",
       "type": "procedure",
-            "sortid": 5,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -425,8 +424,8 @@
         ]
       }
     },
-   {
-     "name": "Electronquantumfieldblock",
+    {
+      "name": "Electronquantumfieldblock",
       "type": "item",
       "sortid": 3,
       "compiles": true,
@@ -442,7 +441,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "electron"
-    }, 
+    },
     {
       "name": "Positron",
       "type": "item",
@@ -451,12 +450,12 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "positron"
-    }, 
+    },
     {
       "name": "ElectronquantumfieldblockBlockDestroyedByPlayer",
       "type": "procedure",
       "sortid": 8,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "electronquantumfieldblock_block_destroyed_by_player",
@@ -490,25 +489,35 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.elementary_craft.gluon": "Gluon",
       "item.elementary_craft.positron": "Positron",
-      "item.elementary_craft.up_quark_green": "Upquark (Green)",
-      "block.elementary_craft.up_quark_field": "Up Quark Field",
-      "item.elementary_craft.up_quark_red": "Upquark (Red)",
+      "block.elementary_craft.photon_field": "Photon Field",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
-      "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.electron": "Electron",
-      "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
-      "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
-      "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)",
+      "item.elementary_craft.photon": "Photon",
+      "item.elementary_craft.down_quark_green": "Downquark (Green)",
+      "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
       "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
+      "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
+      "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
+      "block.elementary_craft.gluon_field": "Gluon Field",
       "itemGroup.tabquantumfield": "Quantumfield",
       "itemGroup.tabelementary_particle": "Elementary Particle",
       "item.elementary_craft.antineutrino": "Antineutrino",
+      "block.elementary_craft.up_quark_field": "Up Quark Field",
+      "item.elementary_craft.up_quark_red": "Upquark (Red)",
+      "item.elementary_craft.anti_down_quark_red": "Anti Downquark (Red)",
       "item.elementary_craft.neutrino": "Neutrino",
-      "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
+      "block.elementary_craft.down_quark_field": "Down Quark Field",
+      "item.elementary_craft.down_quark_red": "Downquark (Red)",
+      "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
+      "item.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
+      "item.elementary_craft.up_quark_green": "Upquark (Green)",
       "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson",
-      "block.elementary_craft.photon_field": "Photon Field",
-      "item.elementary_craft.photon": "Photon"
+      "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
+      "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)"
     }
   },
   "workspaceSettings": {
