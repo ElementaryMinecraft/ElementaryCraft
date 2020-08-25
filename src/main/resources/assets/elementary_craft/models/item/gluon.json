@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "elementary_craft:items/gluon_item_placeholder"
+  }
+}

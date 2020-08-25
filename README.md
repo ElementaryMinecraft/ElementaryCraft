@@ -12,7 +12,6 @@ Eens MCreator is opgestart, klik je op 'Clone Remote'Bij 'Remote Git repository 
 
 https://github.com/ElementaryMinecraft/ElementaryCraft
 
-
 Geef jouw gebruikersnaam en wachtwoordKlik op 'Setup remote repository''Workspace setup for selected generator' download de files automatisch.
 
 Klaar!
