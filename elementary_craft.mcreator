@@ -425,8 +425,8 @@
         ]
       }
     },
-    {
-      "name": "electronquantumfieldblock",
+   {
+     "name": "Electronquantumfieldblock",
       "type": "item",
       "sortid": 3,
       "compiles": true,
@@ -434,6 +434,24 @@
       "ids": {},
       "registry_name": "electronquantumfieldblock"
     },
+    {
+      "name": "Electron",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electron"
+    }, 
+    {
+      "name": "Positron",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron"
+    }, 
     {
       "name": "ElectronquantumfieldblockBlockDestroyedByPlayer",
       "type": "procedure",
