@@ -483,6 +483,60 @@
           }
         ]
       }
+    },
+    {
+      "name": "Neutron",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron"
+    },
+    {
+      "name": "Proton",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "proton"
+    },
+    {
+      "name": "PionMinus",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus"
+    },
+    {
+      "name": "PionNulFromDown",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down"
+    },
+    {
+      "name": "PionNulFromUp",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up"
+    },
+    {
+      "name": "PionPlus",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus"
     }
   ],
   "variable_elements": [],
@@ -515,6 +569,7 @@
       "item.elementary_craft.down_quark_red": "Downquark (Red)",
       "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
+
       "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
       "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)"
