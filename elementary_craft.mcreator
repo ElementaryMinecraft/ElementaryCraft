@@ -345,12 +345,97 @@
           }
         ]
       }
-    }
+    },
+    {
+      "name": "Quantumfield",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quantumfield"
+    },
+    {
+      "name": "ElementaryParticle",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "elementary_particle"
+    },
+    {
+      "name": "NeutrinoQuantumfield",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino_quantumfield"
+    },
+    {
+      "name": "Neutrino",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino"
+    },
+    {
+      "name": "Antineutrino",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "antineutrino"
+    },
+    {
+      "name": "NeutrinoQuantumfieldDrop",
+      "type": "procedure",
+            "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino_quantumfield_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }    
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
+      "itemGroup.tabquantumfield": "Quantumfield",
+      "itemGroup.tabelementary_particle": "Elementary Particle",
+      "item.elementary_craft.antineutrino": "Antineutrino",
+      "item.elementary_craft.neutrino": "Neutrino"
+      "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
+      "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson"
       "block.elementary_craft.photon_field": "Photon Field",
       "item.elementary_craft.photon": "Photon"
     }
