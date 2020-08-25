@@ -4,4 +4,8 @@
   "itemGroup.tabelementary_particle": "Elementary Particle",
   "item.elementary_craft.antineutrino": "Antineutrino",
   "item.elementary_craft.neutrino": "Neutrino"
+  "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
+  "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson"
+  "block.elementary_craft.photon_field": "Photon Field",
+  "item.elementary_craft.photon": "Photon"
 }
