@@ -2,6 +2,57 @@
   "id_map": {},
   "mod_elements": [
     {
+      "name": "GluonField",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon_field"
+    },
+    {
+      "name": "DropGluon",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_gluon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gluon",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon"
+    },
+    {
       "name": "AntiUpQuarkGreen",
       "type": "item",
       "sortid": 6,
@@ -9,6 +60,39 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_up_quark_green"
+    },
+    {
+      "name": "PhotonFieldBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_field_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     },
     {
       "name": "DownQuarkBlue",
@@ -27,6 +111,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "down_quark_red"
+    },
+    {
+      "name": "PhotonField",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_field"
     },
     {
       "name": "AntiUpQuarkRed",
@@ -78,6 +171,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "down_quark_green"
+    },
+    {
+      "name": "Photon",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon"
     },
     {
       "name": "DropDownQuark",
@@ -192,57 +294,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_red"
-    },
-    {
-      "name": "PhotonFieldBlockDestroyedByPlayer",
-      "type": "procedure",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "photon_field_block_destroyed_by_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "PhotonField",
-      "type": "block",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "photon_field"
-    },
-    {
-      "name": "Photon",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "photon"
     }
   ],
   "variable_elements": [],
