@@ -380,6 +380,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
+
       "registry_name": "neutrino"
     },
     {
@@ -423,12 +424,64 @@
           }
         ]
       }
-    }    
+    },
+    {
+      "name": "electronquantumfieldblock",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfieldblock"
+    },
+    {
+      "name": "ElectronquantumfieldblockBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electronquantumfieldblock_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.elementary_craft.positron": "Positron",
+      "item.elementary_craft.up_quark_green": "Upquark (Green)",
+      "block.elementary_craft.up_quark_field": "Up Quark Field",
+      "item.elementary_craft.up_quark_red": "Upquark (Red)",
+      "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
+      "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
+      "item.elementary_craft.electron": "Electron",
+      "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
+      "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
+      "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)",
       "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
       "itemGroup.tabquantumfield": "Quantumfield",
       "itemGroup.tabelementary_particle": "Elementary Particle",

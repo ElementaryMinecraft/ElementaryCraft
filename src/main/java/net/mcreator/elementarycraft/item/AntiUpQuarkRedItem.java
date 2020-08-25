@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.item;
 
 @ElementaryCraftModElements.ModElement.Tag

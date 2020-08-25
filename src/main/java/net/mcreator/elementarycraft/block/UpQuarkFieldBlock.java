@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.block;
 
 import net.minecraft.block.material.Material;
