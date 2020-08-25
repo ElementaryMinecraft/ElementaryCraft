@@ -194,83 +194,78 @@
       "registry_name": "up_quark_red"
     },
     {
-      "name": "PionPlus",
+      "name": "Neutron",
       "type": "item",
-      "sortid": 16,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "pion_plus"
-    },
-    {
-      "name": "PionMinus",
-      "type": "item",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_minus"
-    },
-    {
-      "name": "PionNulFromUp",
-      "type": "item",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_nul_from_up"
-    },
-    {
-      "name": "PionNulFromDown",
-      "type": "item",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_nul_from_down"
+      "registry_name": "neutron"
     },
     {
       "name": "Proton",
       "type": "item",
-      "sortid": 20,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "proton"
     },
     {
-      "name": "Neutron",
+      "name": "PionMinus",
       "type": "item",
-      "sortid": 21,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "neutron"
+      "registry_name": "pion_minus"
+    },
+    {
+      "name": "PionNulFromDown",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down"
+    },
+    {
+      "name": "PionNulFromUp",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up"
+    },
+    {
+      "name": "PionPlus",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.elementary_craft.pion_nul_from_down": "Pion Nul From Down",
       "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
+      "item.elementary_craft.down_quark_green": "Downquark (Green)",
+      "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
+      "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
       "block.elementary_craft.up_quark_field": "Up Quark Field",
-      "item.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.up_quark_red": "Upquark (Red)",
       "item.elementary_craft.anti_down_quark_red": "Anti Downquark (Red)",
-      "item.elementary_craft.pion_minus": "Pion Minus",
       "block.elementary_craft.down_quark_field": "Down Quark Field",
-      "item.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
       "item.elementary_craft.down_quark_red": "Downquark (Red)",
-      "item.elementary_craft.down_quark_green": "Downquark (Green)",
-      "item.elementary_craft.proton": "Proton",
       "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
-      "item.elementary_craft.pion_plus": "Pion Plus",
-      "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
-      "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
       "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)"
     }
   },
