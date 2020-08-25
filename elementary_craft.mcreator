@@ -294,7 +294,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "up_quark_red"
-    }
+    },
     {
       "name": "WeakGaugeBoson",
       "type": "item",
@@ -345,7 +345,7 @@
           }
         ]
       }
-
+    }
   ],
   "variable_elements": [],
   "sound_elements": [],
