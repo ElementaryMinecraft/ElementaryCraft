@@ -60,7 +60,7 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).lightValue(1).doesNotBlockMovement()
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0.3f, 10f).lightValue(1).doesNotBlockMovement()
 					.notSolid());
 			setRegistryName("neutrino_quantumfield");
 		}
@@ -87,7 +87,7 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(this, 0));
 		}
 
 		@OnlyIn(Dist.CLIENT)
