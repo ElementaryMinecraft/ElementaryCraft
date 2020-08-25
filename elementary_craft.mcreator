@@ -2,15 +2,6 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "UpQuarkGreen",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "up_quark_green"
-    },
-    {
       "name": "AntiUpQuarkGreen",
       "type": "item",
       "sortid": 6,
@@ -20,13 +11,22 @@
       "registry_name": "anti_up_quark_green"
     },
     {
-      "name": "UpQuarkField",
-      "type": "block",
-      "sortid": 7,
+      "name": "DownQuarkBlue",
+      "type": "item",
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "up_quark_field"
+      "registry_name": "down_quark_blue"
+    },
+    {
+      "name": "DownQuarkRed",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_red"
     },
     {
       "name": "AntiUpQuarkRed",
@@ -36,24 +36,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "anti_up_quark_red"
-    },
-    {
-      "name": "AntiUpQuarkBlue",
-      "type": "item",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_up_quark_blue"
-    },
-    {
-      "name": "UpQuarkBlue",
-      "type": "item",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "up_quark_blue"
     },
     {
       "name": "DropUpQuark",
@@ -87,69 +69,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "UpQuarkRed",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "up_quark_red"
-    },
-    {
-      "name": "AntiDownQuarkGreen",
-      "type": "item",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_green"
-    },
-    {
-      "name": "AntiDownQuarkBlue",
-      "type": "item",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_blue"
-    },
-    {
-      "name": "DownQuarkBlue",
-      "type": "item",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "down_quark_blue"
-    },
-    {
-      "name": "DownQuarkRed",
-      "type": "item",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "down_quark_red"
-    },
-    {
-      "name": "AntiDownQuarkRed",
-      "type": "item",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "anti_down_quark_red"
-    },
-    {
-      "name": "DownQuarkField",
-      "type": "block",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "down_quark_field"
     },
     {
       "name": "DownQuarkGreen",
@@ -192,6 +111,381 @@
           }
         ]
       }
+    },
+    {
+      "name": "AntiDownQuarkGreen",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_green"
+    },
+    {
+      "name": "AntiDownQuarkBlue",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_blue"
+    },
+    {
+      "name": "UpQuarkGreen",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_green"
+    },
+    {
+      "name": "AntiDownQuarkRed",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_red"
+    },
+    {
+      "name": "DownQuarkField",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_field"
+    },
+    {
+      "name": "UpQuarkField",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_field"
+    },
+    {
+      "name": "AntiUpQuarkBlue",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_up_quark_blue"
+    },
+    {
+      "name": "UpQuarkBlue",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_blue"
+    },
+    {
+      "name": "UpQuarkRed",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_red"
+    },
+    {
+      "name": "DropGluon",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_gluon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PionNulFromUp",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up"
+    },
+    {
+      "name": "WeakGaugeField",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_field"
+    },
+    {
+      "name": "PionMinus",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus"
+    },
+    {
+      "name": "NeutrinoQuantumfield",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino_quantumfield"
+    },
+    {
+      "name": "NeutrinoQuantumfieldDrop",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino_quantumfield_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GluonField",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon_field"
+    },
+    {
+      "name": "DropWeakGaugeBoson",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_weak_gauge_boson",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gluon",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon"
+    },
+    {
+      "name": "Electron",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electron"
+    },
+    {
+      "name": "PionNulFromDown",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down"
+    },
+    {
+      "name": "ElectronField",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electron_field"
+    },
+    {
+      "name": "Proton",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "proton"
+    },
+    {
+      "name": "PionPlus",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus"
+    },
+    {
+      "name": "Quantumfield",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quantumfield"
+    },
+    {
+      "name": "WeakGaugeBoson",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_boson"
+    },
+    {
+      "name": "DropElectronPositron",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_electron_positron",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Neutron",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron"
+    },
+    {
+      "name": "ElementaryParticle",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "elementary_particle"
+    },
+    {
+      "name": "Neutrino",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino"
+    },
+    {
+      "name": "Antineutrino",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "antineutrino"
+    },
+    {
+      "name": "Positron",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron"
     }
   ],
   "variable_elements": [],

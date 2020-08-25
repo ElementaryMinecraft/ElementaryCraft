@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Quantumfield",
+    "icon": {
+      "value": "Blocks.FLOWING_LAVA"
+    },
+    "showSearch": true
+  }
+}

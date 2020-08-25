@@ -1,19 +1,12 @@
 
 package net.mcreator.elementarycraft.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.elementarycraft.ElementaryCraftModElements;
-
 @ElementaryCraftModElements.ModElement.Tag
 public class AntiDownQuarkGreenItem extends ElementaryCraftModElements.ModElement {
+
 	@ObjectHolder("elementary_craft:anti_down_quark_green")
 	public static final Item block = null;
+
 	public AntiDownQuarkGreenItem(ElementaryCraftModElements instance) {
 		super(instance, 9);
 	}
@@ -22,9 +15,11 @@ public class AntiDownQuarkGreenItem extends ElementaryCraftModElements.ModElemen
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
+			super(new Item.Properties().group(ElementaryParticleItemGroup.tab).maxStackSize(64));
 			setRegistryName("anti_down_quark_green");
 		}
 
@@ -42,5 +37,7 @@ public class AntiDownQuarkGreenItem extends ElementaryCraftModElements.ModElemen
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
 		}
+
 	}
+
 }

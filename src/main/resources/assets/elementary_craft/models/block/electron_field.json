@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/elektron16",
+    "up": "elementary_craft:blocks/elektron16",
+    "north": "elementary_craft:blocks/elektron2345",
+    "east": "elementary_craft:blocks/elektron2345",
+    "south": "elementary_craft:blocks/elektron2345",
+    "west": "elementary_craft:blocks/elektron2345",
+    "particle": "elementary_craft:blocks/elektron16"
+  }
+}
