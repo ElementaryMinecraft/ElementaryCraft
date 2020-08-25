@@ -28,7 +28,7 @@
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Quantumfield"
     },
     "destroyTool": "Not specified",
     "customDrop": {

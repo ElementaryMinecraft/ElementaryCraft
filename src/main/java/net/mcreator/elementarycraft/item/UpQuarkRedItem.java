@@ -4,10 +4,11 @@ package net.mcreator.elementarycraft.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
+
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 @ElementaryCraftModElements.ModElement.Tag
@@ -24,7 +25,8 @@ public class UpQuarkRedItem extends ElementaryCraftModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64));
+
+			super(new Item.Properties().group(ElementaryParticleItemGroup.tab).maxStackSize(64));
 			setRegistryName("up_quark_red");
 		}
 
