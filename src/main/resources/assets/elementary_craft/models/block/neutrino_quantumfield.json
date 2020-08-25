@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/neutrinoquantumfield2",
+    "up": "elementary_craft:blocks/neutrinoquantumfield2",
+    "north": "elementary_craft:blocks/neutrinquantumfield",
+    "east": "elementary_craft:blocks/neutrinquantumfield",
+    "south": "elementary_craft:blocks/neutrinquantumfield",
+    "west": "elementary_craft:blocks/neutrinquantumfield",
+    "particle": "elementary_craft:blocks/neutrinoquantumfield2"
+  }
+}
