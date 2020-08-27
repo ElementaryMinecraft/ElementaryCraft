@@ -10,9 +10,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 
-import net.mcreator.elementarycraft.item.NeutrinoItem;
-import net.mcreator.elementarycraft.item.AntineutrinoItem;
 import net.mcreator.elementarycraft.block.NeutrinoQuantumfieldBlock;
+import net.mcreator.elementarycraft.block.NeutrinoBlock;
+import net.mcreator.elementarycraft.block.AntineutrinoBlock;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Map;
@@ -59,12 +59,12 @@ public class NeutrinoQuantumfieldDropProcedure extends ElementaryCraftModElement
 				}
 			} else {
 				if (!world.getWorld().isRemote) {
-					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(NeutrinoItem.block, (int) (1)));
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(NeutrinoBlock.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.addEntity(entityToSpawn);
 				}
 				if (!world.getWorld().isRemote) {
-					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AntineutrinoItem.block, (int) (1)));
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AntineutrinoBlock.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.addEntity(entityToSpawn);
 				}

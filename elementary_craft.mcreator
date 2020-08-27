@@ -374,24 +374,6 @@
       "registry_name": "neutrino_quantumfield"
     },
     {
-      "name": "Neutrino",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "neutrino"
-    },
-    {
-      "name": "Antineutrino",
-      "type": "item",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "antineutrino"
-    },
-    {
       "name": "NeutrinoQuantumfieldDrop",
       "type": "procedure",
       "sortid": 5,
@@ -423,24 +405,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "Electron",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "electron"
-    },
-    {
-      "name": "Positron",
-      "type": "item",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "positron"
     },
     {
       "name": "ElectronField",
@@ -485,36 +449,81 @@
       }
     },
     {
-      "name": "Neutron",
-      "type": "item",
-      "sortid": 1,
+      "name": "Electron",
+      "type": "block",
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "neutron"
+      "registry_name": "electron"
+    },
+    {
+      "name": "Positron",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron"
+    },
+    {
+      "name": "Neutrino",
+      "type": "block",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutrino"
+    },
+    {
+      "name": "Antineutrino",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "antineutrino"
     },
     {
       "name": "Proton",
-      "type": "item",
-      "sortid": 1,
+      "type": "block",
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "proton"
     },
     {
+      "name": "Neutron",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron"
+    },
+    {
       "name": "PionMinus",
-      "type": "item",
-      "sortid": 1,
+      "type": "block",
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "pion_minus"
     },
     {
+      "name": "PionPlus",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus"
+    },
+    {
       "name": "PionNulFromDown",
-      "type": "item",
-      "sortid": 1,
+      "type": "block",
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -522,21 +531,12 @@
     },
     {
       "name": "PionNulFromUp",
-      "type": "item",
-      "sortid": 1,
+      "type": "block",
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "pion_nul_from_up"
-    },
-    {
-      "name": "PionPlus",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_plus"
     }
   ],
   "variable_elements": [],
@@ -545,32 +545,38 @@
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
       "block.elementary_craft.photon_field": "Photon Field",
-      "item.elementary_craft.positron": "Positron",
-      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "block.elementary_craft.neutrino": "Neutrino",
       "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
-      "item.elementary_craft.electron": "Electron",
+      "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
       "item.elementary_craft.down_quark_green": "Downquark (Green)",
       "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
+      "block.elementary_craft.electron": "Electron",
       "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
+      "block.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
       "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
+      "block.elementary_craft.pion_plus": "Pion Plus",
       "block.elementary_craft.gluon_field": "Gluon Field",
       "itemGroup.tabquantumfield": "Quantumfield",
       "itemGroup.tabelementary_particle": "Elementary Particle",
-      "item.elementary_craft.antineutrino": "Antineutrino",
       "block.elementary_craft.up_quark_field": "Up Quark Field",
       "block.elementary_craft.electron_field": "Electron Field",
       "item.elementary_craft.up_quark_red": "Upquark (Red)",
       "item.elementary_craft.anti_down_quark_red": "Anti Downquark (Red)",
-      "item.elementary_craft.neutrino": "Neutrino",
       "block.elementary_craft.down_quark_field": "Down Quark Field",
       "item.elementary_craft.down_quark_red": "Downquark (Red)",
+      "block.elementary_craft.pion_minus": "Pion Minus",
+      "block.elementary_craft.antineutrino": "Antineutrino",
       "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
       "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson",
+      "block.elementary_craft.positron": "Positron",
+      "block.elementary_craft.proton": "Proton",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
+      "block.elementary_craft.pion_nul_from_down": "Pion Nul From Down",
       "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)"
     }
   },

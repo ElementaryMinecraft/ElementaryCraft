@@ -10,9 +10,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 
-import net.mcreator.elementarycraft.item.PositronItem;
-import net.mcreator.elementarycraft.item.ElectronItem;
+import net.mcreator.elementarycraft.block.PositronBlock;
 import net.mcreator.elementarycraft.block.ElectronFieldBlock;
+import net.mcreator.elementarycraft.block.ElectronBlock;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Map;
@@ -59,12 +59,12 @@ public class DropElectronPositronProcedure extends ElementaryCraftModElements.Mo
 				}
 			} else {
 				if (!world.getWorld().isRemote) {
-					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(PositronItem.block, (int) (1)));
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ElectronBlock.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.addEntity(entityToSpawn);
 				}
 				if (!world.getWorld().isRemote) {
-					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ElectronItem.block, (int) (1)));
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(PositronBlock.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.addEntity(entityToSpawn);
 				}

@@ -108,7 +108,7 @@ public class PhotonFieldBlock extends ElementaryCraftModElements.ModElement {
 				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 16)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 63, 63, 128))));
+			}), block.getDefaultState(), 16)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 64))));
 		}
 	}
 }
