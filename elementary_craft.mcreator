@@ -296,15 +296,6 @@
       "registry_name": "up_quark_red"
     },
     {
-      "name": "WeakGaugeBoson",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_gauge_boson"
-    },
-    {
       "name": "WeakGaugeField",
       "type": "block",
       "sortid": 2,
@@ -699,6 +690,189 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "weak_antineutrino_to_positron"
+    },
+    {
+      "name": "NeutronUpdateTick",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NeutronBlockAdded",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakGaugeBosonBlockAdded",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_boson_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakGaugeBosonUpdateTick",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_boson_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakBoson",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_boson"
+    },
+    {
+      "name": "WeakBosonBlockAdded",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_boson_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakBosonUpdateTick",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_boson_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -724,6 +898,7 @@
       "block.elementary_craft.gluon_field": "Gluon Field",
       "itemGroup.tabquantumfield": "Quantumfield",
       "itemGroup.tabelementary_particle": "Elementary Particle",
+      "block.elementary_craft.weak_boson": "Weak Boson",
       "block.elementary_craft.up_quark_field": "Up Quark Field",
       "block.elementary_craft.electron_field": "Electron Field",
       "item.elementary_craft.up_quark_red": "Upquark (Red)",
@@ -734,7 +909,6 @@
       "block.elementary_craft.antineutrino": "Antineutrino",
       "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Rlue)",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
-      "item.elementary_craft.weak_gauge_boson": "Weak Gauge Boson",
       "block.elementary_craft.positron": "Positron",
       "block.elementary_craft.proton": "Proton",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",

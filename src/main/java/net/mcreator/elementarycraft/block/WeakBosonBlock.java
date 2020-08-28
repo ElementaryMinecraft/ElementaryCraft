@@ -46,9 +46,9 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.NeutronUpdateTickProcedure;
-import net.mcreator.elementarycraft.procedures.NeutronBlockAddedProcedure;
-import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
+import net.mcreator.elementarycraft.procedures.WeakBosonUpdateTickProcedure;
+import net.mcreator.elementarycraft.procedures.WeakBosonBlockAddedProcedure;
+import net.mcreator.elementarycraft.itemgroup.QuantumfieldItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import javax.annotation.Nullable;
@@ -61,26 +61,26 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class NeutronBlock extends ElementaryCraftModElements.ModElement {
-	@ObjectHolder("elementary_craft:neutron")
+public class WeakBosonBlock extends ElementaryCraftModElements.ModElement {
+	@ObjectHolder("elementary_craft:weak_boson")
 	public static final Block block = null;
-	@ObjectHolder("elementary_craft:neutron")
+	@ObjectHolder("elementary_craft:weak_boson")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public NeutronBlock(ElementaryCraftModElements instance) {
-		super(instance, 22);
+	public WeakBosonBlock(ElementaryCraftModElements instance) {
+		super(instance, 48);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(QuantumfieldItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("neutron"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("weak_boson"));
 	}
 
 	@Override
@@ -90,14 +90,8 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
-					.notSolid());
-			setRegistryName("neutron");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement());
+			setRegistryName("weak_boson");
 		}
 
 		@Override
@@ -121,7 +115,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				NeutronBlockAddedProcedure.executeProcedure($_dependencies);
+				WeakBosonBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -137,7 +131,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				NeutronUpdateTickProcedure.executeProcedure($_dependencies);
+				WeakBosonUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
@@ -246,7 +240,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("neutron");
+			return new StringTextComponent("weak_boson");
 		}
 
 		@Override
@@ -261,7 +255,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Neutron");
+			return new StringTextComponent("Weak Boson");
 		}
 
 		@Override
