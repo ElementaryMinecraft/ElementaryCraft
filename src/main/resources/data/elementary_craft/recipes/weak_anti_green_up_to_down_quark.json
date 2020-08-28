@@ -1,0 +1,16 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:anti_up_quark_green"
+    },
+    {
+      "item": "elementary_craft:weak_gauge_boson"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:anti_down_quark_green",
+    "count": 1
+  }
+}
