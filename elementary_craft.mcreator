@@ -692,35 +692,6 @@
       "registry_name": "weak_antineutrino_to_positron"
     },
     {
-      "name": "NeutronUpdateTick",
-      "type": "procedure",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "neutron_update_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "WeakBoson",
       "type": "block",
       "sortid": 48,
@@ -730,13 +701,13 @@
       "registry_name": "weak_boson"
     },
     {
-      "name": "WeakBosonUpdateTick",
+      "name": "NeutronDecay",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_boson_update_tick",
+      "registry_name": "neutron_decay",
       "metadata": {
         "dependencies": [
           {
@@ -759,13 +730,13 @@
       }
     },
     {
-      "name": "PionPlusUpdateTick",
+      "name": "WeakBosonDecay",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "pion_plus_update_tick",
+      "registry_name": "weak_boson_decay",
       "metadata": {
         "dependencies": [
           {
@@ -788,13 +759,13 @@
       }
     },
     {
-      "name": "PionNulFromDownUpdateTick",
+      "name": "ChargedPionDecay",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "pion_nul_from_down_update_tick",
+      "registry_name": "charged_pion_decay",
       "metadata": {
         "dependencies": [
           {
@@ -817,13 +788,13 @@
       }
     },
     {
-      "name": "BlockAgeIsZero",
+      "name": "PionNulDecay",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "block_age_is_zero",
+      "registry_name": "pion_nul_decay",
       "metadata": {
         "dependencies": [
           {
@@ -851,10 +822,10 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
-      "block.elementary_craft.neutrino": "Neutrino",
       "block.elementary_craft.photon_field": "Photon Field",
-      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "block.elementary_craft.neutrino": "Neutrino",
       "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",

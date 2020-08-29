@@ -88,11 +88,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "BlockAgeIsZero"
-    },
     "onTickUpdate": {
-      "name": "NeutronUpdateTick"
+      "name": "NeutronDecay"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

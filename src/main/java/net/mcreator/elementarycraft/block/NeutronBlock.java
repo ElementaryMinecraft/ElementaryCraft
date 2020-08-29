@@ -46,8 +46,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.NeutronUpdateTickProcedure;
-import net.mcreator.elementarycraft.procedures.BlockAgeIsZeroProcedure;
+import net.mcreator.elementarycraft.procedures.NeutronDecayProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -115,14 +114,6 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				BlockAgeIsZeroProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override
@@ -137,7 +128,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				NeutronUpdateTickProcedure.executeProcedure($_dependencies);
+				NeutronDecayProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
