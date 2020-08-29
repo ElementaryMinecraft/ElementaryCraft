@@ -537,6 +537,177 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "pion_nul_from_up"
+    },
+    {
+      "name": "TagUpQuarks",
+      "type": "tag",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_up_quarks"
+    },
+    {
+      "name": "TagDownQuarks",
+      "type": "tag",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_down_quarks"
+    },
+    {
+      "name": "TagAntiUpQuarks",
+      "type": "tag",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_anti_up_quarks"
+    },
+    {
+      "name": "TagAntiDownQuarks",
+      "type": "tag",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_anti_down_quarks"
+    },
+    {
+      "name": "TagGreenDyes",
+      "type": "tag",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_green_dyes"
+    },
+    {
+      "name": "TagRedDyes",
+      "type": "tag",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_red_dyes"
+    },
+    {
+      "name": "TagBlueDyes",
+      "type": "tag",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_blue_dyes"
+    },
+    {
+      "name": "DyeUpQuarkBlue",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_blue"
+    },
+    {
+      "name": "DyeDownQuarkBlue",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_blue"
+    },
+    {
+      "name": "DyeAntiUpQuarkBlue",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_blue"
+    },
+    {
+      "name": "DyeAntiDownQuarkBlue",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_blue"
+    },
+    {
+      "name": "DyeUpQuarkGreen",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_green"
+    },
+    {
+      "name": "DyeDownQuarkGreen",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_green"
+    },
+    {
+      "name": "DyeAntiUpQuarkGreen",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_green"
+    },
+    {
+      "name": "DyeAntiDownQuarkGreen",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_green"
+    },
+    {
+      "name": "DyeUpQuarkRed",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_red"
+    },
+    {
+      "name": "DyeDownQuarkRed",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_red"
+    },
+    {
+      "name": "DyeAntiUpQuarkRed",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_red"
+    },
+    {
+      "name": "DyeAntiDownQuarkRed",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_red"
     }
   ],
   "variable_elements": [],

@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.DYE#1"
+      },
+      {
+        "value": "Items.DYE#6"
+      },
+      {
+        "value": "Items.DYE#9"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "tag_red_dyes",
+    "namespace": "minecraft"
+  }
+}
