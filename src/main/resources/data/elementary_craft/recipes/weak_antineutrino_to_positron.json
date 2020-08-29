@@ -1,0 +1,19 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01"
+  ],
+  "key": {
+    "0": {
+      "item": "elementary_craft:antineutrino"
+    },
+    "1": {
+      "item": "elementary_craft:weak_boson"
+    }
+  },
+  "result": {
+    "item": "elementary_craft:positron",
+    "count": 1
+  }
+}

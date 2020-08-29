@@ -46,8 +46,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.PionNulDecayProcedure;
-import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
+import net.mcreator.elementarycraft.procedures.WeakBosonDecayProcedure;
+import net.mcreator.elementarycraft.itemgroup.QuantumfieldItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import javax.annotation.Nullable;
@@ -60,26 +60,26 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement {
-	@ObjectHolder("elementary_craft:pion_nul_from_down")
+public class WeakBosonBlock extends ElementaryCraftModElements.ModElement {
+	@ObjectHolder("elementary_craft:weak_boson")
 	public static final Block block = null;
-	@ObjectHolder("elementary_craft:pion_nul_from_down")
+	@ObjectHolder("elementary_craft:weak_boson")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public PionNulFromDownBlock(ElementaryCraftModElements instance) {
-		super(instance, 25);
+	public WeakBosonBlock(ElementaryCraftModElements instance) {
+		super(instance, 48);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(QuantumfieldItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("pion_nul_from_down"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("weak_boson"));
 	}
 
 	@Override
@@ -89,14 +89,8 @@ public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement 
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
-					.notSolid());
-			setRegistryName("pion_nul_from_down");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement());
+			setRegistryName("weak_boson");
 		}
 
 		@Override
@@ -128,7 +122,7 @@ public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement 
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PionNulDecayProcedure.executeProcedure($_dependencies);
+				WeakBosonDecayProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
@@ -237,7 +231,7 @@ public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement 
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("pion_nul_from_down");
+			return new StringTextComponent("weak_boson");
 		}
 
 		@Override
@@ -252,7 +246,7 @@ public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement 
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Pion Nul From Down");
+			return new StringTextComponent("Weak Boson");
 		}
 
 		@Override

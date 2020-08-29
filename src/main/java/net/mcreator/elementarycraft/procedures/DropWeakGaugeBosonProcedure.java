@@ -10,8 +10,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
 
-import net.mcreator.elementarycraft.item.WeakGaugeBosonItem;
 import net.mcreator.elementarycraft.block.WeakGaugeFieldBlock;
+import net.mcreator.elementarycraft.block.WeakBosonBlock;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Map;
@@ -58,7 +58,7 @@ public class DropWeakGaugeBosonProcedure extends ElementaryCraftModElements.ModE
 				}
 			} else {
 				if (!world.getWorld().isRemote) {
-					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakGaugeBosonItem.block, (int) (1)));
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakBosonBlock.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.addEntity(entityToSpawn);
 				}

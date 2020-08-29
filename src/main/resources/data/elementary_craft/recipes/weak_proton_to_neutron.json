@@ -1,0 +1,16 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:proton"
+    },
+    {
+      "item": "elementary_craft:weak_boson"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:neutron",
+    "count": 1
+  }
+}
