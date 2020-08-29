@@ -46,8 +46,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.PionPlusBlockAddedProcedure;
 import net.mcreator.elementarycraft.procedures.PionNulFromDownUpdateTickProcedure;
+import net.mcreator.elementarycraft.procedures.BlockAgeIsZeroProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -121,7 +121,7 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PionPlusBlockAddedProcedure.executeProcedure($_dependencies);
+				BlockAgeIsZeroProcedure.executeProcedure($_dependencies);
 			}
 		}
 

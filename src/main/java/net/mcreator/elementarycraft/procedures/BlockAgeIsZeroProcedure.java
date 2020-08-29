@@ -10,26 +10,26 @@ import net.mcreator.elementarycraft.ElementaryCraftModElements;
 import java.util.Map;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class WeakGaugeBosonBlockAddedProcedure extends ElementaryCraftModElements.ModElement {
-	public WeakGaugeBosonBlockAddedProcedure(ElementaryCraftModElements instance) {
-		super(instance, 46);
+public class BlockAgeIsZeroProcedure extends ElementaryCraftModElements.ModElement {
+	public BlockAgeIsZeroProcedure(ElementaryCraftModElements instance) {
+		super(instance, 54);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure WeakGaugeBosonBlockAdded!");
+			System.err.println("Failed to load dependency x for procedure BlockAgeIsZero!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure WeakGaugeBosonBlockAdded!");
+			System.err.println("Failed to load dependency y for procedure BlockAgeIsZero!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure WeakGaugeBosonBlockAdded!");
+			System.err.println("Failed to load dependency z for procedure BlockAgeIsZero!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure WeakGaugeBosonBlockAdded!");
+			System.err.println("Failed to load dependency world for procedure BlockAgeIsZero!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

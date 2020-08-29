@@ -47,7 +47,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.WeakBosonUpdateTickProcedure;
-import net.mcreator.elementarycraft.procedures.WeakBosonBlockAddedProcedure;
+import net.mcreator.elementarycraft.procedures.BlockAgeIsZeroProcedure;
 import net.mcreator.elementarycraft.itemgroup.QuantumfieldItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -115,7 +115,7 @@ public class WeakBosonBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				WeakBosonBlockAddedProcedure.executeProcedure($_dependencies);
+				BlockAgeIsZeroProcedure.executeProcedure($_dependencies);
 			}
 		}
 

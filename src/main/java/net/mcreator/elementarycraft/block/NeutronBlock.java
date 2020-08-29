@@ -47,7 +47,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.NeutronUpdateTickProcedure;
-import net.mcreator.elementarycraft.procedures.NeutronBlockAddedProcedure;
+import net.mcreator.elementarycraft.procedures.BlockAgeIsZeroProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -121,7 +121,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				NeutronBlockAddedProcedure.executeProcedure($_dependencies);
+				BlockAgeIsZeroProcedure.executeProcedure($_dependencies);
 			}
 		}
 

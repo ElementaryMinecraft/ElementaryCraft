@@ -89,7 +89,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "NeutronBlockAdded"
+      "name": "BlockAgeIsZero"
     },
     "onTickUpdate": {
       "name": "NeutronUpdateTick"
