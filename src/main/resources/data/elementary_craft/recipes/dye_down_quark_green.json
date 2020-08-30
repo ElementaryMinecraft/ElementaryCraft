@@ -7,10 +7,31 @@
     },
     {
       "tag": "tag_green_dyes"
+    },
+    {
+      "tag": "tag_down_quarks"
+    },
+    {
+      "tag": "tag_down_quarks"
+    },
+    {
+      "tag": "tag_down_quarks"
+    },
+    {
+      "tag": "tag_down_quarks"
+    },
+    {
+      "tag": "tag_down_quarks"
+    },
+    {
+      "tag": "tag_down_quarks"
+    },
+    {
+      "tag": "tag_down_quarks"
     }
   ],
   "result": {
     "item": "elementary_craft:down_quark_green",
-    "count": 1
+    "count": 8
   }
 }

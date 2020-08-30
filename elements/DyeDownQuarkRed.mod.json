@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 1,
+    "recipeRetstackSize": 8,
     "group": "",
     "recipeShapeless": true,
     "recipeSlots": [
@@ -16,25 +16,25 @@
         "value": "TAG:tag_red_dyes"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       },
       {
-        "value": ""
+        "value": "TAG:tag_down_quarks"
       }
     ],
     "recipeReturnStack": {

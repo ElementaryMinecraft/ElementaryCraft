@@ -7,10 +7,31 @@
     },
     {
       "tag": "tag_red_dyes"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
+    },
+    {
+      "tag": "tag_anti_up_quarks"
     }
   ],
   "result": {
     "item": "elementary_craft:anti_up_quark_red",
-    "count": 1
+    "count": 8
   }
 }
