@@ -45,14 +45,6 @@ public class PositronBlockAddedProcedure extends ElementaryCraftModElements.ModE
 				_tileEntity.getTileData().putBoolean("electronNgbr", (false));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (!world.getWorld().isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("tickCounter", 0);
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
 			$_dependencies.put("world", world);
@@ -60,6 +52,14 @@ public class PositronBlockAddedProcedure extends ElementaryCraftModElements.ModE
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
 			CheckElectronNgbrProcedure.executeProcedure($_dependencies);
+		}
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("tickCounter", 0);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }
