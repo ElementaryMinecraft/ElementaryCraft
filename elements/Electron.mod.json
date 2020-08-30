@@ -89,10 +89,13 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "CheckPositronNgbr"
+      "name": "ElectronBlockAdded"
     },
     "onNeighbourBlockChanges": {
-      "name": "ElectronAnnihilate"
+      "name": "CheckPositronNgbr"
+    },
+    "onTickUpdate": {
+      "name": "ElectronUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

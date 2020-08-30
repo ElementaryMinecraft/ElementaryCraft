@@ -13,7 +13,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class CheckElectronNgbrProcedure extends ElementaryCraftModElements.ModElement {
 	public CheckElectronNgbrProcedure(ElementaryCraftModElements instance) {
-		super(instance, 62);
+		super(instance, 64);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -37,13 +37,17 @@ public class CheckElectronNgbrProcedure extends ElementaryCraftModElements.ModEl
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (!world.getWorld().isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putBoolean("electronNgbr", (false));
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+		if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())
+				|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ElectronBlock.block.getDefaultState()
+						.getBlock()))) {
+			if (!world.getWorld().isRemote) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putBoolean("electronNgbr", (true));
+				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
 		}
 		if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())
 				|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
@@ -59,18 +63,6 @@ public class CheckElectronNgbrProcedure extends ElementaryCraftModElements.ModEl
 		} else if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
 				.getBlock())
 				|| ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock()))) {
-			if (!world.getWorld().isRemote) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putBoolean("electronNgbr", (true));
-				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())
-				|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ElectronBlock.block.getDefaultState()
 						.getBlock()))) {
 			if (!world.getWorld().isRemote) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);

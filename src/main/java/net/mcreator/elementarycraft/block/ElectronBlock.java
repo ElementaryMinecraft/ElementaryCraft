@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -45,7 +46,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.ElectronAnnihilateProcedure;
+import net.mcreator.elementarycraft.procedures.ElectronUpdateTickProcedure;
+import net.mcreator.elementarycraft.procedures.ElectronBlockAddedProcedure;
 import net.mcreator.elementarycraft.procedures.CheckPositronNgbrProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
@@ -53,6 +55,7 @@ import net.mcreator.elementarycraft.ElementaryCraftModElements;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -106,13 +109,14 @@ public class ElectronBlock extends ElementaryCraftModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				CheckPositronNgbrProcedure.executeProcedure($_dependencies);
+				ElectronBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -131,8 +135,25 @@ public class ElectronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ElectronAnnihilateProcedure.executeProcedure($_dependencies);
+				CheckPositronNgbrProcedure.executeProcedure($_dependencies);
 			}
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ElectronUpdateTickProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
 
 		@Override
