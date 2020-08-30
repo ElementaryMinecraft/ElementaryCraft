@@ -1,9 +1,9 @@
 {
   "item.elementary_craft.gluon": "Gluon",
-  "item.elementary_craft.positron": "Positron",
   "block.elementary_craft.photon_field": "Photon Field",
-  "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+  "item.elementary_craft.positron": "Positron",
   "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+  "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
   "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
   "item.elementary_craft.electron": "Electron",
   "item.elementary_craft.pion_minus": "Pion Minus",
