@@ -1,0 +1,16 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:neutrino"
+    },
+    {
+      "item": "elementary_craft:unknown_element"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:electron",
+    "count": 1
+  }
+}

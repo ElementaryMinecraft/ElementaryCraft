@@ -1,0 +1,16 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:anti_down_quark_blue"
+    },
+    {
+      "item": "elementary_craft:unknown_element"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:anti_up_quark_blue",
+    "count": 1
+  }
+}
