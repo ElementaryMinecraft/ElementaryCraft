@@ -48,6 +48,14 @@ public class CheckElectronNgbrProcedure extends ElementaryCraftModElements.ModEl
 					_tileEntity.getTileData().putBoolean("electronNgbr", (true));
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			if (!world.getWorld().isRemote) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("tickCounter", 1);
+				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
 		}
 		if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())
 				|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
@@ -60,6 +68,14 @@ public class CheckElectronNgbrProcedure extends ElementaryCraftModElements.ModEl
 					_tileEntity.getTileData().putBoolean("electronNgbr", (true));
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			if (!world.getWorld().isRemote) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("tickCounter", 1);
+				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
 		} else if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
 				.getBlock())
 				|| ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
@@ -70,6 +86,14 @@ public class CheckElectronNgbrProcedure extends ElementaryCraftModElements.ModEl
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putBoolean("electronNgbr", (true));
+				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
+			if (!world.getWorld().isRemote) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("tickCounter", 1);
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
