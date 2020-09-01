@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elementary_craft:items/antineutrino"
+    "layer0": "elementary_craft:items/anti-neutrino"
   }
 }
