@@ -296,6 +296,15 @@
       "registry_name": "up_quark_red"
     },
     {
+      "name": "WeakGaugeBoson",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_gauge_boson"
+    },
+    {
       "name": "WeakGaugeField",
       "type": "block",
       "sortid": 2,
@@ -530,58 +539,175 @@
       "registry_name": "pion_nul_from_up"
     },
     {
-      "name": "WeakBlueDownToUpQuark",
-      "type": "recipe",
-      "sortid": 27,
+      "name": "TagRedDyes",
+      "type": "tag",
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_blue_down_to_up_quark"
+      "registry_name": "tag_red_dyes"
     },
     {
-      "name": "WeakRedDownToUpQuark",
+      "name": "DyeDownQuarkBlue",
       "type": "recipe",
-      "sortid": 28,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_red_down_to_up_quark"
+      "registry_name": "dye_down_quark_blue"
     },
     {
-      "name": "WeakGreenDownToUpQuark",
+      "name": "DyeDownQuarkRed",
       "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_red"
+    },
+    {
+      "name": "TagDownQuarks",
+      "type": "tag",
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_green_down_to_up_quark"
+      "registry_name": "tag_down_quarks"
     },
     {
-      "name": "WeakBlueUpToDownQuark",
-      "type": "recipe",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_blue_up_to_down_quark"
-    },
-    {
-      "name": "WeakRedUpToDownQuark",
-      "type": "recipe",
+      "name": "TagAntiDownQuarks",
+      "type": "tag",
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_red_up_to_down_quark"
+      "registry_name": "tag_anti_down_quarks"
     },
     {
-      "name": "WeakGreenUpToDownQuark",
+      "name": "DyeAntiDownQuarkRed",
       "type": "recipe",
-      "sortid": 32,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_green_up_to_down_quark"
+      "registry_name": "dye_anti_down_quark_red"
+    },
+    {
+      "name": "DyeAntiDownQuarkBlue",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_blue"
+    },
+    {
+      "name": "TagUpQuarks",
+      "type": "tag",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_up_quarks"
+    },
+    {
+      "name": "DyeUpQuarkRed",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_red"
+    },
+    {
+      "name": "TagGreenDyes",
+      "type": "tag",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_green_dyes"
+    },
+    {
+      "name": "DyeUpQuarkGreen",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_green"
+    },
+    {
+      "name": "DyeUpQuarkBlue",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_blue"
+    },
+    {
+      "name": "DyeAntiUpQuarkGreen",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_green"
+    },
+    {
+      "name": "DyeAntiDownQuarkGreen",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_green"
+    },
+    {
+      "name": "TagAntiUpQuarks",
+      "type": "tag",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_anti_up_quarks"
+    },
+    {
+      "name": "TagBlueDyes",
+      "type": "tag",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_blue_dyes"
+    },
+    {
+      "name": "DyeDownQuarkGreen",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_green"
+    },
+    {
+      "name": "DyeAntiUpQuarkRed",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_red"
+    },
+    {
+      "name": "DyeAntiUpQuarkBlue",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_blue"
     },
     {
       "name": "WeakProtonToNeutron",
@@ -593,31 +719,13 @@
       "registry_name": "weak_proton_to_neutron"
     },
     {
-      "name": "WeakNeutronToProton",
+      "name": "WeakAntiRedUpToDownQuark",
       "type": "recipe",
-      "sortid": 34,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_neutron_to_proton"
-    },
-    {
-      "name": "WeakAntiBlueDownToUp",
-      "type": "recipe",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_anti_blue_down_to_up"
-    },
-    {
-      "name": "WeakAntiBlueUpToDown",
-      "type": "recipe",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_anti_blue_up_to_down"
+      "registry_name": "weak_anti_red_up_to_down_quark"
     },
     {
       "name": "WeakAntiRedDownToUp",
@@ -629,49 +737,22 @@
       "registry_name": "weak_anti_red_down_to_up"
     },
     {
-      "name": "WeakAntiRedUpToDownQuark",
+      "name": "WeakAntineutrinoToPositron",
       "type": "recipe",
-      "sortid": 38,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_anti_red_up_to_down_quark"
+      "registry_name": "weak_antineutrino_to_positron"
     },
     {
-      "name": "WeakAntiGreenDownToUpQuark",
+      "name": "WeakGreenDownToUpQuark",
       "type": "recipe",
-      "sortid": 39,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "weak_anti_green_down_to_up_quark"
-    },
-    {
-      "name": "WeakAntiGreenUpToDownQuark",
-      "type": "recipe",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_anti_green_up_to_down_quark"
-    },
-    {
-      "name": "WeakNeutrinoToElectron",
-      "type": "recipe",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_neutrino_to_electron"
-    },
-    {
-      "name": "WeakElectronToNeutrino",
-      "type": "recipe",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_electron_to_neutrino"
+      "registry_name": "weak_green_down_to_up_quark"
     },
     {
       "name": "WeakPositronToAntineutrino",
@@ -683,89 +764,13 @@
       "registry_name": "weak_positron_to_antineutrino"
     },
     {
-      "name": "WeakAntineutrinoToPositron",
-      "type": "recipe",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_antineutrino_to_positron"
-    },
-    {
-      "name": "WeakBoson",
-      "type": "block",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_boson"
-    },
-    {
-      "name": "NeutronDecay",
+      "name": "ElectronBlockAdded",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "neutron_decay",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "WeakBosonDecay",
-      "type": "procedure",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "weak_boson_decay",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ChargedPionDecay",
-      "type": "procedure",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "charged_pion_decay",
+      "registry_name": "electron_block_added",
       "metadata": {
         "dependencies": [
           {
@@ -815,6 +820,355 @@
           }
         ]
       }
+    },
+    {
+      "name": "WeakNeutronToProton",
+      "type": "recipe",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_neutron_to_proton"
+    },
+    {
+      "name": "ChargedPionDecay",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_pion_decay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheckElectronNgbr",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check_electron_ngbr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheckPositronNgbr",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check_positron_ngbr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakAntiBlueUpToDown",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_anti_blue_up_to_down"
+    },
+    {
+      "name": "PositronBlockAdded",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ElectronUpdateTick",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "electron_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakNeutrinoToElectron",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_neutrino_to_electron"
+    },
+    {
+      "name": "WeakBlueUpToDownQuark",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_blue_up_to_down_quark"
+    },
+    {
+      "name": "WeakAntiBlueDownToUp",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_anti_blue_down_to_up"
+    },
+    {
+      "name": "WeakBlueDownToUpQuark",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_blue_down_to_up_quark"
+    },
+    {
+      "name": "WeakElectronToNeutrino",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_electron_to_neutrino"
+    },
+    {
+      "name": "WeakBoson",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_boson"
+    },
+    {
+      "name": "WeakAntiGreenUpToDownQuark",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_anti_green_up_to_down_quark"
+    },
+    {
+      "name": "PositronUpdateTick",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "positron_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakRedDownToUpQuark",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_red_down_to_up_quark"
+    },
+    {
+      "name": "NeutronDecay",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron_decay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakGreenUpToDownQuark",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_green_up_to_down_quark"
+    },
+    {
+      "name": "WeakRedUpToDownQuark",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_red_up_to_down_quark"
+    },
+    {
+      "name": "WeakBosonDecay",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_boson_decay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WeakAntiGreenDownToUpQuark",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weak_anti_green_down_to_up_quark"
     }
   ],
   "variable_elements": [],
@@ -840,7 +1194,6 @@
       "block.elementary_craft.gluon_field": "Gluon Field",
       "itemGroup.tabquantumfield": "Quantumfield",
       "itemGroup.tabelementary_particle": "Elementary Particle",
-      "block.elementary_craft.weak_boson": "Weak Boson",
       "block.elementary_craft.up_quark_field": "Up Quark Field",
       "block.elementary_craft.electron_field": "Electron Field",
       "item.elementary_craft.up_quark_red": "Upquark (Red)",
