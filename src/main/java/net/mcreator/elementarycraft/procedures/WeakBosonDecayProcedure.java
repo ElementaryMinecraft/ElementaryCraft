@@ -1,11 +1,21 @@
 package net.mcreator.elementarycraft.procedures;
 
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.elementarycraft.block.ElectronBlock;
+import net.mcreator.elementarycraft.block.AntineutrinoBlock;
+import net.mcreator.elementarycraft.ElementaryCraftModElements;
+
+import java.util.Map;
+
 @ElementaryCraftModElements.ModElement.Tag
 public class WeakBosonDecayProcedure extends ElementaryCraftModElements.ModElement {
-
 	public WeakBosonDecayProcedure(ElementaryCraftModElements instance) {
 		super(instance, 56);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -25,12 +35,10 @@ public class WeakBosonDecayProcedure extends ElementaryCraftModElements.ModEleme
 			System.err.println("Failed to load dependency world for procedure WeakBosonDecay!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((Math.random() < 0.066967)) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 			if (!world.getWorld().isRemote) {
@@ -44,7 +52,5 @@ public class WeakBosonDecayProcedure extends ElementaryCraftModElements.ModEleme
 				world.addEntity(entityToSpawn);
 			}
 		}
-
 	}
-
 }

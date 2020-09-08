@@ -1,20 +1,72 @@
 
 package net.mcreator.elementarycraft.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.Direction;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.LockableLootTileEntity;
+import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.ChestContainer;
+import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.mcreator.elementarycraft.procedures.PionNulDecayProcedure;
+import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
+import net.mcreator.elementarycraft.ElementaryCraftModElements;
+
+import javax.annotation.Nullable;
+
+import java.util.stream.IntStream;
+import java.util.Random;
+import java.util.Map;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Collections;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
-
 	@ObjectHolder("elementary_craft:pion_nul_from_up")
 	public static final Block block = null;
-
 	@ObjectHolder("elementary_craft:pion_nul_from_up")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-
 	public PionNulFromUpBlock(ElementaryCraftModElements instance) {
 		super(instance, 26);
-
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -35,15 +87,10 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getTranslucent());
 	}
-
 	public static class CustomBlock extends Block {
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
-							.notSolid());
-
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
+					.notSolid());
 			setRegistryName("pion_nul_from_up");
 		}
 
@@ -54,7 +101,6 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -78,12 +124,10 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				PionNulDecayProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
@@ -120,7 +164,6 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
 					world.updateComparatorOutputLevel(pos, this);
 				}
-
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
 		}
@@ -138,13 +181,10 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 			else
 				return 0;
 		}
-
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
-
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -152,23 +192,18 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 		@Override
 		public void read(CompoundNBT compound) {
 			super.read(compound);
-
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
-
 			ItemStackHelper.loadAllItems(compound, this.stacks);
-
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
-
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
-
 			return compound;
 		}
 
@@ -249,14 +284,11 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
-
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
-
 			return super.getCapability(capability, facing);
 		}
 
@@ -266,7 +298,5 @@ public class PionNulFromUpBlock extends ElementaryCraftModElements.ModElement {
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
-
 	}
-
 }
