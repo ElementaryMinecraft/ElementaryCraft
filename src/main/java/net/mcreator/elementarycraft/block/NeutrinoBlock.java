@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.block;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -64,6 +63,7 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
+
 @ElementaryCraftModElements.ModElement.Tag
 public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:neutrino")
@@ -81,8 +81,8 @@ public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 		elements.items.add(
 				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-
-	@SubscribeEvent
+  
+  	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
 		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("neutrino"));
 	}
@@ -116,8 +116,7 @@ public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
-
-		@Override
+    		@Override
 		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
 			super.onBlockAdded(state, world, pos, oldState, moving);
 			int x = pos.getX();

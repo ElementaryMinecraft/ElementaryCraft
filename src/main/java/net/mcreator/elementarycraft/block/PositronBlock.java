@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.block;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -81,8 +80,8 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 		elements.items.add(
 				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-
-	@SubscribeEvent
+  
+  	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
 		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("positron"));
 	}
@@ -92,10 +91,15 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getTranslucent());
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
-					.notSolid());
+			super(
+
+					Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
+							.notSolid());
+
 			setRegistryName("positron");
 		}
 
@@ -111,12 +115,12 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
-
 		@Override
 		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
 			super.onBlockAdded(state, world, pos, oldState, moving);
@@ -335,5 +339,7 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
+
 	}
+
 }

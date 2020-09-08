@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_blue_dyes"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      },
+      {
+        "value": "TAG:tag_up_quarks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:UpQuarkBlue"
+    },
+    "name": "dye_up_quark_blue",
+    "namespace": "mod"
+  }
+}

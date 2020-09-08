@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.block;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -61,17 +60,25 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
+
 @ElementaryCraftModElements.ModElement.Tag
 public class ElectronBlock extends ElementaryCraftModElements.ModElement {
+
 	@ObjectHolder("elementary_craft:electron")
 	public static final Block block = null;
 	@ObjectHolder("elementary_craft:electron")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ElectronBlock(ElementaryCraftModElements instance) {
 		super(instance, 17);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+    FMLJavaModLoadingContext.get().getModEventBus().register(this);
+
 	}
 
+	@SubscribeEvent
+	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("electron"));
+	}
+  
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
@@ -79,24 +86,26 @@ public class ElectronBlock extends ElementaryCraftModElements.ModElement {
 				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
-	@SubscribeEvent
-	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("electron"));
-	}
-
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getTranslucent());
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement());
+			super(
+
+					Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0)
+							.doesNotBlockMovement());
+
 			setRegistryName("electron");
 		}
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -321,5 +330,7 @@ public class ElectronBlock extends ElementaryCraftModElements.ModElement {
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
+	
 	}
+
 }
