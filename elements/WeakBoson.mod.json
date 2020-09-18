@@ -28,7 +28,7 @@
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "CUSTOM:Quantumfield"
+      "value": "CUSTOM:ElementaryParticle"
     },
     "destroyTool": "Not specified",
     "customDrop": {
