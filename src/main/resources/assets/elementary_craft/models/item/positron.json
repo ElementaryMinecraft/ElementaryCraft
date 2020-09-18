@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elementary_craft:items/positron"
+    "layer0": "elementary_craft:items/positrron_new"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "elementary_craft:items/weakgaugebosontexture"
+    "layer0": "elementary_craft:items/w-boson_feynman"
   }
 }

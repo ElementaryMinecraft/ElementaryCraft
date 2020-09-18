@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "gluon_item_placeholder",
+    "texture": "gluon",
     "customModelName": "Normal",
     "name": "Gluon",
     "creativeTab": {

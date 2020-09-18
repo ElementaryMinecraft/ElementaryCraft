@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elementary_craft:blocks/weakgaugefieldtexture",
-    "up": "elementary_craft:blocks/weakgaugefieldtexture",
-    "north": "elementary_craft:blocks/weakgaugefieldtexture",
-    "east": "elementary_craft:blocks/weakgaugefieldtexture",
-    "south": "elementary_craft:blocks/weakgaugefieldtexture",
-    "west": "elementary_craft:blocks/weakgaugefieldtexture",
-    "particle": "elementary_craft:blocks/weakgaugefieldtexture"
+    "down": "elementary_craft:blocks/wboson_field_boven",
+    "up": "elementary_craft:blocks/wboson_field_boven",
+    "north": "elementary_craft:blocks/wboson_field_feynman",
+    "east": "elementary_craft:blocks/wboson_field_feynman",
+    "south": "elementary_craft:blocks/wboson_field_feynman",
+    "west": "elementary_craft:blocks/wboson_field_feynman",
+    "particle": "elementary_craft:blocks/wboson_field_boven"
   }
 }

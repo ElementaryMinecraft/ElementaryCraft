@@ -5,14 +5,14 @@
     "texture": "empty",
     "textureTop": "empty",
     "textureLeft": "empty",
-    "textureFront": "electron",
+    "textureFront": "electron_new",
     "textureRight": "empty",
-    "textureBack": "electron",
+    "textureBack": "electron_new",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "electron",
+    "itemTexture": "electron_new",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
@@ -71,10 +71,10 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "inventorySize": 0,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
@@ -88,6 +88,15 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "ElectronBlockAdded"
+    },
+    "onNeighbourBlockChanges": {
+      "name": "CheckPositronNgbr"
+    },
+    "onTickUpdate": {
+      "name": "ElectronUpdateTick"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

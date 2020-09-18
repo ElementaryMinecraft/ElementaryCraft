@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "greenantiupquark",
+    "texture": "quark_up_antigreen",
     "customModelName": "Normal",
     "name": "Anti Upquark (Green)",
     "creativeTab": {

@@ -3,9 +3,9 @@
   "textures": {
     "down": "elementary_craft:blocks/empty",
     "up": "elementary_craft:blocks/empty",
-    "north": "elementary_craft:blocks/electron",
+    "north": "elementary_craft:blocks/electron_new",
     "east": "elementary_craft:blocks/empty",
-    "south": "elementary_craft:blocks/electron",
+    "south": "elementary_craft:blocks/electron_new",
     "west": "elementary_craft:blocks/empty",
     "particle": "elementary_craft:blocks/empty"
   }

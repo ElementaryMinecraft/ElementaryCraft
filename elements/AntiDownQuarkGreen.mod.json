@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "greenantidownquark",
+    "texture": "quark_down_antigreen",
     "customModelName": "Normal",
     "name": "Anti Downquark (Green)",
     "creativeTab": {

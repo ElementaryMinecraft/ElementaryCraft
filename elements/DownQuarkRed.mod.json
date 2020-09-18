@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "reddownquark",
+    "texture": "quark_down_red",
     "customModelName": "Normal",
     "name": "Downquark (Red)",
     "creativeTab": {

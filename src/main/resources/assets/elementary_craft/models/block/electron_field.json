@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elementary_craft:blocks/elektron16",
-    "up": "elementary_craft:blocks/elektron16",
-    "north": "elementary_craft:blocks/elektron2345",
-    "east": "elementary_craft:blocks/elektron2345",
-    "south": "elementary_craft:blocks/elektron2345",
-    "west": "elementary_craft:blocks/elektron2345",
-    "particle": "elementary_craft:blocks/elektron16"
+    "down": "elementary_craft:blocks/electronfield_o",
+    "up": "elementary_craft:blocks/electronfield_b",
+    "north": "elementary_craft:blocks/electronfield_l",
+    "east": "elementary_craft:blocks/electronfield_a",
+    "south": "elementary_craft:blocks/electronfield_r",
+    "west": "elementary_craft:blocks/electronfield_v",
+    "particle": "elementary_craft:blocks/electronfield_o"
   }
 }
