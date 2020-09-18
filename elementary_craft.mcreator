@@ -530,6 +530,177 @@
       "registry_name": "pion_nul_from_up"
     },
     {
+      "name": "TagRedDyes",
+      "type": "tag",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_red_dyes"
+    },
+    {
+      "name": "DyeDownQuarkBlue",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_blue"
+    },
+    {
+      "name": "DyeDownQuarkRed",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_red"
+    },
+    {
+      "name": "TagDownQuarks",
+      "type": "tag",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_down_quarks"
+    },
+    {
+      "name": "TagAntiDownQuarks",
+      "type": "tag",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_anti_down_quarks"
+    },
+    {
+      "name": "DyeAntiDownQuarkRed",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_red"
+    },
+    {
+      "name": "DyeAntiDownQuarkBlue",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_blue"
+    },
+    {
+      "name": "TagUpQuarks",
+      "type": "tag",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_up_quarks"
+    },
+    {
+      "name": "DyeUpQuarkRed",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_red"
+    },
+    {
+      "name": "TagGreenDyes",
+      "type": "tag",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_green_dyes"
+    },
+    {
+      "name": "DyeUpQuarkGreen",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_green"
+    },
+    {
+      "name": "DyeUpQuarkBlue",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_up_quark_blue"
+    },
+    {
+      "name": "DyeAntiUpQuarkGreen",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_green"
+    },
+    {
+      "name": "DyeAntiDownQuarkGreen",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_green"
+    },
+    {
+      "name": "TagAntiUpQuarks",
+      "type": "tag",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_anti_up_quarks"
+    },
+    {
+      "name": "TagBlueDyes",
+      "type": "tag",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tag_blue_dyes"
+    },
+    {
+      "name": "DyeDownQuarkGreen",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_green"
+    },
+    {
+      "name": "DyeAntiUpQuarkRed",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_red"
+    },
+    {
+      "name": "DyeAntiUpQuarkBlue",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_up_quark_blue"
+    },
+    {
       "name": "WeakBlueDownToUpQuark",
       "type": "recipe",
       "sortid": 27,
@@ -1170,10 +1341,10 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
-      "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
-      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "block.elementary_craft.photon_field": "Photon Field",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
