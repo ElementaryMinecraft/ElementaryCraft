@@ -1,40 +1,35 @@
 {
   "group": "elementary_craft",
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "012",
-    "345",
-    "678"
-  ],
-  "key": {
-    "0": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "elementary_craft:gluon"
     },
-    "1": {
+    {
       "item": "elementary_craft:gluon"
     },
-    "2": {
+    {
       "item": "elementary_craft:gluon"
     },
-    "3": {
+    {
       "item": "elementary_craft:gluon"
     },
-    "4": {
+    {
       "item": "elementary_craft:gluon"
     },
-    "5": {
+    {
       "item": "elementary_craft:gluon"
     },
-    "6": {
+    {
       "item": "elementary_craft:gluon"
     },
-    "7": {
+    {
       "item": "elementary_craft:up_quark_blue"
     },
-    "8": {
+    {
       "item": "elementary_craft:anti_up_quark_blue"
     }
-  },
+  ],
   "result": {
     "item": "elementary_craft:pion_nul_from_up",
     "count": 1
