@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:Gluon"
+      },
+      {
+        "value": "CUSTOM:UpQuarkRed"
+      },
+      {
+        "value": "CUSTOM:AntiUpQuarkRed"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:PionNulFromUp"
+    },
+    "name": "pion_nul_from_up_craft_red",
+    "namespace": "mod"
+  }
+}

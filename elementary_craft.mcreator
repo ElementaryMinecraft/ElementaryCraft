@@ -1426,40 +1426,13 @@
       "registry_name": "anti_down_quark_tag"
     },
     {
-      "name": "PionPlusCraft",
+      "name": "PionPlusCraftRed",
       "type": "recipe",
-      "sortid": 69,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "pion_plus_craft"
-    },
-    {
-      "name": "PionMinusCraft",
-      "type": "recipe",
-      "sortid": 70,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_minus_craft"
-    },
-    {
-      "name": "PionNulFromDownCraft",
-      "type": "recipe",
-      "sortid": 71,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_nul_from_down_craft"
-    },
-    {
-      "name": "PionNulFromUpCraft",
-      "type": "recipe",
-      "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pion_nul_from_up_craft"
+      "registry_name": "pion_plus_craft_red"
     }
   ],
   "variable_elements": [],

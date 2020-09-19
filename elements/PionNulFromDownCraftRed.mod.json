@@ -31,16 +31,16 @@
         "value": "CUSTOM:Gluon"
       },
       {
-        "value": "TAG:elementarycraft:downquarktag"
+        "value": "CUSTOM:DownQuarkRed"
       },
       {
-        "value": "TAG:elementarycraft:antiupquarktag"
+        "value": "CUSTOM:AntiDownQuarkRed"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:PionMinus"
+      "value": "CUSTOM:PionNulFromDown"
     },
-    "name": "pion_minus_craft",
+    "name": "pion_nul_from_down_craft_red",
     "namespace": "mod"
   }
 }

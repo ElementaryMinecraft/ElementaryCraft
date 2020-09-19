@@ -29,14 +29,14 @@
       "item": "elementary_craft:gluon"
     },
     "7": {
-      "tag": "elementarycraft:upquarktag"
+      "item": "elementary_craft:down_quark_green"
     },
     "8": {
-      "tag": "elementarycraft:antidownquarktag"
+      "item": "elementary_craft:anti_up_quark_green"
     }
   },
   "result": {
-    "item": "elementary_craft:pion_plus",
+    "item": "elementary_craft:pion_minus",
     "count": 1
   }
 }
