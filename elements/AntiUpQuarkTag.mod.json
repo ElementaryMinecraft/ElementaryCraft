@@ -1,0 +1,25 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:AntiUpQuarkGreen"
+      },
+      {
+        "value": "CUSTOM:AntiUpQuarkRed"
+      },
+      {
+        "value": "CUSTOM:AntiUpQuarkBlue"
+      },
+      {
+        "value": "CUSTOM:AntiUpQuarkBlue"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "anti_up_quark_tag",
+    "namespace": "forge"
+  }
+}

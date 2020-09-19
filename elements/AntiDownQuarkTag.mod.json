@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:AntiDownQuarkGreen"
+      },
+      {
+        "value": "CUSTOM:AntiDownQuarkBlue"
+      },
+      {
+        "value": "CUSTOM:AntiDownQuarkRed"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "anti_down_quark_tag",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:UpQuarkRed"
+      },
+      {
+        "value": "CUSTOM:UpQuarkGreen"
+      },
+      {
+        "value": "CUSTOM:UpQuarkBlue"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "up_quark_tag",
+    "namespace": "forge"
+  }
+}
