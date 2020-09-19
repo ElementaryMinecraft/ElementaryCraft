@@ -1334,6 +1334,132 @@
           }
         ]
       }
+    },
+    {
+      "name": "ProtonCraft1",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "proton_craft_1"
+    },
+    {
+      "name": "ProtonCraft2",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "proton_craft_2"
+    },
+    {
+      "name": "ProtonCraft3",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "proton_craft_3"
+    },
+    {
+      "name": "NeutronCraft1",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron_craft_1"
+    },
+    {
+      "name": "NeutronCraft2",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron_craft_2"
+    },
+    {
+      "name": "NeutronCraft3",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "neutron_craft_3"
+    },
+    {
+      "name": "UpQuarkTag",
+      "type": "tag",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "up_quark_tag"
+    },
+    {
+      "name": "DownQuarkTag",
+      "type": "tag",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "down_quark_tag"
+    },
+    {
+      "name": "AntiUpQuarkTag",
+      "type": "tag",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_up_quark_tag"
+    },
+    {
+      "name": "AntiDownQuarkTag",
+      "type": "tag",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anti_down_quark_tag"
+    },
+    {
+      "name": "PionPlusCraft",
+      "type": "recipe",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus_craft"
+    },
+    {
+      "name": "PionMinusCraft",
+      "type": "recipe",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus_craft"
+    },
+    {
+      "name": "PionNulFromDownCraft",
+      "type": "recipe",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down_craft"
+    },
+    {
+      "name": "PionNulFromUpCraft",
+      "type": "recipe",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up_craft"
     }
   ],
   "variable_elements": [],
