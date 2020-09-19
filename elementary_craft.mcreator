@@ -1433,6 +1433,105 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "pion_plus_craft_red"
+    },
+    {
+      "name": "PionPlusCraftBlue",
+      "type": "recipe",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus_craft_blue"
+    },
+    {
+      "name": "PionPlusCraftGreen",
+      "type": "recipe",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus_craft_green"
+    },
+    {
+      "name": "PionMinusCraftRed",
+      "type": "recipe",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus_craft_red"
+    },
+    {
+      "name": "PionMinusCraftBlue",
+      "type": "recipe",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus_craft_blue"
+    },
+    {
+      "name": "PionMinusCraftGreen",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus_craft_green"
+    },
+    {
+      "name": "PionNulFromUpCraftRed",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up_craft_red"
+    },
+    {
+      "name": "PionNulFromUpCraftBlue",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up_craft_blue"
+    },
+    {
+      "name": "PionNulFromUpCraftGreen",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_up_craft_green"
+    },
+    {
+      "name": "PionNulFromDownCraftRed",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down_craft_red"
+    },
+    {
+      "name": "PionNulFromDownCraftBlue",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down_craft_blue"
+    },
+    {
+      "name": "PionNulFromDownCraftGreen",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_nul_from_down_craft_green"
     }
   ],
   "variable_elements": [],
@@ -1440,10 +1539,10 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
-      "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
-      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "block.elementary_craft.photon_field": "Photon Field",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
