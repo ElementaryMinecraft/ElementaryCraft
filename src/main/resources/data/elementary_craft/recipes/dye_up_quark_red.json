@@ -1,0 +1,37 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_red_dyes"
+    },
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_up_quarks"
+    },
+    {
+      "tag": "tag_up_quarks"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:up_quark_red",
+    "count": 8
+  }
+}
