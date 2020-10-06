@@ -10,6 +10,7 @@ import net.mcreator.elementarycraft.block.WeakBosonBlock;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Map;
+import java.util.HashMap;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class ChargedPionDecayProcedure extends ElementaryCraftModElements.ModElement {
@@ -45,6 +46,14 @@ public class ChargedPionDecayProcedure extends ElementaryCraftModElements.ModEle
 				entityToSpawn.setPickupDelay(10);
 				world.addEntity(entityToSpawn);
 			}
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			ChargedUpdateTickProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

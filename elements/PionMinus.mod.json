@@ -88,8 +88,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "NegativeChargedAdd"
+    },
     "onTickUpdate": {
       "name": "ChargedPionDecay"
+    },
+    "onDestroyedByPlayer": {
+      "name": "ChargeRemove"
+    },
+    "onDestroyedByExplosion": {
+      "name": "ChargeRemove"
     },
     "onRedstoneOn": {
       "name": "PionMinecart"

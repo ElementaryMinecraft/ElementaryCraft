@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "elementary_craft:electron",
+    "elementary_craft:positron",
+    "elementary_craft:proton",
+    "elementary_craft:pion_minus",
+    "elementary_craft:pion_plus"
+  ]
+}

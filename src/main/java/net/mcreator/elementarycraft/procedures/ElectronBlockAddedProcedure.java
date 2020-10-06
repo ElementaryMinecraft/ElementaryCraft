@@ -61,5 +61,13 @@ public class ElectronBlockAddedProcedure extends ElementaryCraftModElements.ModE
 				_tileEntity.getTileData().putDouble("tickCounter", 0);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			NegativeChargedAddProcedure.executeProcedure($_dependencies);
+		}
 	}
 }

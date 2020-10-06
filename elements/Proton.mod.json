@@ -88,6 +88,18 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "PositiveChargedAdd"
+    },
+    "onTickUpdate": {
+      "name": "ChargedUpdateTick"
+    },
+    "onDestroyedByPlayer": {
+      "name": "ChargeRemove"
+    },
+    "onDestroyedByExplosion": {
+      "name": "ChargeRemove"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

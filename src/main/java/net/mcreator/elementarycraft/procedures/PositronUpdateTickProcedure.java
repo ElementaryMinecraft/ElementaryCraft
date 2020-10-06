@@ -12,6 +12,7 @@ import net.mcreator.elementarycraft.item.PhotonItem;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Map;
+import java.util.HashMap;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class PositronUpdateTickProcedure extends ElementaryCraftModElements.ModElement {
@@ -40,6 +41,14 @@ public class PositronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			ChargedUpdateTickProcedure.executeProcedure($_dependencies);
+		}
 		if ((new Object() {
 			public boolean getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);

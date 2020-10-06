@@ -97,6 +97,12 @@
     "onTickUpdate": {
       "name": "ElectronUpdateTick"
     },
+    "onDestroyedByPlayer": {
+      "name": "ChargeRemove"
+    },
+    "onDestroyedByExplosion": {
+      "name": "ChargeRemove"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
