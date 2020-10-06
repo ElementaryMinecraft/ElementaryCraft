@@ -64,7 +64,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("Ex", 0);
+				_tileEntity.getTileData().putDouble("ex", 0);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -72,7 +72,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("Ey", 0);
+				_tileEntity.getTileData().putDouble("ey", 0);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -80,10 +80,10 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("Ez", 0);
+				_tileEntity.getTileData().putDouble("ez", 0);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		ni = (double) 3;
+		ni = (double) 4;
 		iEx = (double) 0;
 		iEy = (double) 0;
 		iEz = (double) 0;
@@ -97,20 +97,24 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 						if ((BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((world.getBlockState(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))))).getBlock()))) {
 							distance = (double) Math.pow(((Math.pow((ix), 2) + Math.pow((iy), 2)) + Math.pow((iz), 2)), 0.5);
+							System.out.println((("ChargeAdd== x: ") + "" + ((new java.text.DecimalFormat("##.##").format((ix)))) + "" + (", y:") + ""
+									+ ((new java.text.DecimalFormat("##.##").format((iy)))) + "" + (", z:") + ""
+									+ ((new java.text.DecimalFormat("##.##").format((iz)))) + "" + (", d:") + ""
+									+ ((new java.text.DecimalFormat("##.##").format((distance))))));
 							dE = (double) ((kc) / Math.pow((distance), 2));
 							if (!world.getWorld().isRemote) {
 								BlockPos _bp = new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz)));
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("Ex", ((new Object() {
+									_tileEntity.getTileData().putDouble("ex", ((new Object() {
 										public double getValue(BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "Ex"))
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ex"))
 											+ (((dE) * (qc)) * ((ix) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -119,14 +123,14 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("Ey", ((new Object() {
+									_tileEntity.getTileData().putDouble("ey", ((new Object() {
 										public double getValue(BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "Ey"))
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ey"))
 											+ (((dE) * (qc)) * ((iy) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -135,17 +139,20 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("Ez", ((new Object() {
+									_tileEntity.getTileData().putDouble("ez", ((new Object() {
 										public double getValue(BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "Ez"))
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ez"))
 											+ (((dE) * (qc)) * ((iz) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
+							System.out.println((("ChargeAdd== x/d") + "" + ((new java.text.DecimalFormat("##.##").format(((ix) / (distance))))) + ""
+									+ (", y/d") + "" + ((new java.text.DecimalFormat("##.##").format(((iy) / (distance))))) + "" + (", z/d") + ""
+									+ ((new java.text.DecimalFormat("##.##").format(((iz) / (distance)))))));
 							qremote = (double) (new Object() {
 								public double getValue(BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
@@ -157,6 +164,9 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 							iEx = (double) ((iEx) - (((dE) * (qremote)) * ((ix) / (distance))));
 							iEy = (double) ((iEy) - (((dE) * (qremote)) * ((iy) / (distance))));
 							iEz = (double) ((iEz) - (((dE) * (qremote)) * ((iz) / (distance))));
+							System.out.println((("ChargeAdd== Ex") + "" + ((new java.text.DecimalFormat("##.##").format((iEx)))) + "" + (", Ey:") + ""
+									+ ((new java.text.DecimalFormat("##.##").format((iEy)))) + "" + (", Ez:") + ""
+									+ ((new java.text.DecimalFormat("##.##").format((iEz))))));
 						}
 					}
 					iz = (double) ((iz) + 1);
@@ -170,7 +180,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("Ex", (iEx));
+				_tileEntity.getTileData().putDouble("ex", (iEx));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -178,7 +188,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("Ey", (iEy));
+				_tileEntity.getTileData().putDouble("ey", (iEy));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -186,9 +196,8 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("Ez", (iEz));
+				_tileEntity.getTileData().putDouble("ez", (iEz));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		System.out.println((("Chargeadd= ") + "" + ((new java.text.DecimalFormat("##.##").format((iEx))))));
 	}
 }

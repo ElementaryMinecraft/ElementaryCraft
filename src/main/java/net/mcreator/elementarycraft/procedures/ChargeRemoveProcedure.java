@@ -57,7 +57,7 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "charge"));
 		dE = (double) 0;
-		ni = (double) 3;
+		ni = (double) 4;
 		ix = (double) 0;
 		iy = (double) 0;
 		iz = (double) 0;
@@ -77,14 +77,14 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("Ex", ((new Object() {
+									_tileEntity.getTileData().putDouble("ex", ((new Object() {
 										public double getValue(BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "Ex"))
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ex"))
 											- (((dE) * (qc)) * ((ix) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -93,14 +93,14 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("Ey", ((new Object() {
+									_tileEntity.getTileData().putDouble("ey", ((new Object() {
 										public double getValue(BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "Ey"))
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ey"))
 											- (((dE) * (qc)) * ((iy) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -109,17 +109,42 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("Ez", ((new Object() {
+									_tileEntity.getTileData().putDouble("ez", ((new Object() {
 										public double getValue(BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "Ez"))
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ez"))
 											- (((dE) * (qc)) * ((iz) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
+							System.out.println(
+									(("Blok verwijderen== verminderen -- Ex: ") + "" + ((new java.text.DecimalFormat("##.##").format((new Object() {
+										public double getValue(BlockPos pos, String tag) {
+											TileEntity tileEntity = world.getTileEntity(pos);
+											if (tileEntity != null)
+												return tileEntity.getTileData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ex"))))) + "" + (", Ey: ") + ""
+											+ ((new java.text.DecimalFormat("##.##").format((new Object() {
+												public double getValue(BlockPos pos, String tag) {
+													TileEntity tileEntity = world.getTileEntity(pos);
+													if (tileEntity != null)
+														return tileEntity.getTileData().getDouble(tag);
+													return -1;
+												}
+											}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ey"))))) + "" + (", Ez: ")
+											+ "" + ((new java.text.DecimalFormat("##.##").format((new Object() {
+												public double getValue(BlockPos pos, String tag) {
+													TileEntity tileEntity = world.getTileEntity(pos);
+													if (tileEntity != null)
+														return tileEntity.getTileData().getDouble(tag);
+													return -1;
+												}
+											}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ez")))))));
 						}
 					}
 					iz = (double) ((iz) + 1);
@@ -127,6 +152,54 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 				iy = (double) ((iy) + 1);
 			}
 			ix = (double) ((ix) + 1);
+		}
+		System.out.println((("Blok verwijderen== oud blok -- Ex: ") + "" + ((new java.text.DecimalFormat("##.##").format((new Object() {
+			public double getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "ex"))))) + "" + (", Ey: ") + ""
+				+ ((new java.text.DecimalFormat("##.##").format((new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "ey"))))) + "" + (", Ez: ") + ""
+				+ ((new java.text.DecimalFormat("##.##").format((new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "ez")))))));
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("ex", 0);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("ey", 0);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("ez", 0);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }
