@@ -79,9 +79,6 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "ez")) * (qc));
-		System.out.println((("Update tick -- Fx:  ") + "" + ((new java.text.DecimalFormat("##.##").format((Ex)))) + "" + (", Fy:  ") + ""
-				+ ((new java.text.DecimalFormat("##.##").format((Ey)))) + "" + (", Fz:  ") + ""
-				+ ((new java.text.DecimalFormat("##.##").format((Ez))))));
 		if (((Math.abs((Ex)) >= (Em)) || ((Math.abs((Ey)) >= (Em)) || (Math.abs((Ez)) >= (Em))))) {
 			if ((Math.abs((Ex)) >= Math.abs((Ey)))) {
 				if ((Math.abs((Ex)) >= Math.abs((Ez)))) {

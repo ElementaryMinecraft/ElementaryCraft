@@ -97,10 +97,6 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 						if ((BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((world.getBlockState(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))))).getBlock()))) {
 							distance = (double) Math.pow(((Math.pow((ix), 2) + Math.pow((iy), 2)) + Math.pow((iz), 2)), 0.5);
-							System.out.println((("ChargeAdd== x: ") + "" + ((new java.text.DecimalFormat("##.##").format((ix)))) + "" + (", y:") + ""
-									+ ((new java.text.DecimalFormat("##.##").format((iy)))) + "" + (", z:") + ""
-									+ ((new java.text.DecimalFormat("##.##").format((iz)))) + "" + (", d:") + ""
-									+ ((new java.text.DecimalFormat("##.##").format((distance))))));
 							dE = (double) ((kc) / Math.pow((distance), 2));
 							if (!world.getWorld().isRemote) {
 								BlockPos _bp = new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz)));
@@ -150,9 +146,6 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 											+ (((dE) * (qc)) * ((iz) / (distance)))));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
-							System.out.println((("ChargeAdd== x/d") + "" + ((new java.text.DecimalFormat("##.##").format(((ix) / (distance))))) + ""
-									+ (", y/d") + "" + ((new java.text.DecimalFormat("##.##").format(((iy) / (distance))))) + "" + (", z/d") + ""
-									+ ((new java.text.DecimalFormat("##.##").format(((iz) / (distance)))))));
 							qremote = (double) (new Object() {
 								public double getValue(BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
@@ -164,9 +157,6 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 							iEx = (double) ((iEx) - (((dE) * (qremote)) * ((ix) / (distance))));
 							iEy = (double) ((iEy) - (((dE) * (qremote)) * ((iy) / (distance))));
 							iEz = (double) ((iEz) - (((dE) * (qremote)) * ((iz) / (distance))));
-							System.out.println((("ChargeAdd== Ex") + "" + ((new java.text.DecimalFormat("##.##").format((iEx)))) + "" + (", Ey:") + ""
-									+ ((new java.text.DecimalFormat("##.##").format((iEy)))) + "" + (", Ez:") + ""
-									+ ((new java.text.DecimalFormat("##.##").format((iEz))))));
 						}
 					}
 					iz = (double) ((iz) + 1);
