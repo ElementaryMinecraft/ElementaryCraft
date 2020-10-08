@@ -47,6 +47,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.PionNulDecayProcedure;
+import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -85,18 +86,12 @@ public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(block, RenderType.getTranslucent());
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement()
-					.notSolid());
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0));
 			setRegistryName("pion_nul_from_down");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override
@@ -114,6 +109,25 @@ public class PionNulFromDownBlock extends ElementaryCraftModElements.ModElement 
 			int y = pos.getY();
 			int z = pos.getZ();
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+		}
+
+		@Override
+		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					PionMinecartProcedure.executeProcedure($_dependencies);
+				}
+			} else {
+			}
 		}
 
 		@Override

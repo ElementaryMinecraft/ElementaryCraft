@@ -13,9 +13,9 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "pionnulfromup",
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
+    "transparencyType": "CUTOUT",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
@@ -57,7 +57,7 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": true,
+    "isNotColidable": false,
     "soundOnStep": {
       "value": "CLOTH"
     },
@@ -90,6 +90,9 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "PionNulDecay"
+    },
+    "onRedstoneOn": {
+      "name": "PionMinecart"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
