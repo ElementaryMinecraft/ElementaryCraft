@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cross",
   "textures": {
-    "down": "elementary_craft:blocks/empty",
-    "up": "elementary_craft:blocks/empty",
-    "north": "elementary_craft:blocks/pionnulfromup",
-    "east": "elementary_craft:blocks/empty",
-    "south": "elementary_craft:blocks/pionnulfromup",
-    "west": "elementary_craft:blocks/empty",
-    "particle": "elementary_craft:blocks/empty"
+    "cross": "elementary_craft:blocks/pionnulfromup",
+    "particle": "elementary_craft:blocks/pionnulfromup"
   }
 }
