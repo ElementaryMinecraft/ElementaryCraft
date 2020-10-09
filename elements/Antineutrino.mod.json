@@ -2,14 +2,14 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "empty",
+    "texture": "anti-neutrino",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "anti-neutrino",
     "textureRight": "empty",
     "textureBack": "anti-neutrino",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 12,
+    "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "anti-neutrino",
@@ -39,7 +39,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },

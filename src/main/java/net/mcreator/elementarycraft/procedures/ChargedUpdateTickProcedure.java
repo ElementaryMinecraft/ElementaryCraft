@@ -53,55 +53,110 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 				return false;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "move"))) {
-			Ex = (double) (new Object() {
-				public double getValue(BlockPos pos, String tag) {
+			if ((new Object() {
+				public boolean getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
+						return tileEntity.getTileData().getBoolean(tag);
+					return false;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ex"));
-			Ey = (double) (new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ey"));
-			Ez = (double) (new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ez"));
-			Em = (double) 0.4;
-			if ((Math.abs((Ex)) >= Math.abs((Ey)))) {
-				if ((Math.abs((Ex)) >= Math.abs((Ez)))) {
-					if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
-							.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-						{
-							Map<String, Object> $_dependencies = new HashMap<>();
-							$_dependencies.put("world", world);
-							$_dependencies.put("x", x);
-							$_dependencies.put("y", y);
-							$_dependencies.put("z", z);
-							ChargeRemoveProcedure.executeProcedure($_dependencies);
-						}
-						loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-						world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z), /* @BlockState */(new Object() {
-							public BlockState toBlock(ItemStack _stk) {
-								if (_stk.getItem() instanceof BlockItem) {
-									return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-								}
-								return Blocks.AIR.getDefaultState();
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "movable"))) {
+				Ex = (double) (new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "ex"));
+				Ey = (double) (new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "ey"));
+				Ez = (double) (new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "ez"));
+				Em = (double) 0.4;
+				if ((Math.abs((Ex)) >= Math.abs((Ey)))) {
+					if ((Math.abs((Ex)) >= Math.abs((Ez)))) {
+						if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
+								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								ChargeRemoveProcedure.executeProcedure($_dependencies);
 							}
-						}.toBlock((loc))), 3);
-					} else if ((Math.abs((Ez)) >= Math.abs((Ey)))) {
-						if ((Math.abs((Ez)) >= (Em))) {
+							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z), /* @BlockState */(new Object() {
+								public BlockState toBlock(ItemStack _stk) {
+									if (_stk.getItem() instanceof BlockItem) {
+										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+									}
+									return Blocks.AIR.getDefaultState();
+								}
+							}.toBlock((loc))), 3);
+						} else if ((Math.abs((Ez)) >= Math.abs((Ey)))) {
+							if ((Math.abs((Ez)) >= (Em))) {
+								if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
+										.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+									{
+										Map<String, Object> $_dependencies = new HashMap<>();
+										$_dependencies.put("world", world);
+										$_dependencies.put("x", x);
+										$_dependencies.put("y", y);
+										$_dependencies.put("z", z);
+										ChargeRemoveProcedure.executeProcedure($_dependencies);
+									}
+									loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+									world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+									world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))),
+											/* @BlockState */(new Object() {
+												public BlockState toBlock(ItemStack _stk) {
+													if (_stk.getItem() instanceof BlockItem) {
+														return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+													}
+													return Blocks.AIR.getDefaultState();
+												}
+											}.toBlock((loc))), 3);
+								} else if ((Math.abs((Ey)) >= (Em))) {
+									if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
+											.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+										{
+											Map<String, Object> $_dependencies = new HashMap<>();
+											$_dependencies.put("world", world);
+											$_dependencies.put("x", x);
+											$_dependencies.put("y", y);
+											$_dependencies.put("z", z);
+											ChargeRemoveProcedure.executeProcedure($_dependencies);
+										}
+										loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+										world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+										world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z),
+												/* @BlockState */(new Object() {
+													public BlockState toBlock(ItemStack _stk) {
+														if (_stk.getItem() instanceof BlockItem) {
+															return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+														}
+														return Blocks.AIR.getDefaultState();
+													}
+												}.toBlock((loc))), 3);
+									}
+								}
+							}
+						} else if ((Math.abs((Ez)) >= (Em))) {
 							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
 									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
 								{
@@ -148,209 +203,7 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 								}
 							}
 						}
-					} else if ((Math.abs((Ez)) >= (Em))) {
-						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
-								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								ChargeRemoveProcedure.executeProcedure($_dependencies);
-							}
-							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))), /* @BlockState */(new Object() {
-								public BlockState toBlock(ItemStack _stk) {
-									if (_stk.getItem() instanceof BlockItem) {
-										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-									}
-									return Blocks.AIR.getDefaultState();
-								}
-							}.toBlock((loc))), 3);
-						} else if ((Math.abs((Ey)) >= (Em))) {
-							if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
-									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-								{
-									Map<String, Object> $_dependencies = new HashMap<>();
-									$_dependencies.put("world", world);
-									$_dependencies.put("x", x);
-									$_dependencies.put("y", y);
-									$_dependencies.put("z", z);
-									ChargeRemoveProcedure.executeProcedure($_dependencies);
-								}
-								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-								world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z),
-										/* @BlockState */(new Object() {
-											public BlockState toBlock(ItemStack _stk) {
-												if (_stk.getItem() instanceof BlockItem) {
-													return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-												}
-												return Blocks.AIR.getDefaultState();
-											}
-										}.toBlock((loc))), 3);
-							}
-						}
-					}
-				} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
-						.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						ChargeRemoveProcedure.executeProcedure($_dependencies);
-					}
-					loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))), /* @BlockState */(new Object() {
-						public BlockState toBlock(ItemStack _stk) {
-							if (_stk.getItem() instanceof BlockItem) {
-								return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-							}
-							return Blocks.AIR.getDefaultState();
-						}
-					}.toBlock((loc))), 3);
-				} else {
-					if ((Math.abs((Ex)) >= (Em))) {
-						if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
-								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								ChargeRemoveProcedure.executeProcedure($_dependencies);
-							}
-							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-							world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z), /* @BlockState */(new Object() {
-								public BlockState toBlock(ItemStack _stk) {
-									if (_stk.getItem() instanceof BlockItem) {
-										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-									}
-									return Blocks.AIR.getDefaultState();
-								}
-							}.toBlock((loc))), 3);
-						} else if ((Math.abs((Ey)) >= (Em))) {
-							if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
-									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-								{
-									Map<String, Object> $_dependencies = new HashMap<>();
-									$_dependencies.put("world", world);
-									$_dependencies.put("x", x);
-									$_dependencies.put("y", y);
-									$_dependencies.put("z", z);
-									ChargeRemoveProcedure.executeProcedure($_dependencies);
-								}
-								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-								world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z),
-										/* @BlockState */(new Object() {
-											public BlockState toBlock(ItemStack _stk) {
-												if (_stk.getItem() instanceof BlockItem) {
-													return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-												}
-												return Blocks.AIR.getDefaultState();
-											}
-										}.toBlock((loc))), 3);
-							}
-						}
-					}
-				}
-			} else if ((Math.abs((Ex)) >= Math.abs((Ez)))) {
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
-						.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						ChargeRemoveProcedure.executeProcedure($_dependencies);
-					}
-					loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z), /* @BlockState */(new Object() {
-						public BlockState toBlock(ItemStack _stk) {
-							if (_stk.getItem() instanceof BlockItem) {
-								return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-							}
-							return Blocks.AIR.getDefaultState();
-						}
-					}.toBlock((loc))), 3);
-				} else if ((Math.abs((Ex)) >= (Em))) {
-					if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
-							.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-						{
-							Map<String, Object> $_dependencies = new HashMap<>();
-							$_dependencies.put("world", world);
-							$_dependencies.put("x", x);
-							$_dependencies.put("y", y);
-							$_dependencies.put("z", z);
-							ChargeRemoveProcedure.executeProcedure($_dependencies);
-						}
-						loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-						world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z), /* @BlockState */(new Object() {
-							public BlockState toBlock(ItemStack _stk) {
-								if (_stk.getItem() instanceof BlockItem) {
-									return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-								}
-								return Blocks.AIR.getDefaultState();
-							}
-						}.toBlock((loc))), 3);
-					} else if ((Math.abs((Ez)) >= (Em))) {
-						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
-								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								ChargeRemoveProcedure.executeProcedure($_dependencies);
-							}
-							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))), /* @BlockState */(new Object() {
-								public BlockState toBlock(ItemStack _stk) {
-									if (_stk.getItem() instanceof BlockItem) {
-										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-									}
-									return Blocks.AIR.getDefaultState();
-								}
-							}.toBlock((loc))), 3);
-						}
-					}
-				}
-			} else if ((Math.abs((Ey)) >= Math.abs((Ez)))) {
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
-						.getMaterial() == net.minecraft.block.material.Material.ROCK)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						ChargeRemoveProcedure.executeProcedure($_dependencies);
-					}
-					loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z), /* @BlockState */(new Object() {
-						public BlockState toBlock(ItemStack _stk) {
-							if (_stk.getItem() instanceof BlockItem) {
-								return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-							}
-							return Blocks.AIR.getDefaultState();
-						}
-					}.toBlock((loc))), 3);
-				} else if ((Math.abs((Ez)) >= (Em))) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
+					} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
 							.getMaterial() == net.minecraft.block.material.Material.AIR)) {
 						{
 							Map<String, Object> $_dependencies = new HashMap<>();
@@ -370,52 +223,56 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 								return Blocks.AIR.getDefaultState();
 							}
 						}.toBlock((loc))), 3);
-					} else if ((Math.abs((Ex)) >= (Em))) {
-						if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
-								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								ChargeRemoveProcedure.executeProcedure($_dependencies);
-							}
-							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-							world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z), /* @BlockState */(new Object() {
-								public BlockState toBlock(ItemStack _stk) {
-									if (_stk.getItem() instanceof BlockItem) {
-										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-									}
-									return Blocks.AIR.getDefaultState();
+					} else {
+						if ((Math.abs((Ex)) >= (Em))) {
+							if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
+									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+								{
+									Map<String, Object> $_dependencies = new HashMap<>();
+									$_dependencies.put("world", world);
+									$_dependencies.put("x", x);
+									$_dependencies.put("y", y);
+									$_dependencies.put("z", z);
+									ChargeRemoveProcedure.executeProcedure($_dependencies);
 								}
-							}.toBlock((loc))), 3);
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-						}
-					}
-				}
-			} else {
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
-						.getMaterial() == net.minecraft.block.material.Material.AIR)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						ChargeRemoveProcedure.executeProcedure($_dependencies);
-					}
-					loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))), /* @BlockState */(new Object() {
-						public BlockState toBlock(ItemStack _stk) {
-							if (_stk.getItem() instanceof BlockItem) {
-								return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+								world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z),
+										/* @BlockState */(new Object() {
+											public BlockState toBlock(ItemStack _stk) {
+												if (_stk.getItem() instanceof BlockItem) {
+													return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+												}
+												return Blocks.AIR.getDefaultState();
+											}
+										}.toBlock((loc))), 3);
+							} else if ((Math.abs((Ey)) >= (Em))) {
+								if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
+										.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+									{
+										Map<String, Object> $_dependencies = new HashMap<>();
+										$_dependencies.put("world", world);
+										$_dependencies.put("x", x);
+										$_dependencies.put("y", y);
+										$_dependencies.put("z", z);
+										ChargeRemoveProcedure.executeProcedure($_dependencies);
+									}
+									loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+									world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+									world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z),
+											/* @BlockState */(new Object() {
+												public BlockState toBlock(ItemStack _stk) {
+													if (_stk.getItem() instanceof BlockItem) {
+														return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+													}
+													return Blocks.AIR.getDefaultState();
+												}
+											}.toBlock((loc))), 3);
+								}
 							}
-							return Blocks.AIR.getDefaultState();
 						}
-					}.toBlock((loc))), 3);
-				} else if ((Math.abs((Ey)) >= (Em))) {
+					}
+				} else if ((Math.abs((Ex)) >= Math.abs((Ez)))) {
 					if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
 							.getMaterial() == net.minecraft.block.material.Material.AIR)) {
 						{
@@ -448,6 +305,7 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 								ChargeRemoveProcedure.executeProcedure($_dependencies);
 							}
 							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 							world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z), /* @BlockState */(new Object() {
 								public BlockState toBlock(ItemStack _stk) {
 									if (_stk.getItem() instanceof BlockItem) {
@@ -456,7 +314,163 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 									return Blocks.AIR.getDefaultState();
 								}
 							}.toBlock((loc))), 3);
+						} else if ((Math.abs((Ez)) >= (Em))) {
+							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
+									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+								{
+									Map<String, Object> $_dependencies = new HashMap<>();
+									$_dependencies.put("world", world);
+									$_dependencies.put("x", x);
+									$_dependencies.put("y", y);
+									$_dependencies.put("z", z);
+									ChargeRemoveProcedure.executeProcedure($_dependencies);
+								}
+								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+								world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))),
+										/* @BlockState */(new Object() {
+											public BlockState toBlock(ItemStack _stk) {
+												if (_stk.getItem() instanceof BlockItem) {
+													return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+												}
+												return Blocks.AIR.getDefaultState();
+											}
+										}.toBlock((loc))), 3);
+							}
+						}
+					}
+				} else if ((Math.abs((Ey)) >= Math.abs((Ez)))) {
+					if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
+							.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+						{
+							Map<String, Object> $_dependencies = new HashMap<>();
+							$_dependencies.put("world", world);
+							$_dependencies.put("x", x);
+							$_dependencies.put("y", y);
+							$_dependencies.put("z", z);
+							ChargeRemoveProcedure.executeProcedure($_dependencies);
+						}
+						loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+						world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z), /* @BlockState */(new Object() {
+							public BlockState toBlock(ItemStack _stk) {
+								if (_stk.getItem() instanceof BlockItem) {
+									return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+								}
+								return Blocks.AIR.getDefaultState();
+							}
+						}.toBlock((loc))), 3);
+					} else if ((Math.abs((Ez)) >= (Em))) {
+						if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
+								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								ChargeRemoveProcedure.executeProcedure($_dependencies);
+							}
+							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
 							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))), /* @BlockState */(new Object() {
+								public BlockState toBlock(ItemStack _stk) {
+									if (_stk.getItem() instanceof BlockItem) {
+										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+									}
+									return Blocks.AIR.getDefaultState();
+								}
+							}.toBlock((loc))), 3);
+						} else if ((Math.abs((Ex)) >= (Em))) {
+							if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
+									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+								{
+									Map<String, Object> $_dependencies = new HashMap<>();
+									$_dependencies.put("world", world);
+									$_dependencies.put("x", x);
+									$_dependencies.put("y", y);
+									$_dependencies.put("z", z);
+									ChargeRemoveProcedure.executeProcedure($_dependencies);
+								}
+								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+								world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z),
+										/* @BlockState */(new Object() {
+											public BlockState toBlock(ItemStack _stk) {
+												if (_stk.getItem() instanceof BlockItem) {
+													return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+												}
+												return Blocks.AIR.getDefaultState();
+											}
+										}.toBlock((loc))), 3);
+								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+							}
+						}
+					}
+				} else {
+					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
+							.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+						{
+							Map<String, Object> $_dependencies = new HashMap<>();
+							$_dependencies.put("world", world);
+							$_dependencies.put("x", x);
+							$_dependencies.put("y", y);
+							$_dependencies.put("z", z);
+							ChargeRemoveProcedure.executeProcedure($_dependencies);
+						}
+						loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))), /* @BlockState */(new Object() {
+							public BlockState toBlock(ItemStack _stk) {
+								if (_stk.getItem() instanceof BlockItem) {
+									return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+								}
+								return Blocks.AIR.getDefaultState();
+							}
+						}.toBlock((loc))), 3);
+					} else if ((Math.abs((Ey)) >= (Em))) {
+						if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
+								.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+							{
+								Map<String, Object> $_dependencies = new HashMap<>();
+								$_dependencies.put("world", world);
+								$_dependencies.put("x", x);
+								$_dependencies.put("y", y);
+								$_dependencies.put("z", z);
+								ChargeRemoveProcedure.executeProcedure($_dependencies);
+							}
+							loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z), /* @BlockState */(new Object() {
+								public BlockState toBlock(ItemStack _stk) {
+									if (_stk.getItem() instanceof BlockItem) {
+										return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+									}
+									return Blocks.AIR.getDefaultState();
+								}
+							}.toBlock((loc))), 3);
+						} else if ((Math.abs((Ex)) >= (Em))) {
+							if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
+									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+								{
+									Map<String, Object> $_dependencies = new HashMap<>();
+									$_dependencies.put("world", world);
+									$_dependencies.put("x", x);
+									$_dependencies.put("y", y);
+									$_dependencies.put("z", z);
+									ChargeRemoveProcedure.executeProcedure($_dependencies);
+								}
+								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
+								world.setBlockState(new BlockPos((int) (x + ((Ex) / Math.abs((Ex)))), (int) y, (int) z),
+										/* @BlockState */(new Object() {
+											public BlockState toBlock(ItemStack _stk) {
+												if (_stk.getItem() instanceof BlockItem) {
+													return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
+												}
+												return Blocks.AIR.getDefaultState();
+											}
+										}.toBlock((loc))), 3);
+								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+							}
 						}
 					}
 				}

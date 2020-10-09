@@ -91,17 +91,14 @@
     "onBlockAdded": {
       "name": "ElectronBlockAdded"
     },
-    "onNeighbourBlockChanges": {
-      "name": "CheckPositronNgbr"
-    },
     "onTickUpdate": {
       "name": "ElectronUpdateTick"
     },
     "onDestroyedByPlayer": {
-      "name": "ChargeRemove"
+      "name": "PositronElectronRemove"
     },
     "onDestroyedByExplosion": {
-      "name": "ChargeRemove"
+      "name": "PositronElectronRemove"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

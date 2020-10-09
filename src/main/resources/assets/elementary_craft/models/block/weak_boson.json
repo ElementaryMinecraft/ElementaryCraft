@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cross",
   "textures": {
-    "down": "elementary_craft:blocks/empty",
-    "up": "elementary_craft:blocks/empty",
-    "north": "elementary_craft:blocks/w-boson_feynman",
-    "east": "elementary_craft:blocks/empty",
-    "south": "elementary_craft:blocks/w-boson_feynman",
-    "west": "elementary_craft:blocks/empty",
-    "particle": "elementary_craft:blocks/empty"
+    "cross": "elementary_craft:blocks/w-boson_feynman",
+    "particle": "elementary_craft:blocks/w-boson_feynman"
   }
 }

@@ -105,8 +105,13 @@ public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 		}
 
 		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
+		}
+
+		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 0.49D, 0D, 1D, 0.5D, 1D);
+			return VoxelShapes.create(0D, 1D, 0D, 1D, 1D, 1D);
 		}
 
 		@Override
