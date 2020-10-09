@@ -1,0 +1,28 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Electron"
+      },
+      {
+        "value": "CUSTOM:Positron"
+      },
+      {
+        "value": "CUSTOM:Proton"
+      },
+      {
+        "value": "CUSTOM:PionMinus"
+      },
+      {
+        "value": "CUSTOM:PionPlus"
+      }
+    ],
+    "functions": [],
+    "name": "charged",
+    "namespace": "forge"
+  }
+}

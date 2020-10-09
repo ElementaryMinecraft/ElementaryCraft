@@ -2,18 +2,18 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "empty",
+    "texture": "pionplus",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "pionplus",
     "textureRight": "empty",
     "textureBack": "pionplus",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 12,
+    "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "pionplus",
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT",
     "mx": 0.0,
@@ -39,7 +39,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },
@@ -88,8 +88,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "PositiveChargedAdd"
+    },
     "onTickUpdate": {
       "name": "ChargedPionDecay"
+    },
+    "onDestroyedByPlayer": {
+      "name": "ChargeRemove"
+    },
+    "onDestroyedByExplosion": {
+      "name": "ChargeRemove"
     },
     "onRedstoneOn": {
       "name": "PionMinecart"

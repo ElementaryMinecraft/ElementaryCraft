@@ -2,14 +2,14 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "empty",
+    "texture": "positron_new",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "positron_new",
     "textureRight": "empty",
     "textureBack": "positron_new",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 12,
+    "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "positrron_new",
@@ -18,10 +18,10 @@
     "transparencyType": "TRANSLUCENT",
     "mx": 0.0,
     "my": 0.0,
-    "mz": 0.4,
+    "mz": 0.0,
     "Mx": 1.0,
-    "My": 0.0,
-    "Mz": 0.6,
+    "My": 1.0,
+    "Mz": 1.0,
     "name": "Positron",
     "specialInfo": [],
     "hardness": 1.0,
@@ -39,7 +39,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },
@@ -96,6 +96,12 @@
     },
     "onTickUpdate": {
       "name": "PositronUpdateTick"
+    },
+    "onDestroyedByPlayer": {
+      "name": "ChargeRemove"
+    },
+    "onDestroyedByExplosion": {
+      "name": "ChargeRemove"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
