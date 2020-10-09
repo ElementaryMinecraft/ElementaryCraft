@@ -95,10 +95,10 @@
       "name": "ChargedUpdateTick"
     },
     "onDestroyedByPlayer": {
-      "name": "ChargeRemove"
+      "name": "ChargeRemovePositive"
     },
     "onDestroyedByExplosion": {
-      "name": "ChargeRemove"
+      "name": "ChargeRemovePositive"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

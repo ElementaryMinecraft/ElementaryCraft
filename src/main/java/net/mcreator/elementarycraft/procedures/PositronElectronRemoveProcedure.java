@@ -38,14 +38,6 @@ public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		{
-			Map<String, Object> $_dependencies = new HashMap<>();
-			$_dependencies.put("world", world);
-			$_dependencies.put("x", x);
-			$_dependencies.put("y", y);
-			$_dependencies.put("z", z);
-			ChargeRemoveProcedure.executeProcedure($_dependencies);
-		}
 		if (((new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -54,16 +46,18 @@ public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) != 0)) {
-			if (((new Object() {
+			if ((((new Object() {
 				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 1)) {
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 1)
+					&& ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)))
+							.getMaterial() == net.minecraft.block.material.Material.AIR))) {
 				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -71,189 +65,16 @@ public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.
 					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putBoolean("movable", (true));
 					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
-				if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock())) {
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())) {
 					if (!world.getWorld().isRemote) {
-						BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("tickCounter", 0);
-						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
-				}
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("world", world);
-					$_dependencies.put("x", (x + 1));
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
-				}
-			} else if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-1))) {
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("neighbour", 0);
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("movable", (true));
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock())) {
-					if (!world.getWorld().isRemote) {
-						BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("tickCounter", 0);
-						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
-				}
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("world", world);
-					$_dependencies.put("x", (x - 1));
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
-				}
-			} else if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 2)) {
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("neighbour", 0);
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("movable", (true));
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock())) {
-					if (!world.getWorld().isRemote) {
-						BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("tickCounter", 0);
-						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
-				}
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("world", world);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", (y + 1));
-					$_dependencies.put("z", z);
-					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
-				}
-			} else if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-2))) {
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("neighbour", 0);
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("movable", (true));
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock())) {
-					if (!world.getWorld().isRemote) {
-						BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("tickCounter", 0);
-						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-					}
-				}
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("world", world);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", (y - 1));
-					$_dependencies.put("z", z);
-					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
-				}
-			} else if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 3)) {
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("neighbour", 0);
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("movable", (true));
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock())) {
-					if (!world.getWorld().isRemote) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
@@ -266,19 +87,21 @@ public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.
 					$_dependencies.put("world", world);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
-					$_dependencies.put("z", (z + 1));
+					$_dependencies.put("z", z);
 					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
 				}
-			} else if (((new Object() {
+			} else if ((((new Object() {
 				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-3))) {
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-1))
+					&& ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)))
+							.getMaterial() == net.minecraft.block.material.Material.AIR))) {
 				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -286,17 +109,16 @@ public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.
 					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.getWorld().isRemote) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putBoolean("movable", (true));
 					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
-				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ElectronBlock.block.getDefaultState()
-						.getBlock())) {
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())) {
 					if (!world.getWorld().isRemote) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
@@ -309,7 +131,183 @@ public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.
 					$_dependencies.put("world", world);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
-					$_dependencies.put("z", (z - 1));
+					$_dependencies.put("z", z);
+					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
+				}
+			} else if ((((new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 2)
+					&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z)))
+							.getMaterial() == net.minecraft.block.material.Material.AIR))) {
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("neighbour", 0);
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putBoolean("movable", (true));
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())) {
+					if (!world.getWorld().isRemote) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("tickCounter", 0);
+						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+				}
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
+				}
+			} else if ((((new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-2))
+					&& ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)))
+							.getMaterial() == net.minecraft.block.material.Material.AIR))) {
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("neighbour", 0);
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putBoolean("movable", (true));
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())) {
+					if (!world.getWorld().isRemote) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("tickCounter", 0);
+						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+				}
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
+				}
+			} else if ((((new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 3)
+					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))))
+							.getMaterial() == net.minecraft.block.material.Material.AIR))) {
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("neighbour", 0);
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putBoolean("movable", (true));
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())) {
+					if (!world.getWorld().isRemote) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("tickCounter", 0);
+						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+				}
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
+				}
+			} else if ((((new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-3))
+					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))))
+							.getMaterial() == net.minecraft.block.material.Material.AIR))) {
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("neighbour", 0);
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (!world.getWorld().isRemote) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putBoolean("movable", (true));
+					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronBlock.block.getDefaultState().getBlock())) {
+					if (!world.getWorld().isRemote) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("tickCounter", 0);
+						world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+				}
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
 					CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
 				}
 			}

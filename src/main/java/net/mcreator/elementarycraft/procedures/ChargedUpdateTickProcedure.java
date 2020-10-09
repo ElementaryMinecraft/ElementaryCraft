@@ -156,8 +156,8 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 									}
 								}
 							}
-						} else if ((Math.abs((Ez)) >= (Em))) {
-							if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
+						} else if ((Math.abs((Ey)) >= (Em))) {
+							if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
 									.getMaterial() == net.minecraft.block.material.Material.AIR)) {
 								{
 									Map<String, Object> $_dependencies = new HashMap<>();
@@ -169,7 +169,7 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 								}
 								loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
 								world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-								world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))),
+								world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z),
 										/* @BlockState */(new Object() {
 											public BlockState toBlock(ItemStack _stk) {
 												if (_stk.getItem() instanceof BlockItem) {
@@ -178,8 +178,8 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 												return Blocks.AIR.getDefaultState();
 											}
 										}.toBlock((loc))), 3);
-							} else if ((Math.abs((Ey)) >= (Em))) {
-								if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
+							} else if ((Math.abs((Ez)) >= (Em))) {
+								if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez)))))))
 										.getMaterial() == net.minecraft.block.material.Material.AIR)) {
 									{
 										Map<String, Object> $_dependencies = new HashMap<>();
@@ -191,7 +191,7 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 									}
 									loc = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
 									world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-									world.setBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z),
+									world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + ((Ez) / Math.abs((Ez))))),
 											/* @BlockState */(new Object() {
 												public BlockState toBlock(ItemStack _stk) {
 													if (_stk.getItem() instanceof BlockItem) {

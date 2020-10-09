@@ -52,7 +52,7 @@ import net.minecraft.block.Block;
 import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
 import net.mcreator.elementarycraft.procedures.NegativeChargedAddProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
-import net.mcreator.elementarycraft.procedures.ChargeRemoveProcedure;
+import net.mcreator.elementarycraft.procedures.ChargeRemoveNegativeProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -182,7 +182,7 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ChargeRemoveProcedure.executeProcedure($_dependencies);
+				ChargeRemoveNegativeProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -199,7 +199,7 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ChargeRemoveProcedure.executeProcedure($_dependencies);
+				ChargeRemoveNegativeProcedure.executeProcedure($_dependencies);
 			}
 		}
 

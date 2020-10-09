@@ -51,7 +51,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.PositiveChargedAddProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedUpdateTickProcedure;
-import net.mcreator.elementarycraft.procedures.ChargeRemoveProcedure;
+import net.mcreator.elementarycraft.procedures.ChargeRemovePositiveProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -163,7 +163,7 @@ public class ProtonBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ChargeRemoveProcedure.executeProcedure($_dependencies);
+				ChargeRemovePositiveProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -180,7 +180,7 @@ public class ProtonBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ChargeRemoveProcedure.executeProcedure($_dependencies);
+				ChargeRemovePositiveProcedure.executeProcedure($_dependencies);
 			}
 		}
 

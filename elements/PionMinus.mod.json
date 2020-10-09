@@ -95,10 +95,10 @@
       "name": "ChargedPionDecay"
     },
     "onDestroyedByPlayer": {
-      "name": "ChargeRemove"
+      "name": "ChargeRemoveNegative"
     },
     "onDestroyedByExplosion": {
-      "name": "ChargeRemove"
+      "name": "ChargeRemoveNegative"
     },
     "onRedstoneOn": {
       "name": "PionMinecart"
