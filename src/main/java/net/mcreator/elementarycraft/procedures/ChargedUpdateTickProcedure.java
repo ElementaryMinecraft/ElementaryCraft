@@ -45,41 +45,39 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 		double Ey = 0;
 		double Ez = 0;
 		double Em = 0;
-		double qc = 0;
-		Em = (double) 0.4;
-		qc = (double) (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+		if ((new Object() {
+			public boolean getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
+					return tileEntity.getTileData().getBoolean(tag);
+				return false;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "charge"));
-		Ex = (double) ((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "ex")) * (qc));
-		Ey = (double) ((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "ey")) * (qc));
-		Ez = (double) ((new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "ez")) * (qc));
-		if (((Math.abs((Ex)) >= (Em)) || ((Math.abs((Ey)) >= (Em)) || (Math.abs((Ez)) >= (Em))))) {
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "move"))) {
+			Ex = (double) (new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ex"));
+			Ey = (double) (new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ey"));
+			Ez = (double) (new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ez"));
+			Em = (double) 0.4;
 			if ((Math.abs((Ex)) >= Math.abs((Ey)))) {
 				if ((Math.abs((Ex)) >= Math.abs((Ez)))) {
 					if (((world.getBlockState(new BlockPos((int) (x + Math.round(((Ex) / Math.abs((Ex))))), (int) y, (int) z)))
@@ -332,7 +330,7 @@ public class ChargedUpdateTickProcedure extends ElementaryCraftModElements.ModEl
 				}
 			} else if ((Math.abs((Ey)) >= Math.abs((Ez)))) {
 				if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((Ey) / Math.abs((Ey)))), (int) z)))
-						.getMaterial() == net.minecraft.block.material.Material.AIR)) {
+						.getMaterial() == net.minecraft.block.material.Material.ROCK)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("world", world);

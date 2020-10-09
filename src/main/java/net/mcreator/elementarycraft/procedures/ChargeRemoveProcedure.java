@@ -38,16 +38,22 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		boolean qremote = false;
 		double kc = 0;
 		double ix = 0;
 		double iy = 0;
 		double iz = 0;
 		double ni = 0;
-		double distance = 0;
 		double qc = 0;
 		double dE = 0;
+		double rEx = 0;
+		double rEy = 0;
+		double rEz = 0;
+		double rx = 0;
+		double ry = 0;
+		double rz = 0;
+		double nn = 0;
 		kc = (double) 2;
+		kc = (double) 0.4;
 		qc = (double) (new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -56,101 +62,106 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "charge"));
-		dE = (double) 0;
 		ni = (double) 4;
-		ix = (double) 0;
-		iy = (double) 0;
-		iz = (double) 0;
-		ix = (double) ((ni) * (-1));
-		for (int index0 = 0; index0 < (int) ((((ni) * 2) + 1)); index0++) {
-			iy = (double) ((ni) * (-1));
-			for (int index1 = 0; index1 < (int) ((((ni) * 2) + 1)); index1++) {
-				iz = (double) ((ni) * (-1));
-				for (int index2 = 0; index2 < (int) ((((ni) * 2) + 1)); index2++) {
+		nn = (double) (((ni) * 2) + 1);
+		rEx = (double) 0;
+		rEy = (double) 0;
+		rEz = (double) 0;
+		ix = (double) (ni);
+		for (int index0 = 0; index0 < (int) ((nn)); index0++) {
+			iy = (double) (ni);
+			for (int index1 = 0; index1 < (int) ((nn)); index1++) {
+				iz = (double) (ni);
+				for (int index2 = 0; index2 < (int) ((nn)); index2++) {
 					if ((((iz) != 0) || (((iy) != 0) || ((ix) != 0)))) {
 						if ((BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((world.getBlockState(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))))).getBlock()))) {
-							distance = (double) Math.pow(((Math.pow((ix), 2) + Math.pow((iy), 2)) + Math.pow((iz), 2)), 0.5);
-							dE = (double) ((kc) / Math.pow((distance), 2));
+							rx = (double) (x + (ix));
+							ry = (double) (y + (iy));
+							rz = (double) (z + (iz));
+							dE = (double) (((kc) * ((qc) * (new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) (rx), (int) (ry), (int) (rz)), "charge"))))
+									/ Math.pow(((Math.pow((ix), 2) + Math.pow((iy), 2)) + Math.pow((iz), 2)), 1.5));
+							rEx = (double) ((new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) (rx), (int) (ry), (int) (rz)), "ex")) - ((dE) * (ix)));
+							rEy = (double) ((new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) (rx), (int) (ry), (int) (rz)), "ey")) - ((dE) * (iy)));
+							rEz = (double) ((new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) (rx), (int) (ry), (int) (rz)), "ez")) - ((dE) * (iz)));
 							if (!world.getWorld().isRemote) {
-								BlockPos _bp = new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz)));
+								BlockPos _bp = new BlockPos((int) (rx), (int) (ry), (int) (rz));
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("ex", ((new Object() {
-										public double getValue(BlockPos pos, String tag) {
-											TileEntity tileEntity = world.getTileEntity(pos);
-											if (tileEntity != null)
-												return tileEntity.getTileData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ex"))
-											- (((dE) * (qc)) * ((ix) / (distance)))));
+									_tileEntity.getTileData().putDouble("ex", (rEx));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 							if (!world.getWorld().isRemote) {
-								BlockPos _bp = new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz)));
+								BlockPos _bp = new BlockPos((int) (rx), (int) (ry), (int) (rz));
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("ey", ((new Object() {
-										public double getValue(BlockPos pos, String tag) {
-											TileEntity tileEntity = world.getTileEntity(pos);
-											if (tileEntity != null)
-												return tileEntity.getTileData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ey"))
-											- (((dE) * (qc)) * ((iy) / (distance)))));
+									_tileEntity.getTileData().putDouble("ey", (rEy));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 							if (!world.getWorld().isRemote) {
-								BlockPos _bp = new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz)));
+								BlockPos _bp = new BlockPos((int) (rx), (int) (ry), (int) (rz));
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
-									_tileEntity.getTileData().putDouble("ez", ((new Object() {
-										public double getValue(BlockPos pos, String tag) {
-											TileEntity tileEntity = world.getTileEntity(pos);
-											if (tileEntity != null)
-												return tileEntity.getTileData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(new BlockPos((int) (x + (ix)), (int) (y + (iy)), (int) (z + (iz))), "ez"))
-											- (((dE) * (qc)) * ((iz) / (distance)))));
+									_tileEntity.getTileData().putDouble("ez", (rEz));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (((Math.abs((rEx)) >= (kc)) || ((Math.abs((rEy)) >= (kc)) || (Math.abs((rEz)) >= (kc))))) {
+								if (!world.getWorld().isRemote) {
+									BlockPos _bp = new BlockPos((int) (rx), (int) (ry), (int) (rz));
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("move", (true));
+									world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+							} else {
+								if (!world.getWorld().isRemote) {
+									BlockPos _bp = new BlockPos((int) (rx), (int) (ry), (int) (rz));
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putBoolean("move", (false));
+									world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
 							}
 						}
 					}
-					iz = (double) ((iz) + 1);
+					iz = (double) ((iz) - 1);
 				}
-				iy = (double) ((iy) + 1);
+				iy = (double) ((iy) - 1);
 			}
-			ix = (double) ((ix) + 1);
-		}
-		if (!world.getWorld().isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ex", 0);
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (!world.getWorld().isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ey", 0);
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (!world.getWorld().isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ez", 0);
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			ix = (double) ((ix) - 1);
 		}
 	}
 }
