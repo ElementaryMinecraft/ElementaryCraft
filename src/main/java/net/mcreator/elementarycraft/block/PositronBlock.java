@@ -49,10 +49,9 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.PositronUpdateTickProcedure;
+import net.mcreator.elementarycraft.procedures.PositronElectronRemoveProcedure;
 import net.mcreator.elementarycraft.procedures.PositronBlockAddedProcedure;
-import net.mcreator.elementarycraft.procedures.CheckElectronNgbrProcedure;
-import net.mcreator.elementarycraft.procedures.ChargeRemoveProcedure;
+import net.mcreator.elementarycraft.procedures.ChargedUpdateTickProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -136,25 +135,6 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 		}
 
 		@Override
-		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
-			} else {
-			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				CheckElectronNgbrProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
 		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 			super.tick(state, world, pos, random);
 			int x = pos.getX();
@@ -166,7 +146,7 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PositronUpdateTickProcedure.executeProcedure($_dependencies);
+				ChargedUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
@@ -183,7 +163,7 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ChargeRemoveProcedure.executeProcedure($_dependencies);
+				PositronElectronRemoveProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -200,7 +180,7 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ChargeRemoveProcedure.executeProcedure($_dependencies);
+				PositronElectronRemoveProcedure.executeProcedure($_dependencies);
 			}
 		}
 

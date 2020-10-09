@@ -101,6 +101,14 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 				_tileEntity.getTileData().putBoolean("move", (false));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putBoolean("movable", (true));
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
 		ni = (double) 4;
 		nn = (double) (((ni) * 2) + 1);
 		iEx = (double) 0;
