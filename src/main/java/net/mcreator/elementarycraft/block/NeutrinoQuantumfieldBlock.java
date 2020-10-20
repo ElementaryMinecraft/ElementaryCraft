@@ -134,6 +134,14 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 			int y = pos.getY();
 			int z = pos.getZ();
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				TorchUpdateProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
