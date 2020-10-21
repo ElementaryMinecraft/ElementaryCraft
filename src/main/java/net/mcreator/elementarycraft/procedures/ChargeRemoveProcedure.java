@@ -52,8 +52,9 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 		double ry = 0;
 		double rz = 0;
 		double nn = 0;
+		double Em = 0;
 		kc = (double) 2;
-		kc = (double) 0.4;
+		Em = (double) 0.4;
 		qc = (double) (new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -136,7 +137,7 @@ public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement
 									_tileEntity.getTileData().putDouble("ez", (rEz));
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
-							if (((Math.abs((rEx)) >= (kc)) || ((Math.abs((rEy)) >= (kc)) || (Math.abs((rEz)) >= (kc))))) {
+							if (((Math.abs((rEx)) >= (Em)) || ((Math.abs((rEy)) >= (Em)) || (Math.abs((rEz)) >= (Em))))) {
 								if (!world.getWorld().isRemote) {
 									BlockPos _bp = new BlockPos((int) (rx), (int) (ry), (int) (rz));
 									TileEntity _tileEntity = world.getTileEntity(_bp);
