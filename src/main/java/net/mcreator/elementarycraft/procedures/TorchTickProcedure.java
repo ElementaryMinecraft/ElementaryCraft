@@ -6,6 +6,7 @@ import net.minecraft.tileentity.TileEntity;
 
 import net.mcreator.elementarycraft.block.UpQuarkFieldBlock;
 import net.mcreator.elementarycraft.block.NeutrinoQuantumfieldBlock;
+import net.mcreator.elementarycraft.block.ElectronFieldBlock;
 import net.mcreator.elementarycraft.block.DownQuarkFieldBlock;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -47,7 +48,7 @@ public class TorchTickProcedure extends ElementaryCraftModElements.ModElement {
 				return false;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "onTorch"))) {
-			if ((Math.random() <= 0.25)) {
+			if ((Math.random() <= 0.05)) {
 				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NeutrinoQuantumfieldBlock.block.getDefaultState()
 						.getBlock())) {
 					{
@@ -77,6 +78,16 @@ public class TorchTickProcedure extends ElementaryCraftModElements.ModElement {
 						$_dependencies.put("z", z);
 						$_dependencies.put("world", world);
 						DropUpQuarkProcedure.executeProcedure($_dependencies);
+					}
+				} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ElectronFieldBlock.block.getDefaultState()
+						.getBlock())) {
+					{
+						Map<String, Object> $_dependencies = new HashMap<>();
+						$_dependencies.put("world", world);
+						$_dependencies.put("x", x);
+						$_dependencies.put("y", y);
+						$_dependencies.put("z", z);
+						DropElectronPositronProcedure.executeProcedure($_dependencies);
 					}
 				}
 			}
