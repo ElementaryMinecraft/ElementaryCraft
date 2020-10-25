@@ -51,7 +51,7 @@ public class ElectronBlockAddedProcedure extends ElementaryCraftModElements.ModE
 			$_dependencies.put("x", x);
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
-			ElectronPositronBlockAddedProcedure.executeProcedure($_dependencies);
+			CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
 		}
 		if (!world.getWorld().isRemote) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);

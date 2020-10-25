@@ -8,8 +8,8 @@
     "textureFront": "neutrino_new",
     "textureRight": "empty",
     "textureBack": "neutrino_new",
-    "renderType": 12,
-    "customModelName": "Cross model",
+    "renderType": 2,
+    "customModelName": "neutrinoblock:default",
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "neutrino_new",
@@ -17,7 +17,7 @@
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
     "mx": 0.0,
-    "my": 1.0,
+    "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
     "My": 1.0,
@@ -92,7 +92,7 @@
       "name": "NeutrinoBlockAdded"
     },
     "onNeighbourBlockChanges": {
-      "name": "CheckAntiNeutrinoNgbr"
+      "name": "NeutrinoAntineutrinoRemove"
     },
     "onTickUpdate": {
       "name": "NeutrinoUpdateTick"

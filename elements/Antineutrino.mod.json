@@ -8,8 +8,8 @@
     "textureFront": "anti-neutrino",
     "textureRight": "empty",
     "textureBack": "anti-neutrino",
-    "renderType": 12,
-    "customModelName": "Cross model",
+    "renderType": 2,
+    "customModelName": "antineutrinoblock:default",
     "rotationMode": 0,
     "emissiveRendering": false,
     "itemTexture": "anti-neutrino",
@@ -17,10 +17,10 @@
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
     "mx": 0.0,
-    "my": 0.4,
+    "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 0.6,
+    "My": 1.0,
     "Mz": 1.0,
     "name": "Antineutrino",
     "specialInfo": [],
@@ -89,13 +89,10 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "AntineutrinoBlockAdded"
+      "name": "CheckNeutrinoAntineutrinoNgbr"
     },
     "onNeighbourBlockChanges": {
-      "name": "CheckNeutrinoNgbr"
-    },
-    "onTickUpdate": {
-      "name": "AntineutrinoUpdateTick"
+      "name": "NeutrinoAntineutrinoRemove"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

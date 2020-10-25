@@ -20,9 +20,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.Direction;
@@ -51,7 +48,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.NeutrinoUpdateTickProcedure;
 import net.mcreator.elementarycraft.procedures.NeutrinoBlockAddedProcedure;
-import net.mcreator.elementarycraft.procedures.CheckAntiNeutrinoNgbrProcedure;
+import net.mcreator.elementarycraft.procedures.NeutrinoAntineutrinoRemoveProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -110,11 +107,6 @@ public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 		}
 
 		@Override
-		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 1D, 0D, 1D, 1D, 1D);
-		}
-
-		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
@@ -154,7 +146,7 @@ public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				CheckAntiNeutrinoNgbrProcedure.executeProcedure($_dependencies);
+				NeutrinoAntineutrinoRemoveProcedure.executeProcedure($_dependencies);
 			}
 		}
 

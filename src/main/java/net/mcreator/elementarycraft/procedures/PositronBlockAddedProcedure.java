@@ -48,7 +48,7 @@ public class PositronBlockAddedProcedure extends ElementaryCraftModElements.ModE
 			$_dependencies.put("x", x);
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
-			ElectronPositronBlockAddedProcedure.executeProcedure($_dependencies);
+			CheckPositronElectronNgbrProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

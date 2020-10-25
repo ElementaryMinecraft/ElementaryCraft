@@ -1,7 +1,8 @@
 {
-  "parent": "block/cross",
+  "parent": "elementary_craft:custom/neutronblock",
   "textures": {
-    "cross": "elementary_craft:blocks/neutron",
-    "particle": "elementary_craft:blocks/neutron"
+    "all": "elementary_craft:blocks/neutron",
+    "particle": "elementary_craft:blocks/neutron",
+    "0": "elementary_craft:blocks/neutron"
   }
 }

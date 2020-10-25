@@ -37,21 +37,13 @@ public class NeutrinoBlockAddedProcedure extends ElementaryCraftModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (!world.getWorld().isRemote) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putBoolean("antineutrinoNgbr", (false));
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
 			$_dependencies.put("world", world);
 			$_dependencies.put("x", x);
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
-			CheckAntiNeutrinoNgbrProcedure.executeProcedure($_dependencies);
+			CheckNeutrinoAntineutrinoNgbrProcedure.executeProcedure($_dependencies);
 		}
 		if (!world.getWorld().isRemote) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);

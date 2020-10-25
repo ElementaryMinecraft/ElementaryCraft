@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "neutrino_new"
+      },
+      "name": "default"
+    }
+  }
+}
