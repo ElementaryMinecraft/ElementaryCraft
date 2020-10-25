@@ -6,8 +6,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.block.Blocks;
 
+import net.mcreator.elementarycraft.item.PhotonItem;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 @ElementaryCraftModElements.ModElement.Tag
@@ -22,7 +22,7 @@ public class ElementaryParticleItemGroup extends ElementaryCraftModElements.ModE
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(Blocks.BUBBLE_COLUMN, (int) (1));
+				return new ItemStack(PhotonItem.block, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)
