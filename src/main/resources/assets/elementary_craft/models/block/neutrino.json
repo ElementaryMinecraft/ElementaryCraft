@@ -1,8 +1,8 @@
 {
   "parent": "elementary_craft:custom/neutrinoblock",
   "textures": {
-    "all": "elementary_craft:blocks/neutrino_new",
-    "particle": "elementary_craft:blocks/neutrino_new",
+    "all": "elementary_craft:blocks/neutrino",
+    "particle": "elementary_craft:blocks/neutrino",
     "1": "elementary_craft:blocks/neutrino_new"
   }
 }

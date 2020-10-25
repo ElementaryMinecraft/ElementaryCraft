@@ -3,10 +3,10 @@
   "textures": {
     "down": "elementary_craft:blocks/electronfield_o",
     "up": "elementary_craft:blocks/electronfield_b",
-    "north": "elementary_craft:blocks/electronfield_l",
-    "east": "elementary_craft:blocks/electronfield_a",
-    "south": "elementary_craft:blocks/electronfield_r",
-    "west": "elementary_craft:blocks/electronfield_v",
+    "north": "elementary_craft:blocks/electronfield_v",
+    "east": "elementary_craft:blocks/electronfield_l",
+    "south": "elementary_craft:blocks/electronfield_a",
+    "west": "elementary_craft:blocks/electronfield_r",
     "particle": "elementary_craft:blocks/electronfield_o"
   }
 }

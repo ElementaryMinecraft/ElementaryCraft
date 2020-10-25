@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "neutrino_new",
+    "texture": "neutrino",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "neutrino_new",
@@ -12,7 +12,7 @@
     "customModelName": "neutrinoblock:default",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "neutrino_new",
+    "itemTexture": "neutrino",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",

@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elementary_craft:blocks/gluonfield_o_alt",
-    "up": "elementary_craft:blocks/gluonfield_b_alt",
-    "north": "elementary_craft:blocks/gluonfield_l_alt",
-    "east": "elementary_craft:blocks/gluonfield_a_alt",
-    "south": "elementary_craft:blocks/gluonfield_r_alt",
-    "west": "elementary_craft:blocks/gluonfield_v_alt",
-    "particle": "elementary_craft:blocks/gluonfield_o_alt"
+    "down": "elementary_craft:blocks/gluonfield_o_new",
+    "up": "elementary_craft:blocks/gluonfield_b_new",
+    "north": "elementary_craft:blocks/gluonfield_v_new",
+    "east": "elementary_craft:blocks/gluonfield_l_new",
+    "south": "elementary_craft:blocks/gluonfield_a_new",
+    "west": "elementary_craft:blocks/gluonfield_r_new",
+    "particle": "elementary_craft:blocks/gluonfield_o_new"
   }
 }
