@@ -3,6 +3,6 @@
   "textures": {
     "all": "elementary_craft:blocks/positron",
     "particle": "elementary_craft:blocks/positron",
-    "1": "elementary_craft:blocks/positron_new"
+    "1": "elementary_craft:blocks/positron"
   }
 }

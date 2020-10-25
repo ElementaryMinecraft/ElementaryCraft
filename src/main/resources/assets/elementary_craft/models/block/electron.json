@@ -3,6 +3,6 @@
   "textures": {
     "all": "elementary_craft:blocks/electron",
     "particle": "elementary_craft:blocks/electron",
-    "1": "elementary_craft:blocks/electron_new"
+    "1": "elementary_craft:blocks/electron"
   }
 }
