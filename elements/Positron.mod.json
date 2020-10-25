@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "positron_new",
+    "texture": "positron",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "positron_new",
@@ -12,7 +12,7 @@
     "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "positrron_new",
+    "itemTexture": "positron",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",

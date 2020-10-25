@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "elementary_craft:blocks/positron_new",
-    "particle": "elementary_craft:blocks/positron_new"
+    "cross": "elementary_craft:blocks/positron",
+    "particle": "elementary_craft:blocks/positron"
   }
 }

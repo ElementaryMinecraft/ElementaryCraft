@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "elementary_craft:blocks/neutrino_new",
-    "particle": "elementary_craft:blocks/neutrino_new"
+    "cross": "elementary_craft:blocks/neutrino",
+    "particle": "elementary_craft:blocks/neutrino"
   }
 }

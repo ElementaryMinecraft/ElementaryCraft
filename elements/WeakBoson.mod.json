@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "w-boson_feynman",
+    "texture": "wboson_new",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "w-boson_feynman",
@@ -12,7 +12,7 @@
     "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "w-boson_feynman",
+    "itemTexture": "wboson_new",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",

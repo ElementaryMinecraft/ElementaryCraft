@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "elementary_craft:blocks/wboson_field_boven",
-    "up": "elementary_craft:blocks/wboson_field_boven",
-    "north": "elementary_craft:blocks/wboson_field_feynman",
-    "east": "elementary_craft:blocks/wboson_field_feynman",
-    "south": "elementary_craft:blocks/wboson_field_feynman",
-    "west": "elementary_craft:blocks/wboson_field_feynman",
-    "particle": "elementary_craft:blocks/wboson_field_boven"
+    "down": "elementary_craft:blocks/wboson_field_boven_new",
+    "up": "elementary_craft:blocks/wboson_field_boven_new",
+    "north": "elementary_craft:blocks/wboson_field_new",
+    "east": "elementary_craft:blocks/wboson_field_new",
+    "south": "elementary_craft:blocks/wboson_field_new",
+    "west": "elementary_craft:blocks/wboson_field_new",
+    "particle": "elementary_craft:blocks/wboson_field_boven_new"
   }
 }
