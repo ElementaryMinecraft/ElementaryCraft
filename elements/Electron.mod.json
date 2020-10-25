@@ -2,7 +2,7 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "electron_new",
+    "texture": "electron",
     "textureTop": "empty",
     "textureLeft": "empty",
     "textureFront": "electron_new",
@@ -12,7 +12,7 @@
     "customModelName": "electronblock:default",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "electron_new",
+    "itemTexture": "electron",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",

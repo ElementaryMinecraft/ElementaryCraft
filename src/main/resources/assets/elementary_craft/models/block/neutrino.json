@@ -3,6 +3,6 @@
   "textures": {
     "all": "elementary_craft:blocks/neutrino",
     "particle": "elementary_craft:blocks/neutrino",
-    "1": "elementary_craft:blocks/neutrino_new"
+    "1": "elementary_craft:blocks/neutrino"
   }
 }
