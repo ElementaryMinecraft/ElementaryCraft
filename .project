@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>oktober</name>
+=======
+	<name>Graphics</name>
+>>>>>>> branch 'textures' of https://github.com/ElementaryMinecraft/ElementaryCraft.git
 	<comment></comment>
 	<projects/>
 	<natures>
