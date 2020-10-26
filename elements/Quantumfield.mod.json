@@ -4,7 +4,7 @@
   "definition": {
     "name": "Quantumfield",
     "icon": {
-      "value": "Blocks.FLOWING_LAVA"
+      "value": "CUSTOM:PhotonField"
     },
     "showSearch": true
   }

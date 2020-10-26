@@ -3,10 +3,10 @@
   "textures": {
     "down": "elementary_craft:blocks/neutrino_field_o",
     "up": "elementary_craft:blocks/neutrino_field_b",
-    "north": "elementary_craft:blocks/neutrino_field_l",
-    "east": "elementary_craft:blocks/neutrino_field_a",
-    "south": "elementary_craft:blocks/neutrino_field_r",
-    "west": "elementary_craft:blocks/neutrino_field_v",
+    "north": "elementary_craft:blocks/neutrino_field_v",
+    "east": "elementary_craft:blocks/neutrino_field_l",
+    "south": "elementary_craft:blocks/neutrino_field_a",
+    "west": "elementary_craft:blocks/neutrino_field_r",
     "particle": "elementary_craft:blocks/neutrino_field_o"
   }
 }

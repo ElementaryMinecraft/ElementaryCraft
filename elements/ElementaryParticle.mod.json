@@ -4,7 +4,7 @@
   "definition": {
     "name": "Elementary Particle",
     "icon": {
-      "value": "Blocks.BUBBLE_COLUMN"
+      "value": "CUSTOM:Photon"
     },
     "showSearch": true
   }

@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "electron_new"
+        "1": "electron"
       },
       "name": "default"
     }

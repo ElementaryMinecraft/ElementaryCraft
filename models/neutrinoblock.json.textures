@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "neutrino_new"
+        "1": "neutrino"
       },
       "name": "default"
     }

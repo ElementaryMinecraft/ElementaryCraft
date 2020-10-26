@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "photon_new",
+    "texture": "photon",
     "customModelName": "Normal",
     "name": "Photon",
     "creativeTab": {
