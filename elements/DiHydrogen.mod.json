@@ -12,7 +12,7 @@
     "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "",
+    "itemTexture": "dihydrogen",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT",
