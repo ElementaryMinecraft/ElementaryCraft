@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Electron"
+      },
+      {
+        "value": "CUSTOM:Photon"
+      },
+      {
+        "value": "CUSTOM:Proton"
+      },
+      {
+        "value": "CUSTOM:Photon"
+      },
+      {
+        "value": "CUSTOM:Photon"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Hydrogen"
+    },
+    "name": "hydrogen_craft",
+    "namespace": "mod"
+  }
+}
