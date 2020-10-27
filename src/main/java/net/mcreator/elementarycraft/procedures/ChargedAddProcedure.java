@@ -10,6 +10,7 @@ import net.minecraft.block.BlockState;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.util.Map;
+import java.util.HashMap;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
@@ -255,6 +256,14 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 					_tileEntity.getTileData().putBoolean("move", (true));
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			AddPhotonFarmProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

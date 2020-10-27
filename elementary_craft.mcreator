@@ -1869,6 +1869,129 @@
           }
         ]
       }
+    },
+    {
+      "name": "PhotonFarmX",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_x"
+    },
+    {
+      "name": "PhotonFarmY",
+      "type": "block",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_y"
+    },
+    {
+      "name": "PhotonFarmZ",
+      "type": "block",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_z"
+    },
+    {
+      "name": "PhotonFarmBlocks",
+      "type": "tag",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_blocks"
+    },
+    {
+      "name": "AddPhotonFarm",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "add_photon_farm",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhotonFarmNgbr",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_ngbr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhotonFarmTick",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1876,10 +1999,10 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
-      "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
-      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "block.elementary_craft.photon_field": "Photon Field",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
@@ -1892,7 +2015,10 @@
       "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
       "block.elementary_craft.pion_plus": "Pion Plus",
       "block.elementary_craft.gluon_field": "Gluon Field",
+      "block.elementary_craft.photon_farm_x": "Photon Farm X",
       "itemGroup.tabquantumfield": "Quantumfield",
+      "block.elementary_craft.photon_farm_y": "Photon Farm X",
+      "block.elementary_craft.photon_farm_z": "Photon Farm X",
       "itemGroup.tabelementary_particle": "Elementary Particle",
       "block.elementary_craft.weak_boson": "Weak Boson",
       "block.elementary_craft.up_quark_field": "Up Quark Field",

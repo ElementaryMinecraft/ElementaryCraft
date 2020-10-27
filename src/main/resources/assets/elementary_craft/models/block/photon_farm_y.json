@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/wboson_new",
+    "up": "elementary_craft:blocks/wboson_new",
+    "north": "elementary_craft:blocks/wboson_new",
+    "east": "elementary_craft:blocks/wboson_new",
+    "south": "elementary_craft:blocks/wboson_new",
+    "west": "elementary_craft:blocks/wboson_new",
+    "particle": "elementary_craft:blocks/wboson_new"
+  }
+}

@@ -29,6 +29,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.PhotonFieldBlockDestroyedByPlayerProcedure;
+import net.mcreator.elementarycraft.procedures.AddPhotonFarmProcedure;
 import net.mcreator.elementarycraft.itemgroup.QuantumfieldItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -65,6 +66,22 @@ public class PhotonFieldBlock extends ElementaryCraftModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 0));
+		}
+
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AddPhotonFarmProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

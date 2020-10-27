@@ -2,33 +2,33 @@
   "_fv": 10,
   "_type": "block",
   "definition": {
-    "texture": "photon_field_b",
-    "textureTop": "photon_field_b",
-    "textureLeft": "photon_field",
-    "textureFront": "photon_field",
-    "textureRight": "photon_field",
-    "textureBack": "photon_field",
+    "texture": "wboson_new",
+    "textureTop": "",
+    "textureLeft": "wboson_new",
+    "textureFront": "",
+    "textureRight": "wboson_new",
+    "textureBack": "",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "",
-    "hasTransparency": false,
+    "itemTexture": "wboson_new",
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "TRANSLUCENT",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
-    "Mx": 1.0,
-    "My": 1.0,
-    "Mz": 1.0,
-    "name": "Photon Field",
+    "Mx": 0.0,
+    "My": 0.0,
+    "Mz": 0.0,
+    "name": "Photon Farm X",
     "specialInfo": [],
-    "hardness": 0.3,
+    "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "CUSTOM:Quantumfield"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -39,13 +39,13 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 126,
+    "lightOpacity": 255,
     "material": {
-      "value": "ROCK"
+      "value": "AIR"
     },
     "tickRate": 10,
     "tickRandomly": false,
-    "isReplaceable": false,
+    "isReplaceable": true,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -59,10 +59,10 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": true,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "GROUND"
     },
     "luminance": 0.0,
-    "unbreakable": false,
+    "unbreakable": true,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
@@ -88,28 +88,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "AddPhotonFarm"
+    "onNeighbourBlockChanges": {
+      "name": "PhotonFarmNgbr"
     },
-    "onDestroyedByPlayer": {
-      "name": "PhotonFieldBlockDestroyedByPlayer"
+    "onTickUpdate": {
+      "name": "PhotonFarmTick"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
-      },
-      {
-        "value": "Blocks.SAND#0"
-      },
-      {
-        "value": "Blocks.DIRT#0"
       }
     ],
-    "frequencyPerChunks": 20,
+    "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64
