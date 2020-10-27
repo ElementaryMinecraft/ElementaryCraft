@@ -85,6 +85,25 @@ public class PhotonFieldBlock extends ElementaryCraftModElements.ModElement {
 		}
 
 		@Override
+		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
+			} else {
+			}
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AddPhotonFarmProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
 		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, IFluidState fluid) {
 			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
 			int x = pos.getX();

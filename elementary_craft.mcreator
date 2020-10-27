@@ -1999,10 +1999,10 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.gluon": "Gluon",
-      "block.elementary_craft.neutrino": "Neutrino",
       "block.elementary_craft.photon_field": "Photon Field",
-      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "block.elementary_craft.neutrino": "Neutrino",
       "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",

@@ -45,64 +45,100 @@ public class AddPhotonFarmProcedure extends ElementaryCraftModElements.ModElemen
 			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& ((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) z))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 							.getBlock()))) {
-				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& ((world.getBlockState(new BlockPos((int) (x - 2), (int) y, (int) z))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 							.getBlock()))) {
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 2), (int) z))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 							.getBlock()))) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 							.getBlock()))) {
-				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 2)))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 							.getBlock()))) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 2)))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 							.getBlock()))) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				}
 			}
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == PhotonFieldBlock.block.getDefaultState()
 				.getBlock())) {
 			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& (BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 							.contains((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) z))).getBlock())))) {
-				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& (BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 							.contains((world.getBlockState(new BlockPos((int) (x - 2), (int) y, (int) z))).getBlock())))) {
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), PhotonFarmXBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& (BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 							.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 2), (int) z))).getBlock())))) {
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& (BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 							.contains((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock())))) {
-				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), PhotonFarmYBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& (BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 							.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 2)))).getBlock())))) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				}
 			}
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.AIR)
 					&& (BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:charged").toLowerCase(java.util.Locale.ENGLISH)))
 							.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 2)))).getBlock())))) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				if ((!(BlockTags.getCollection().getOrCreate(new ResourceLocation(("forge:photon_farm_blocks").toLowerCase(java.util.Locale.ENGLISH)))
+						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock())))) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), PhotonFarmZBlock.block.getDefaultState(), 3);
+				}
 			}
 		}
 	}

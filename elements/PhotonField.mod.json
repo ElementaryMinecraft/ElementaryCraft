@@ -91,6 +91,9 @@
     "onBlockAdded": {
       "name": "AddPhotonFarm"
     },
+    "onNeighbourBlockChanges": {
+      "name": "AddPhotonFarm"
+    },
     "onDestroyedByPlayer": {
       "name": "PhotonFieldBlockDestroyedByPlayer"
     },
