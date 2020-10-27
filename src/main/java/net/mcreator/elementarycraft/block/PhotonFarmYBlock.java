@@ -67,6 +67,11 @@ public class PhotonFarmYBlock extends ElementaryCraftModElements.ModElement {
 		}
 
 		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
+		}
+
+		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			return VoxelShapes.create(0D, 0D, 0D, 0D, 0D, 0D);
 		}

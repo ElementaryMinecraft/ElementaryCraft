@@ -1,12 +1,8 @@
 {
-  "parent": "block/cube",
+  "parent": "elementary_craft:custom/photonfarmx",
   "textures": {
-    "down": "elementary_craft:blocks/wboson_new",
-    "up": "elementary_craft:blocks/wboson_new",
-    "north": "elementary_craft:blocks/wboson_new",
-    "east": "elementary_craft:blocks/wboson_new",
-    "south": "elementary_craft:blocks/wboson_new",
-    "west": "elementary_craft:blocks/",
-    "particle": "elementary_craft:blocks/wboson_new"
+    "all": "elementary_craft:blocks/photonfarm.png",
+    "particle": "elementary_craft:blocks/photonfarm.png",
+    "0": "elementary_craft:blocks/photonfarm"
   }
 }
