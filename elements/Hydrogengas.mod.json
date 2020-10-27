@@ -25,7 +25,7 @@
     "name": "Hydrogengas",
     "specialInfo": [],
     "hardness": 1.0,
-    "resistance": 10.0,
+    "resistance": 5.0,
     "hasGravity": false,
     "creativeTab": {
       "value": "CUSTOM:ElementaryParticle"
@@ -88,6 +88,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "HydrogengasExplode"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
