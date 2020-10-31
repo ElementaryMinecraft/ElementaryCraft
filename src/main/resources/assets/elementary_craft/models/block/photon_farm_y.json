@@ -1,5 +1,5 @@
 {
-  "parent": "elementary_craft:custom/photonfieldy",
+  "parent": "elementary_craft:custom/photonfarmy",
   "textures": {
     "all": "elementary_craft:blocks/photonfarm",
     "particle": "elementary_craft:blocks/photonfarm",
