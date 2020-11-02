@@ -1871,13 +1871,22 @@
       }
     },
     {
-      "name": "DyeDownQuarkBlue1",
+      "name": "DyeUpQuarkGreen1",
       "type": "recipe",
-      "sortid": 110,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dye_down_quark_blue_1"
+      "registry_name": "dye_up_quark_green_1"
+    },
+    {
+      "name": "DyeDownQuarkGreen1",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_down_quark_green_1"
     },
     {
       "name": "DyeDownQuarkRed1",
@@ -1889,13 +1898,22 @@
       "registry_name": "dye_down_quark_red_1"
     },
     {
-      "name": "DyeAntiDownQuarkRed1",
+      "name": "DyeUpQuarkBlue1",
       "type": "recipe",
-      "sortid": 112,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dye_anti_down_quark_red_1"
+      "registry_name": "dye_up_quark_blue_1"
+    },
+    {
+      "name": "DyeAntiDownQuarkGreen1",
+      "type": "recipe",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dye_anti_down_quark_green_1"
     },
     {
       "name": "DyeAntiDownQuarkBlue1",
@@ -1916,49 +1934,31 @@
       "registry_name": "dye_up_quark_red_1"
     },
     {
-      "name": "DyeUpQuarkGreen1",
+      "name": "DyeAntiUpQuarkBlue1",
       "type": "recipe",
-      "sortid": 115,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dye_up_quark_green_1"
+      "registry_name": "dye_anti_up_quark_blue_1"
     },
     {
-      "name": "DyeUpQuarkBlue1",
+      "name": "DyeDownQuarkBlue1",
       "type": "recipe",
-      "sortid": 116,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dye_up_quark_blue_1"
+      "registry_name": "dye_down_quark_blue_1"
     },
     {
-      "name": "DyeAntiUpQuarkGreen1",
+      "name": "DyeAntiDownQuarkRed1",
       "type": "recipe",
-      "sortid": 117,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dye_anti_up_quark_green_1"
-    },
-    {
-      "name": "DyeAntiDownQuarkGreen1",
-      "type": "recipe",
-      "sortid": 118,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "dye_anti_down_quark_green_1"
-    },
-    {
-      "name": "DyeDownQuarkGreen1",
-      "type": "recipe",
-      "sortid": 119,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "dye_down_quark_green_1"
+      "registry_name": "dye_anti_down_quark_red_1"
     },
     {
       "name": "DyeAntiUpQuarkRed1",
@@ -1970,13 +1970,136 @@
       "registry_name": "dye_anti_up_quark_red_1"
     },
     {
-      "name": "DyeAntiUpQuarkBlue1",
+      "name": "DyeAntiUpQuarkGreen1",
       "type": "recipe",
-      "sortid": 121,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dye_anti_up_quark_blue_1"
+      "registry_name": "dye_anti_up_quark_green_1"
+    },
+    {
+      "name": "PhotonFarmY",
+      "type": "block",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_y"
+    },
+    {
+      "name": "PhotonFarmX",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_x"
+    },
+    {
+      "name": "PhotonFarmNgbr",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_ngbr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhotonFarmZ",
+      "type": "block",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_z"
+    },
+    {
+      "name": "PhotonFarmBlocks",
+      "type": "tag",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_blocks"
+    },
+    {
+      "name": "AddPhotonFarm",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "add_photon_farm",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhotonFarmTick",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "photon_farm_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
