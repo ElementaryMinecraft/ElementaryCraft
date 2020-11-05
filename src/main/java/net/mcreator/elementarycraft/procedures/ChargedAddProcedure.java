@@ -1,3 +1,4 @@
+
 package net.mcreator.elementarycraft.procedures;
 
 import net.minecraft.world.IWorld;
@@ -14,8 +15,10 @@ import java.util.HashMap;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
+
 	public ChargedAddProcedure(ElementaryCraftModElements instance) {
 		super(instance, 87);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -35,10 +38,12 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			System.err.println("Failed to load dependency world for procedure ChargedAdd!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double ix = 0;
 		double iy = 0;
 		double iz = 0;
@@ -76,6 +81,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("ex", 0);
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -84,6 +90,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("ey", 0);
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -92,6 +99,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("ez", 0);
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -100,6 +108,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putBoolean("move", (false));
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -108,6 +117,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putBoolean("movable", (true));
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		ni = (double) 4;
@@ -175,6 +185,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("ex", (rEx));
+
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 							if (!world.getWorld().isRemote) {
@@ -183,6 +194,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("ey", (rEy));
+
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 							if (!world.getWorld().isRemote) {
@@ -191,6 +203,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("ez", (rEz));
+
 								world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 							if (((Math.abs((rEx)) >= (Em)) || ((Math.abs((rEy)) >= (Em)) || (Math.abs((rEz)) >= (Em))))) {
@@ -200,6 +213,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putBoolean("move", (true));
+
 									world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							} else {
@@ -209,6 +223,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putBoolean("move", (false));
+
 									world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
@@ -229,6 +244,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("ex", (iEx));
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -237,6 +253,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("ey", (iEy));
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
@@ -245,6 +262,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("ez", (iEz));
+
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (((Math.abs((iEx)) >= (Em)) || ((Math.abs((iEy)) >= (Em)) || (Math.abs((iEz)) >= (Em))))) {
@@ -254,6 +272,7 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putBoolean("move", (true));
+
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
@@ -266,4 +285,5 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 			AddPhotonFarmProcedure.executeProcedure($_dependencies);
 		}
 	}
+
 }
