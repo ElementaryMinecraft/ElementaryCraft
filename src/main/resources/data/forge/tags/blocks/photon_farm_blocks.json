@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "elementary_craft:photon_farm_x",
+    "elementary_craft:photon_farm_y",
+    "elementary_craft:photon_farm_z"
+  ]
+}

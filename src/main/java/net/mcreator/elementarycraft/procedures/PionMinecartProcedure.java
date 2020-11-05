@@ -9,6 +9,7 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.Vec3d;
 
 import net.mcreator.elementarycraft.item.GluonItem;
 import net.mcreator.elementarycraft.ElementaryCraftMod;
@@ -24,6 +25,8 @@ import java.util.HashSet;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import net.minecraft.client.Minecraft;
+import com.sun.corba.se.spi.extension.ZeroPortPolicy;
+import com.sun.corba.se.spi.extension.ZeroPortPolicy;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement {

@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:PhotonFarmX"
+      },
+      {
+        "value": "CUSTOM:PhotonFarmY"
+      },
+      {
+        "value": "CUSTOM:PhotonFarmZ"
+      }
+    ],
+    "functions": [],
+    "name": "photon_farm_blocks",
+    "namespace": "forge"
+  }
+}
