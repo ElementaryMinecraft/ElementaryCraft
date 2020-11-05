@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.procedures;
 
 import net.minecraft.world.IWorld;
@@ -287,3 +286,4 @@ public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 	}
 
 }
+
