@@ -2017,6 +2017,53 @@
           }
         ]
       }
+    },
+    {
+      "name": "HeliumgasRise",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "heliumgas_rise",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ballooncraft",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ballooncraft"
+    },
+    {
+      "name": "Balloon",
+      "type": "item",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "balloon"
     }
   ],
   "variable_elements": [],
@@ -2040,6 +2087,7 @@
       "block.elementary_craft.heliumgas": "Heliumgas",
       "block.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
       "block.elementary_craft.hydrogengas": "Hydrogengas",
+      "item.elementary_craft.balloon": "Balloon",
       "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
       "block.elementary_craft.pion_plus": "Pion Plus",
