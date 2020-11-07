@@ -1,0 +1,42 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "1": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "2": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "3": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "4": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "5": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "6": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "7": {
+      "item": "elementary_craft:di_hydrogen"
+    },
+    "8": {
+      "item": "elementary_craft:di_hydrogen"
+    }
+  },
+  "result": {
+    "item": "elementary_craft:hydrogengas",
+    "count": 1
+  }
+}

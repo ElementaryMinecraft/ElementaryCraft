@@ -1,0 +1,16 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:hydrogen"
+    },
+    {
+      "item": "elementary_craft:hydrogen"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:di_hydrogen",
+    "count": 1
+  }
+}

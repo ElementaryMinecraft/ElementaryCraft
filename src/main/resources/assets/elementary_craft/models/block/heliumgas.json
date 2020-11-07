@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/heliumgas",
+    "up": "elementary_craft:blocks/heliumgas",
+    "north": "elementary_craft:blocks/heliumgas",
+    "east": "elementary_craft:blocks/heliumgas",
+    "south": "elementary_craft:blocks/heliumgas",
+    "west": "elementary_craft:blocks/heliumgas",
+    "particle": "elementary_craft:blocks/heliumgas"
+  }
+}

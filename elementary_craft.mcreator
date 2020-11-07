@@ -1871,6 +1871,199 @@
       }
     },
     {
+      "name": "Hydrogen",
+      "type": "block",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hydrogen"
+    },
+    {
+      "name": "HydrogenCraft",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hydrogen_craft"
+    },
+    {
+      "name": "DiHydrogen",
+      "type": "block",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "di_hydrogen"
+    },
+    {
+      "name": "DiHydrogenCraft",
+      "type": "recipe",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+     "registry_name": "di_hydrogen_craft"
+    },
+    {
+      "name": "Hydrogengas",
+      "type": "block",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hydrogengas"
+    },
+    {
+      "name": "Hydrogengascraft",
+      "type": "recipe",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hydrogengascraft"
+    },
+    {
+      "name": "SpontaneousDihydrogen",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spontaneous_dihydrogen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Helium",
+      "type": "block",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "helium"
+    },
+    {
+      "name": "HeliumCraft",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "helium_craft"
+    },
+    {
+      "name": "Heliumgas",
+      "type": "block",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "heliumgas"
+    },
+    {
+      "name": "Heliumgascraft",
+      "type": "recipe",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "heliumgascraft"
+    },
+    {
+      "name": "HydrogengasExplode",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hydrogengas_explode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HeliumgasRise",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "heliumgas_rise",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ballooncraft",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ballooncraft"
+    },
+    {
+      "name": "Balloon",
+      "type": "item",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "balloon"
       "name": "DyeUpQuarkGreen1",
       "type": "recipe",
       "sortid": 115,
@@ -1944,7 +2137,7 @@
     },
     {
       "name": "DyeDownQuarkBlue1",
-      "type": "recipe",
+            "type": "recipe",
       "sortid": 110,
       "compiles": true,
       "locked_code": false,
@@ -1980,7 +2173,7 @@
     },
     {
       "name": "PhotonFarmY",
-      "type": "block",
+            "type": "block",
       "sortid": 111,
       "compiles": true,
       "locked_code": false,
@@ -2099,26 +2292,31 @@
             "type": "world"
           }
         ]
-      }
+      }    
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.elementary_craft.hydrogen": "Hydrogen",
       "item.elementary_craft.gluon": "Gluon",
       "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
-      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.electronquantumfieldblock": "Electronquantumfieldblock",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
+      "block.elementary_craft.helium": "Helium",
       "item.elementary_craft.down_quark_green": "Downquark (Green)",
       "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
       "block.elementary_craft.electron": "Electron",
       "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
+      "block.elementary_craft.heliumgas": "Heliumgas",
       "block.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
+      "block.elementary_craft.hydrogengas": "Hydrogengas",
+      "item.elementary_craft.balloon": "Balloon",
       "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
       "block.elementary_craft.pion_plus": "Pion Plus",
@@ -2139,6 +2337,7 @@
       "block.elementary_craft.antineutrino": "Antineutrino",
       "item.elementary_craft.anti_down_quark_blue": "Anti Downquark (Blue)",
       "item.elementary_craft.up_quark_green": "Upquark (Green)",
+      "block.elementary_craft.di_hydrogen": "Di Hydrogen",
       "block.elementary_craft.positron": "Positron",
       "block.elementary_craft.proton": "Proton",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",

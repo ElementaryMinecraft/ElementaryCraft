@@ -1,0 +1,36 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "tag": "wool"
+    },
+    "1": {
+      "tag": "wool"
+    },
+    "2": {
+      "tag": "wool"
+    },
+    "3": {
+      "tag": "wool"
+    },
+    "4": {
+      "item": "elementary_craft:heliumgas"
+    },
+    "5": {
+      "tag": "wool"
+    },
+    "7": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "elementary_craft:balloon",
+    "count": 1
+  }
+}

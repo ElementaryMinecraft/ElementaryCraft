@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "elementary_craft:blocks/helium",
+    "particle": "elementary_craft:blocks/helium"
+  }
+}

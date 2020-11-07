@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "elementary_craft:blocks/hydrogengas",
+    "particle": "elementary_craft:blocks/hydrogengas"
+  }
+}
