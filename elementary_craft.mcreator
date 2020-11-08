@@ -2361,8 +2361,8 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.entropy_mob": "Entropy Mob Spawn Egg",
-      "item.elementary_craft.gluon": "Gluon",
       "block.elementary_craft.hydrogen": "Hydrogen",
+      "item.elementary_craft.gluon": "Gluon",
       "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
@@ -2374,9 +2374,9 @@
       "item.elementary_craft.down_quark_green": "Downquark (Green)",
       "block.elementary_craft.weak_gauge_field": "Weak Gauge Field",
       "block.elementary_craft.electron": "Electron",
-      "block.elementary_craft.pion_nul": "Pion Nul",
       "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
       "block.elementary_craft.heliumgas": "Heliumgas",
+      "block.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
       "block.elementary_craft.hydrogengas": "Hydrogengas",
       "item.elementary_craft.balloon": "Balloon",
       "entity.elementary_craft.entropy_mob": "Entropy Mob",
@@ -2404,6 +2404,7 @@
       "block.elementary_craft.positron": "Positron",
       "block.elementary_craft.proton": "Proton",
       "item.elementary_craft.anti_up_quark_blue": "Anti Upquark (Blue)",
+      "block.elementary_craft.pion_nul_from_down": "Pion Nul From Down",
       "item.elementary_craft.anti_up_quark_red": "Anti Upquark (Red)"
     }
   },
