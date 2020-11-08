@@ -487,6 +487,15 @@
       "registry_name": "pion_minus"
     },
     {
+      "name": "PionNul",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "pion_nul"
+    },
+    {
       "name": "PionPlus",
       "type": "block",
       "sortid": 24,
@@ -2277,15 +2286,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "PionNul",
-      "type": "block",
-      "sortid": 127,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "pion_nul"
     },
     {
       "name": "EntropyMob",
