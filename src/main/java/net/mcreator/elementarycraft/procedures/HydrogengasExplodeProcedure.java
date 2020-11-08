@@ -35,7 +35,7 @@ public class HydrogengasExplodeProcedure extends ElementaryCraftModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getSpawnPoint().getY()) < 150)) {
+		if ((y < 150)) {
 			if ((Math.random() < 0.6)) {
 				if (world instanceof World && !world.getWorld().isRemote) {
 					world.getWorld().createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.BREAK);
