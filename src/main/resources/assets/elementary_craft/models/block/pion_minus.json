@@ -1,7 +1,8 @@
 {
-  "parent": "block/cross",
+  "parent": "elementary_craft:custom/pionminus_red",
   "textures": {
-    "cross": "elementary_craft:blocks/pionminus",
-    "particle": "elementary_craft:blocks/pionminus"
+    "all": "elementary_craft:blocks/pionminus_red",
+    "particle": "elementary_craft:blocks/pionminus_red",
+    "0": "elementary_craft:blocks/pionminus_red"
   }
 }
