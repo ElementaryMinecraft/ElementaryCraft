@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "elementary_craft:blocks/pionnulfromup",
-    "particle": "elementary_craft:blocks/pionnulfromup"
+    "cross": "elementary_craft:blocks/pionnul_red",
+    "particle": "elementary_craft:blocks/pionnul_red"
   }
 }
