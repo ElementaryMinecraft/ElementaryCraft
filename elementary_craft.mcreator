@@ -2297,6 +2297,15 @@
       }
     },
     {
+      "name": "PionNul",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "pion_nul"
+    },
+    {
       "name": "EntropyMob",
       "type": "mob",
       "sortid": 122,
@@ -2363,15 +2372,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "entropy_gui"
-    },
-    {
-      "name": "PionNul",
-      "type": "block",
-      "sortid": 127,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "pion_nul"
     }
   ],
   "variable_elements": [],
