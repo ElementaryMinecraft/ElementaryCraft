@@ -1,11 +1,8 @@
 {
-  "parent": "elementary_craft:custom/pionplus",
+  "parent": "elementary_craft:custom/pionplus_red",
   "textures": {
-    "all": "elementary_craft:blocks/pionplus",
-    "particle": "elementary_craft:blocks/pionplus",
-    "2": "elementary_craft:blocks/pionplus1",
-    "3": "elementary_craft:blocks/pionplus2",
-    "4": "elementary_craft:blocks/pionplus2d",
-    "5": "elementary_craft:blocks/pionplus2u"
+    "all": "elementary_craft:blocks/pionplus_red",
+    "particle": "elementary_craft:blocks/pionplus_red",
+    "0": "elementary_craft:blocks/pionplus_red"
   }
 }
