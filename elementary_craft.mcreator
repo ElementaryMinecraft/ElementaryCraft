@@ -2370,8 +2370,8 @@
   "language_map": {
     "en_us": {
       "item.elementary_craft.entropy_mob": "Entropy Mob Spawn Egg",
-      "item.elementary_craft.gluon": "Gluon",
       "block.elementary_craft.hydrogen": "Hydrogen",
+      "item.elementary_craft.gluon": "Gluon",
       "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
