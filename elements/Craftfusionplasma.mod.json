@@ -10,37 +10,37 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:DenseHydrogen"
       },
       {
-        "value": ""
+        "value": "CUSTOM:WeakBoson"
       },
       {
-        "value": ""
+        "value": "CUSTOM:DenseHydrogen"
       },
       {
-        "value": "CUSTOM:Hydrogen"
+        "value": "CUSTOM:WeakBoson"
       },
       {
-        "value": "CUSTOM:Hydrogen"
+        "value": "CUSTOM:DenseHydrogen"
       },
       {
-        "value": ""
+        "value": "CUSTOM:WeakBoson"
       },
       {
-        "value": ""
+        "value": "CUSTOM:DenseHydrogen"
       },
       {
-        "value": ""
+        "value": "CUSTOM:WeakBoson"
       },
       {
-        "value": ""
+        "value": "CUSTOM:DenseHydrogen"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:DiHydrogen"
+      "value": "CUSTOM:Fusionplasma"
     },
-    "name": "di_hydrogen_craft",
+    "name": "craftfusionplasma",
     "namespace": "mod"
   }
 }

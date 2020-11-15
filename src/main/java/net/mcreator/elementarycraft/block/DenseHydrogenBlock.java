@@ -47,8 +47,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.HydrogengasExplodeProcedure;
-import net.mcreator.elementarycraft.procedures.AddHydrogengasProcedure;
-import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
+import net.mcreator.elementarycraft.procedures.AddDenseHydrogenProcedure;
+import net.mcreator.elementarycraft.itemgroup.QuantumfieldItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import javax.annotation.Nullable;
@@ -61,26 +61,26 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @ElementaryCraftModElements.ModElement.Tag
-public class HydrogengasBlock extends ElementaryCraftModElements.ModElement {
-	@ObjectHolder("elementary_craft:hydrogengas")
+public class DenseHydrogenBlock extends ElementaryCraftModElements.ModElement {
+	@ObjectHolder("elementary_craft:dense_hydrogen")
 	public static final Block block = null;
-	@ObjectHolder("elementary_craft:hydrogengas")
+	@ObjectHolder("elementary_craft:dense_hydrogen")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public HydrogengasBlock(ElementaryCraftModElements instance) {
-		super(instance, 111);
+	public DenseHydrogenBlock(ElementaryCraftModElements instance) {
+		super(instance, 127);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(QuantumfieldItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("hydrogengas"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("dense_hydrogen"));
 	}
 
 	@Override
@@ -90,14 +90,8 @@ public class HydrogengasBlock extends ElementaryCraftModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 5f).lightValue(0).doesNotBlockMovement()
-					.notSolid());
-			setRegistryName("hydrogengas");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 5f).lightValue(0).doesNotBlockMovement());
+			setRegistryName("dense_hydrogen");
 		}
 
 		@Override
@@ -121,7 +115,7 @@ public class HydrogengasBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				AddHydrogengasProcedure.executeProcedure($_dependencies);
+				AddDenseHydrogenProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -246,7 +240,7 @@ public class HydrogengasBlock extends ElementaryCraftModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("hydrogengas");
+			return new StringTextComponent("dense_hydrogen");
 		}
 
 		@Override
@@ -261,7 +255,7 @@ public class HydrogengasBlock extends ElementaryCraftModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Hydrogengas");
+			return new StringTextComponent("Dense Hydrogen");
 		}
 
 		@Override

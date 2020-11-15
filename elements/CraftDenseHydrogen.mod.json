@@ -10,19 +10,19 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:Hydrogengas"
+      },
+      {
+        "value": "CUSTOM:Hydrogengas"
       },
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:Hydrogengas"
       },
       {
-        "value": "CUSTOM:Hydrogen"
-      },
-      {
-        "value": "CUSTOM:Hydrogen"
+        "value": "CUSTOM:Hydrogengas"
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:DiHydrogen"
+      "value": "CUSTOM:DenseHydrogen"
     },
-    "name": "di_hydrogen_craft",
+    "name": "craft_dense_hydrogen",
     "namespace": "mod"
   }
 }

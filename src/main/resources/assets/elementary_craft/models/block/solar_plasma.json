@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/plasma",
+    "up": "elementary_craft:blocks/plasma",
+    "north": "elementary_craft:blocks/plasma",
+    "east": "elementary_craft:blocks/plasma",
+    "south": "elementary_craft:blocks/plasma",
+    "west": "elementary_craft:blocks/plasma",
+    "particle": "elementary_craft:blocks/plasma"
+  }
+}
