@@ -20,6 +20,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
+import java.util.function.Function;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 import java.util.Comparator;
@@ -32,23 +33,28 @@ public class EntropyMobCollidesWithPlayerProcedure extends ElementaryCraftModEle
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure EntropyMobCollidesWithPlayer!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure EntropyMobCollidesWithPlayer!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure EntropyMobCollidesWithPlayer!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure EntropyMobCollidesWithPlayer!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure EntropyMobCollidesWithPlayer!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure EntropyMobCollidesWithPlayer!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure EntropyMobCollidesWithPlayer!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure EntropyMobCollidesWithPlayer!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure EntropyMobCollidesWithPlayer!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure EntropyMobCollidesWithPlayer!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -128,19 +134,22 @@ public class EntropyMobCollidesWithPlayerProcedure extends ElementaryCraftModEle
 													* (((entity.getPersistentData().getDouble("radius")) * 2) + 1))))));
 							entity.getPersistentData().putDouble("iterations", ((entity.getPersistentData().getDouble("iterations")) + 1));
 						}
-						if ((!((world
+						if ((!(((Entity) world
 								.getEntitiesWithinAABB(PlayerEntity.class,
-										new AxisAlignedBB((x + (entity.getPersistentData().getDouble("xcoord"))) - 2 / 2,
-												(y + (entity.getPersistentData().getDouble("ycoord"))) - 2 / 2,
-												(z + (entity.getPersistentData().getDouble("zcoord"))) - 2 / 2,
-												(x + (entity.getPersistentData().getDouble("xcoord"))) + 2 / 2,
-												(y + (entity.getPersistentData().getDouble("ycoord"))) + 2 / 2,
-												(z + (entity.getPersistentData().getDouble("zcoord"))) + 2 / 2),
+										new AxisAlignedBB((x + (entity.getPersistentData().getDouble("xcoord"))) - (2 / 2d),
+												(y + (entity.getPersistentData().getDouble("ycoord"))) - (2 / 2d),
+												(z + (entity.getPersistentData().getDouble("zcoord"))) - (2 / 2d),
+												(x + (entity.getPersistentData().getDouble("xcoord"))) + (2 / 2d),
+												(y + (entity.getPersistentData().getDouble("ycoord"))) + (2 / 2d),
+												(z + (entity.getPersistentData().getDouble("zcoord"))) + (2 / 2d)),
 										null)
-								.stream()
-								.sorted(Comparator.comparing(_entcnd -> _entcnd.getDistanceSq((x + (entity.getPersistentData().getDouble("xcoord"))),
+								.stream().sorted(new Object() {
+									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+										return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+									}
+								}.compareDistOf((x + (entity.getPersistentData().getDouble("xcoord"))),
 										(y + (entity.getPersistentData().getDouble("ycoord"))),
-										(z + (entity.getPersistentData().getDouble("zcoord"))))))
+										(z + (entity.getPersistentData().getDouble("zcoord")))))
 								.findFirst().orElse(null)) != null))) {
 							{
 								BlockPos _bp = new BlockPos((int) (x + (entity.getPersistentData().getDouble("xcoord"))),

@@ -24,23 +24,28 @@ public class ElectronFieldBlockDestroyedByPlayerProcedure extends ElementaryCraf
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure ElectronFieldBlockDestroyedByPlayer!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure ElectronFieldBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure ElectronFieldBlockDestroyedByPlayer!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure ElectronFieldBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure ElectronFieldBlockDestroyedByPlayer!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure ElectronFieldBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure ElectronFieldBlockDestroyedByPlayer!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure ElectronFieldBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure ElectronFieldBlockDestroyedByPlayer!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure ElectronFieldBlockDestroyedByPlayer!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -53,7 +58,7 @@ public class ElectronFieldBlockDestroyedByPlayerProcedure extends ElementaryCraf
 					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ElectronFieldBlock.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 			} else {

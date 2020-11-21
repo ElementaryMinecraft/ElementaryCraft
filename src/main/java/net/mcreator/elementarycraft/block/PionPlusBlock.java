@@ -49,7 +49,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.elementarycraft.procedures.PositiveChargedAddProcedure;
+import net.mcreator.elementarycraft.procedures.PionPlusBlockAddedProcedure;
 import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
 import net.mcreator.elementarycraft.procedures.ChargeRemovePositiveProcedure;
@@ -130,7 +130,7 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PositiveChargedAddProcedure.executeProcedure($_dependencies);
+				PionPlusBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 

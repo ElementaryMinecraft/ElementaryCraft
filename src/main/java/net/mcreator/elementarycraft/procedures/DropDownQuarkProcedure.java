@@ -22,19 +22,23 @@ public class DropDownQuarkProcedure extends ElementaryCraftModElements.ModElemen
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure DropDownQuark!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure DropDownQuark!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure DropDownQuark!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure DropDownQuark!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure DropDownQuark!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure DropDownQuark!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure DropDownQuark!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure DropDownQuark!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -44,35 +48,35 @@ public class DropDownQuarkProcedure extends ElementaryCraftModElements.ModElemen
 		if ((Math.random() <= 0.333333333333333)) {
 			if (!world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DownQuarkBlueItem.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
+				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 			if (!world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AntiDownQuarkBlueItem.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
+				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		} else {
 			if ((Math.random() <= 0.5)) {
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DownQuarkGreenItem.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AntiDownQuarkGreenItem.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 			} else {
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(DownQuarkRedItem.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AntiDownQuarkRedItem.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 			}
