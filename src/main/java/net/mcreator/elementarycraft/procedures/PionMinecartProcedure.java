@@ -198,7 +198,7 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 							minZ = (int) (Math.round(pionMinecarts.get(i).get(1).getPosition().getZ() - 1.5));
 							maxZ = (int) (Math.round(pionMinecarts.get(i).get(0).getPosition().getZ() - 0.5));
 						}
-						for (int j = minZ; j < maxZ + 1; j++) {
+						for (int j = minZ + 2; j < maxZ; j++) {
 							if ((pionMinecarts.get(i).get(1).world.getBlockState(new BlockPos(mineX, mineY, j))).getMaterial()
 							 != net.minecraft.block.material.Material.AIR) {
 							 	if ((pionMinecarts.get(i).get(1).world.getBlockState(new BlockPos(mineX, mineY, j))).getBlock() !=
@@ -220,7 +220,7 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 							minX = (int) (Math.round(pionMinecarts.get(i).get(1).getPosition().getX() - 1.5));
 							maxX = (int) (Math.round(pionMinecarts.get(i).get(0).getPosition().getX() - 0.5));
 						}
-						for (int j = minX; j < maxX + 1; j++) {
+						for (int j = minX + 2; j < maxX; j++) {
 							if ((pionMinecarts.get(i).get(1).world.getBlockState(new BlockPos(j, mineY, mineZ))).getMaterial()
 							 != net.minecraft.block.material.Material.AIR) {
 							 	if ((pionMinecarts.get(i).get(1).world.getBlockState(new BlockPos(j, mineY, mineZ))).getBlock() !=
