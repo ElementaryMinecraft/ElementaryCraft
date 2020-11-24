@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:PionNulFromDown"
+      "value": "CUSTOM:PionNul"
     },
     "name": "pion_nul_from_down_craft_blue",
     "namespace": "mod"
