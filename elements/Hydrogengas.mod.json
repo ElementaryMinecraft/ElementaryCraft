@@ -45,7 +45,7 @@
     "canProvidePower": false,
     "lightOpacity": 60,
     "material": {
-      "value": "ROCK"
+      "value": "MISCELLANEOUS"
     },
     "tickRate": 10,
     "tickRandomly": false,

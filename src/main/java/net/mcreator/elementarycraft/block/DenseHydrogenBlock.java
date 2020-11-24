@@ -90,7 +90,8 @@ public class DenseHydrogenBlock extends ElementaryCraftModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 5f).lightValue(0).doesNotBlockMovement());
+			super(Block.Properties.create(Material.MISCELLANEOUS).sound(SoundType.GROUND).hardnessAndResistance(1f, 5f).lightValue(0)
+					.doesNotBlockMovement());
 			setRegistryName("dense_hydrogen");
 		}
 

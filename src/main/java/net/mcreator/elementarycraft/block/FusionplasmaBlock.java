@@ -83,7 +83,7 @@ public class FusionplasmaBlock extends ElementaryCraftModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(15));
+			super(Block.Properties.create(Material.MISCELLANEOUS).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(15));
 			setRegistryName("fusionplasma");
 		}
 
