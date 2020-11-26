@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "elementary_craft:block/pion_nul"
+    },
+    "age=1": {
+      "model": "elementary_craft:block/pion_nul_green"
+    },
+    "age=2": {
+      "model": "elementary_craft:block/pion_nul_blue"
+    }
+  }
+}

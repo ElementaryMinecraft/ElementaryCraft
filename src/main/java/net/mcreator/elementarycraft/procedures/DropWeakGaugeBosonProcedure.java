@@ -24,23 +24,28 @@ public class DropWeakGaugeBosonProcedure extends ElementaryCraftModElements.ModE
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure DropWeakGaugeBoson!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure DropWeakGaugeBoson!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure DropWeakGaugeBoson!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure DropWeakGaugeBoson!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure DropWeakGaugeBoson!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure DropWeakGaugeBoson!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure DropWeakGaugeBoson!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure DropWeakGaugeBoson!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure DropWeakGaugeBoson!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure DropWeakGaugeBoson!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -53,13 +58,13 @@ public class DropWeakGaugeBosonProcedure extends ElementaryCraftModElements.ModE
 					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY))) == 1)) {
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakGaugeFieldBlock.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 			} else {
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WeakBosonBlock.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeakGaugeFieldBlock.block.getDefaultState(), 3);
