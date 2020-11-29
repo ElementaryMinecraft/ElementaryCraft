@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pionnul_blue"
+      },
+      "name": "default"
+    }
+  }
+}

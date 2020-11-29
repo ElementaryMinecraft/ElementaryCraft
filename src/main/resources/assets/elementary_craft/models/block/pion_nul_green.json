@@ -1,0 +1,8 @@
+{
+  "parent": "elementary_craft:custom/pionnul_green",
+  "textures": {
+    "all": "elementary_craft:blocks/pionnul_grreen",
+    "particle": "elementary_craft:blocks/pionnul_green",
+    "0": "elementary_craft:blocks/pionnul_green"
+  }
+}

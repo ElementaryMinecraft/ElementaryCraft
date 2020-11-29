@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.item;
 
 import net.minecraftforge.registries.ObjectHolder;

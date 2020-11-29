@@ -17,19 +17,23 @@ public class HeliumgasRiseProcedure extends ElementaryCraftModElements.ModElemen
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure HeliumgasRise!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure HeliumgasRise!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure HeliumgasRise!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure HeliumgasRise!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure HeliumgasRise!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure HeliumgasRise!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure HeliumgasRise!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure HeliumgasRise!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

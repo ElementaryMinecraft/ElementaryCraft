@@ -1,18 +1,19 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "pionplus",
+    "texture": "pionplus_red",
     "textureTop": "empty",
     "textureLeft": "empty",
-    "textureFront": "pionplus",
+    "textureFront": "",
     "textureRight": "empty",
-    "textureBack": "pionplus",
+    "textureBack": "",
     "renderType": 2,
-    "customModelName": "pionplus:default",
+    "customModelName": "pionplus_red:default",
     "rotationMode": 0,
     "emissiveRendering": false,
-    "itemTexture": "pionplus",
+    "displayFluidOverlay": false,
+    "itemTexture": "pionplus_red",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT",
@@ -27,6 +28,7 @@
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:ElementaryParticle"
     },
@@ -35,6 +37,7 @@
       "value": ""
     },
     "dropAmount": 1,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,

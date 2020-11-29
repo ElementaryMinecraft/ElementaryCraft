@@ -1,4 +1,3 @@
-
 package net.mcreator.elementarycraft.block;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -48,6 +47,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.IntegerProperty;
 
 import net.mcreator.elementarycraft.procedures.PositiveChargedAddProcedure;
 import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
@@ -64,6 +65,7 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import net.minecraft.state.properties.BlockStateProperties;
 
 @ElementaryCraftModElements.ModElement.Tag
 public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
@@ -94,9 +96,15 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 	public static class CustomBlock extends Block {
+		public static final IntegerProperty COLOUR = BlockStateProperties.AGE_0_3;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.CLOTH).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
+			this.setDefaultState(this.stateContainer.getBaseState().with(COLOUR, Integer.valueOf(0)));
 			setRegistryName("pion_plus");
+		}
+		@Override
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(COLOUR);
 		}
 
 		@Override
@@ -123,6 +131,14 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
+			double R = Math.random();
+			int i = 0;
+			if ((R <= 0.333333333333333)){
+				i = 1;
+			} else if ((R <= 0.66666666666666)){
+				i = 2;
+			}
+			world.setBlockState(pos, state.with(COLOUR, Integer.valueOf(i)));
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
@@ -370,3 +386,4 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 		}
 	}
 }
+
