@@ -2286,6 +2286,74 @@
       "locked_code": true,
       "ids": {},
       "registry_name": "pion_nul"
+    },
+    {
+      "name": "EntropyMob",
+      "type": "mob",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entropy_mob"
+    },
+    {
+      "name": "EntropyMobCollidesWithPlayer",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entropy_mob_collides_with_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EntropyMobSpawn",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entropy_mob_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EntropyGUI",
+      "type": "gui",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entropy_gui"
     }
   ],
   "variable_elements": [],
@@ -2312,6 +2380,7 @@
       "block.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
       "block.elementary_craft.hydrogengas": "Hydrogengas",
       "item.elementary_craft.balloon": "Balloon",
+      "entity.elementary_craft.entropy_mob": "Entropy Mob",
       "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
       "item.elementary_craft.up_quark_blue": "Upquark (Blue)",
       "block.elementary_craft.pion_plus": "Pion Plus",

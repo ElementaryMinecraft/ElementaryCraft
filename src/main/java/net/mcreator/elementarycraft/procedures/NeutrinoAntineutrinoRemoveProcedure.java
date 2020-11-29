@@ -19,23 +19,19 @@ public class NeutrinoAntineutrinoRemoveProcedure extends ElementaryCraftModEleme
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure NeutrinoAntineutrinoRemove!");
+			System.err.println("Failed to load dependency x for procedure NeutrinoAntineutrinoRemove!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure NeutrinoAntineutrinoRemove!");
+			System.err.println("Failed to load dependency y for procedure NeutrinoAntineutrinoRemove!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure NeutrinoAntineutrinoRemove!");
+			System.err.println("Failed to load dependency z for procedure NeutrinoAntineutrinoRemove!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure NeutrinoAntineutrinoRemove!");
+			System.err.println("Failed to load dependency world for procedure NeutrinoAntineutrinoRemove!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
