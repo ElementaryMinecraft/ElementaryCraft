@@ -2,12 +2,12 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "densehydrogen",
-    "textureTop": "densehydrogen",
-    "textureLeft": "densehydrogen",
-    "textureFront": "densehydrogen",
-    "textureRight": "densehydrogen",
-    "textureBack": "densehydrogen",
+    "texture": "silicium",
+    "textureTop": "silicium",
+    "textureLeft": "silicium",
+    "textureFront": "silicium",
+    "textureRight": "silicium",
+    "textureBack": "silicium",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -17,21 +17,21 @@
     "particleTexture": "",
     "hasTransparency": false,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
+    "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Dense Hydrogen",
+    "name": "Silicon",
     "specialInfo": [],
     "hardness": 1.0,
-    "resistance": 5.0,
+    "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:ElementaryParticle"
+      "value": "BUILDING_BLOCKS"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -45,7 +45,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "MISCELLANEOUS"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -61,7 +61,7 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": true,
+    "isNotColidable": false,
     "soundOnStep": {
       "value": "GROUND"
     },
@@ -75,7 +75,7 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": true,
+    "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -92,12 +92,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "AddDenseHydrogen"
-    },
-    "onTickUpdate": {
-      "name": "HydrogengasExplode"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

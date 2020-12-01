@@ -1,0 +1,19 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "elementary_craft:silicon"
+    }
+  ],
+  "result": {
+    "item": "minecraft:smooth_quartz",
+    "count": 1
+  }
+}

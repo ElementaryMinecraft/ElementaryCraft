@@ -1,0 +1,13 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:silicon"
+    }
+  ],
+  "result": {
+    "item": "minecraft:flint",
+    "count": 1
+  }
+}

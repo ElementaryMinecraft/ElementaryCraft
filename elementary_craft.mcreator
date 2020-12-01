@@ -2599,6 +2599,149 @@
           }
         ]
       }
+    },
+    {
+      "name": "UpdateHydrogenNearStar",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "update_hydrogen_near_star",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GrowStar",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grow_star",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GrowCore",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grow_core",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CraftFlint",
+      "type": "recipe",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_flint"
+    },
+    {
+      "name": "Silicon",
+      "type": "block",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silicon"
+    },
+    {
+      "name": "CraftQuartz",
+      "type": "recipe",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_quartz"
+    },
+    {
+      "name": "ExplodeStar",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explode_star",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -2606,13 +2749,14 @@
   "language_map": {
     "en_us": {
       "block.elementary_craft.hydrogen": "Hydrogen",
-      "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
-      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "block.elementary_craft.photon_field": "Photon Field",
       "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
+      "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
       "item.elementary_craft.down_quark_green": "Downquark (Green)",
+      "block.elementary_craft.silicon": "Silicon",
       "block.elementary_craft.electron": "Electron",
       "block.elementary_craft.hydrogengas": "Hydrogengas",
       "item.elementary_craft.anti_up_quark_green": "Anti Upquark (Green)",
