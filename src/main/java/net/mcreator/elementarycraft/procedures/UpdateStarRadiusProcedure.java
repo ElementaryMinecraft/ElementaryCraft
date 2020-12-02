@@ -1,8 +1,6 @@
 package net.mcreator.elementarycraft.procedures;
 
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.block.BlockState;
@@ -64,7 +62,14 @@ public class UpdateStarRadiusProcedure extends ElementaryCraftModElements.ModEle
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "radius")) < 7)) {
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "radius")) < (new Object() {
+			public double getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxPlasmaRadius")))) {
 			if (!world.getWorld().isRemote) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -257,8 +262,28 @@ public class UpdateStarRadiusProcedure extends ElementaryCraftModElements.ModEle
 				}
 			}
 		} else {
-			if (world instanceof World && !world.getWorld().isRemote) {
-				world.getWorld().createExplosion(null, (int) x, (int) y, (int) z, (float) 100, Explosion.Mode.BREAK);
+			if (!world.getWorld().isRemote) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("lifeStage", ((new Object() {
+						public double getValue(BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
+						}
+					}.getValue(new BlockPos((int) x, (int) y, (int) z), "lifeStage")) + 1));
+				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
+			if (!world.getWorld().isRemote) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("radius", 0);
+				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 	}

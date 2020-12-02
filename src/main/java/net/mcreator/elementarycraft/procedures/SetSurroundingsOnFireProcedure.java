@@ -51,87 +51,89 @@ public class SetSurroundingsOnFireProcedure extends ElementaryCraftModElements.M
 		double zdz = 0;
 		double lavadist = 0;
 		double firedist = 0;
-		lavadist = (double) 3;
-		dx = (double) ((-1) * (lavadist));
-		while (((dx) <= (lavadist))) {
-			dy = (double) ((-1) * (lavadist));
-			while (((dy) <= (lavadist))) {
-				dz = (double) ((-1) * (lavadist));
-				while (((dz) <= (lavadist))) {
-					if ((Math.sqrt((Math.pow((dx), 2) + (Math.pow((dy), 2) + Math.pow((dz), 2)))) <= (lavadist))) {
-						xdx = (double) (x + (dx));
-						ydy = (double) (y + (dy));
-						zdz = (double) (z + (dz));
-						if ((((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-								.getMaterial() == net.minecraft.block.material.Material.ROCK)
-								|| ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-										.getMaterial() == net.minecraft.block.material.Material.EARTH))) {
-							{
-								BlockPos _bp = new BlockPos((int) (xdx), (int) (ydy), (int) (zdz));
-								BlockState _bs = Blocks.LAVA.getDefaultState();
-								world.setBlockState(_bp, _bs, 3);
+		if ((false)) {
+			lavadist = (double) 3;
+			dx = (double) ((-1) * (lavadist));
+			while (((dx) <= (lavadist))) {
+				dy = (double) ((-1) * (lavadist));
+				while (((dy) <= (lavadist))) {
+					dz = (double) ((-1) * (lavadist));
+					while (((dz) <= (lavadist))) {
+						if ((Math.sqrt((Math.pow((dx), 2) + (Math.pow((dy), 2) + Math.pow((dz), 2)))) <= (lavadist))) {
+							xdx = (double) (x + (dx));
+							ydy = (double) (y + (dy));
+							zdz = (double) (z + (dz));
+							if ((((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+									.getMaterial() == net.minecraft.block.material.Material.ROCK)
+									|| ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+											.getMaterial() == net.minecraft.block.material.Material.EARTH))) {
+								{
+									BlockPos _bp = new BlockPos((int) (xdx), (int) (ydy), (int) (zdz));
+									BlockState _bs = Blocks.LAVA.getDefaultState();
+									world.setBlockState(_bp, _bs, 3);
+								}
+							}
+							if ((((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+									.getMaterial() == net.minecraft.block.material.Material.SAND)
+									|| ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+											.getMaterial() == net.minecraft.block.material.Material.IRON))) {
+								{
+									BlockPos _bp = new BlockPos((int) (xdx), (int) (ydy), (int) (zdz));
+									BlockState _bs = Blocks.LAVA.getDefaultState();
+									world.setBlockState(_bp, _bs, 3);
+								}
+							}
+							if ((((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+									.getMaterial() == net.minecraft.block.material.Material.GLASS)
+									|| ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+											.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
+								{
+									BlockPos _bp = new BlockPos((int) (xdx), (int) (ydy), (int) (zdz));
+									BlockState _bs = Blocks.LAVA.getDefaultState();
+									world.setBlockState(_bp, _bs, 3);
+								}
 							}
 						}
-						if ((((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-								.getMaterial() == net.minecraft.block.material.Material.SAND)
-								|| ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-										.getMaterial() == net.minecraft.block.material.Material.IRON))) {
-							{
-								BlockPos _bp = new BlockPos((int) (xdx), (int) (ydy), (int) (zdz));
-								BlockState _bs = Blocks.LAVA.getDefaultState();
-								world.setBlockState(_bp, _bs, 3);
-							}
-						}
-						if ((((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-								.getMaterial() == net.minecraft.block.material.Material.GLASS)
-								|| ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-										.getMaterial() == net.minecraft.block.material.Material.ORGANIC))) {
-							{
-								BlockPos _bp = new BlockPos((int) (xdx), (int) (ydy), (int) (zdz));
-								BlockState _bs = Blocks.LAVA.getDefaultState();
-								world.setBlockState(_bp, _bs, 3);
-							}
-						}
+						dz = (double) ((dz) + 1);
 					}
-					dz = (double) ((dz) + 1);
+					dy = (double) ((dy) + 1);
 				}
-				dy = (double) ((dy) + 1);
+				dx = (double) ((dx) + 1);
 			}
-			dx = (double) ((dx) + 1);
-		}
-		firedist = (double) 5;
-		dx = (double) ((-1) * (firedist));
-		while (((dx) <= (firedist))) {
-			dy = (double) ((-1) * (firedist));
-			while (((dy) <= (firedist))) {
-				dz = (double) ((-1) * (firedist));
-				while (((dz) <= (firedist))) {
-					if ((Math.sqrt((Math.pow((dx), 2) + (Math.pow((dy), 2) + Math.pow((dz), 2)))) <= (firedist))) {
-						xdx = (double) (x + (dx));
-						ydy = (double) (y + (dy));
-						zdz = (double) (z + (dz));
-						if ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))).isSolid())) {
-							if (((!(world.getBlockState(new BlockPos((int) (xdx), (int) ((ydy) + 1), (int) (zdz))).isSolid()))
-									&& (!(/* @BlockState */(world.getFluidState(new BlockPos((int) (xdx), (int) ((ydy) + 1), (int) (zdz)))
-											.getBlockState()).getBlock() instanceof FlowingFluidBlock)))) {
-								if (((!((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-										.getBlock() == SolarPlasmaBlock.block.getDefaultState().getBlock()))
-										&& (!((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
-												.getBlock() == FusionplasmaBlock.block.getDefaultState().getBlock())))) {
-									{
-										BlockPos _bp = new BlockPos((int) (xdx), (int) ((ydy) + 1), (int) (zdz));
-										BlockState _bs = Blocks.FIRE.getDefaultState();
-										world.setBlockState(_bp, _bs, 3);
+			firedist = (double) 5;
+			dx = (double) ((-1) * (firedist));
+			while (((dx) <= (firedist))) {
+				dy = (double) ((-1) * (firedist));
+				while (((dy) <= (firedist))) {
+					dz = (double) ((-1) * (firedist));
+					while (((dz) <= (firedist))) {
+						if ((Math.sqrt((Math.pow((dx), 2) + (Math.pow((dy), 2) + Math.pow((dz), 2)))) <= (firedist))) {
+							xdx = (double) (x + (dx));
+							ydy = (double) (y + (dy));
+							zdz = (double) (z + (dz));
+							if ((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))).isSolid())) {
+								if (((!(world.getBlockState(new BlockPos((int) (xdx), (int) ((ydy) + 1), (int) (zdz))).isSolid()))
+										&& (!(/* @BlockState */(world.getFluidState(new BlockPos((int) (xdx), (int) ((ydy) + 1), (int) (zdz)))
+												.getBlockState()).getBlock() instanceof FlowingFluidBlock)))) {
+									if (((!((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+											.getBlock() == SolarPlasmaBlock.block.getDefaultState().getBlock()))
+											&& (!((world.getBlockState(new BlockPos((int) (xdx), (int) (ydy), (int) (zdz))))
+													.getBlock() == FusionplasmaBlock.block.getDefaultState().getBlock())))) {
+										{
+											BlockPos _bp = new BlockPos((int) (xdx), (int) ((ydy) + 1), (int) (zdz));
+											BlockState _bs = Blocks.FIRE.getDefaultState();
+											world.setBlockState(_bp, _bs, 3);
+										}
 									}
 								}
 							}
 						}
+						dz = (double) ((dz) + 1);
 					}
-					dz = (double) ((dz) + 1);
+					dy = (double) ((dy) + 1);
 				}
-				dy = (double) ((dy) + 1);
+				dx = (double) ((dx) + 1);
 			}
-			dx = (double) ((dx) + 1);
 		}
 	}
 }

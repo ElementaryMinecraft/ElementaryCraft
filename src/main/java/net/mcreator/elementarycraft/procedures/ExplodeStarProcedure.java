@@ -197,7 +197,31 @@ public class ExplodeStarProcedure extends ElementaryCraftModElements.ModElement 
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(new BlockPos((int) x, (int) y, (int) z), "zcoord"))), (int) 500, 2, 2, 2, 1);
+							}.getValue(new BlockPos((int) x, (int) y, (int) z), "zcoord"))), (int) 100, 2, 2, 2, 1);
+						}
+						if (world instanceof ServerWorld) {
+							((ServerWorld) world).spawnParticle(ParticleTypes.EXPLOSION, (x + (new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) x, (int) y, (int) z), "xcoord"))), (y + (new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) x, (int) y, (int) z), "ycoord"))), (z + (new Object() {
+								public double getValue(BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(new BlockPos((int) x, (int) y, (int) z), "zcoord"))), (int) 10, 2, 2, 2, 1);
 						}
 					}
 					if (((world.getBlockState(new BlockPos((int) (x + (new Object() {

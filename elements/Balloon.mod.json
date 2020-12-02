@@ -1,28 +1,35 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "balloon3",
     "customModelName": "Normal",
     "name": "Balloon",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "TRANSPORTATION"
     },
     "stackSize": 64,
     "enchantability": 0,
-    "useDuration": 0,
+    "useDuration": 3,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 300,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
+    "damageOnCrafting": true,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
-    "inventoryStackSize": 64
+    "inventoryStackSize": 64,
+    "onItemInUseTick": {
+      "name": "BalloonInHand"
+    }
   }
 }
