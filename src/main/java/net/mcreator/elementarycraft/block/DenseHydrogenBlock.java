@@ -48,7 +48,7 @@ import net.minecraft.block.Block;
 
 import net.mcreator.elementarycraft.procedures.HydrogengasExplodeProcedure;
 import net.mcreator.elementarycraft.procedures.AddDenseHydrogenProcedure;
-import net.mcreator.elementarycraft.itemgroup.QuantumfieldItemGroup;
+import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import javax.annotation.Nullable;
@@ -74,8 +74,8 @@ public class DenseHydrogenBlock extends ElementaryCraftModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(QuantumfieldItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(ElementaryParticleItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent

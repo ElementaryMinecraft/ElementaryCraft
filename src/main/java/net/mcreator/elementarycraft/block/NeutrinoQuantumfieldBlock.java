@@ -26,7 +26,6 @@ import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
@@ -45,7 +44,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -178,27 +176,6 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 				TorchTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
-			super.animateTick(state, world, pos, random);
-			PlayerEntity entity = Minecraft.getInstance().player;
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			if (true)
-				for (int l = 0; l < 4; ++l) {
-					double d0 = (x + random.nextFloat());
-					double d1 = (y + random.nextFloat());
-					double d2 = (z + random.nextFloat());
-					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
-					world.addParticle(ParticleTypes.BUBBLE_POP, d0, d1, d2, d3, d4, d5);
-				}
 		}
 
 		@Override

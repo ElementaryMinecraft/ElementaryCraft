@@ -21,19 +21,23 @@ public class TorchTickProcedure extends ElementaryCraftModElements.ModElement {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure TorchTick!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure TorchTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure TorchTick!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure TorchTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure TorchTick!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure TorchTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure TorchTick!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure TorchTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

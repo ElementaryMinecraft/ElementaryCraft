@@ -22,19 +22,23 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure ElectronUpdateTick!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure ElectronUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure ElectronUpdateTick!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure ElectronUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure ElectronUpdateTick!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure ElectronUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure ElectronUpdateTick!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure ElectronUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -110,7 +114,7 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (x + 1), y, z, new ItemStack(PhotonItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((new Object() {
@@ -132,7 +136,7 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (x - 1), y, z, new ItemStack(PhotonItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((new Object() {
@@ -154,7 +158,7 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, (y + 1), z, new ItemStack(PhotonItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((new Object() {
@@ -176,7 +180,7 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, (y - 1), z, new ItemStack(PhotonItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((new Object() {
@@ -198,7 +202,7 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, (z + 1), new ItemStack(PhotonItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if (((new Object() {
@@ -220,14 +224,14 @@ public class ElectronUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, (z - 1), new ItemStack(PhotonItem.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				}
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(PhotonItem.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
+					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
 			}

@@ -1,5 +1,5 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "block",
   "definition": {
     "texture": "neutrino_field_o",
@@ -12,7 +12,9 @@
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
+    "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": true,
     "connectedSides": true,
     "transparencyType": "CUTOUT_MIPPED",
@@ -29,6 +31,7 @@
     "hardness": 0.3,
     "resistance": 10.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:Quantumfield"
     },
@@ -37,6 +40,7 @@
       "value": ""
     },
     "dropAmount": 0,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -66,7 +70,7 @@
     "luminance": 0.07,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": true,
+    "spawnParticles": false,
     "particleToSpawn": {
       "value": "BUBBLE_POP"
     },

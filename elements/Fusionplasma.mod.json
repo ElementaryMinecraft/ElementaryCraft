@@ -31,7 +31,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Quantumfield"
+      "value": "CUSTOM:ElementaryParticle"
     },
     "destroyTool": "Not specified",
     "customDrop": {
