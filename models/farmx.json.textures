@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pionplus2"
+      },
+      "name": "default"
+    }
+  }
+}
