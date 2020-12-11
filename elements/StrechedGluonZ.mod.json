@@ -2,35 +2,36 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "pionminus_red",
-    "textureTop": "empty",
-    "textureLeft": "empty",
-    "textureFront": "pionminus",
-    "textureRight": "empty",
-    "textureBack": "pionminus",
+    "texture": "pionplus1",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
     "renderType": 2,
-    "customModelName": "pionminus_red:default",
+    "customModelName": "farmz:default",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "pionminus_red",
+    "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
-    "Mx": 1.0,
-    "My": 1.0,
-    "Mz": 1.0,
-    "name": "Pion Minus",
+    "Mx": 0.0,
+    "My": 0.0,
+    "Mz": 0.0,
+    "name": "Streched Gluon Z",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:ElementaryParticle"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -62,7 +63,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "CLOTH"
+      "value": "GROUND"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -74,10 +75,10 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": true,
+    "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 0,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
@@ -91,21 +92,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "PionMinusBlockAdded"
-    },
-    "onTickUpdate": {
-      "name": "ChargedPionDecay"
-    },
-    "onDestroyedByPlayer": {
-      "name": "ChargeRemoveNegative"
-    },
-    "onDestroyedByExplosion": {
-      "name": "ChargeRemoveNegative"
-    },
-    "onRedstoneOn": {
-      "name": "PionMinecart"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
