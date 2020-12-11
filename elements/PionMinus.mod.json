@@ -92,7 +92,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "NegativeChargedAdd"
+      "name": "PionMinusBlockAdded"
     },
     "onTickUpdate": {
       "name": "ChargedPionDecay"

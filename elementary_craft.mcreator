@@ -481,7 +481,7 @@
       "name": "PionMinus",
       "type": "block",
       "sortid": 23,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "registry_name": "pion_minus"
@@ -2771,6 +2771,100 @@
           }
         ]
       }
+    },
+    {
+      "name": "PionMinusBlockAdded",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_minus_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PionPlusBlockAdded",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StrechedGluonX",
+      "type": "block",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "streched_gluon_x"
+    },
+    {
+      "name": "StrechedGluonZ",
+      "type": "block",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "streched_gluon_z"
+    },
+    {
+      "name": "GluonMinecartFront",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon_minecart_front"
+    },
+    {
+      "name": "GluonMinecartBack",
+      "type": "block",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gluon_minecart_back"
     }
   ],
   "variable_elements": [],
@@ -2780,6 +2874,7 @@
       "block.elementary_craft.hydrogen": "Hydrogen",
       "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
+      "block.elementary_craft.gluon_minecart_front": "Gluon Minecart Front",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
       "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.neutron": "Neutron",
@@ -2813,6 +2908,7 @@
       "block.elementary_craft.pion_nul": "Pion Nul",
       "block.elementary_craft.neutrino_quantumfield": "Neutrino Quantumfield",
       "block.elementary_craft.solar_plasma": "Solar Plasma",
+      "block.elementary_craft.gluon_minecart_back": "Gluon Minecart Back",
       "block.elementary_craft.heliumgas": "Heliumgas",
       "block.elementary_craft.pion_nul_from_up": "Pion Nul From Up",
       "item.elementary_craft.balloon": "Balloon",
@@ -2820,8 +2916,10 @@
       "block.elementary_craft.pion_plus": "Pion Plus",
       "block.elementary_craft.dense_hydrogen": "Dense Hydrogen",
       "itemGroup.tabquantumfield": "Quantumfield",
+      "block.elementary_craft.streched_gluon_z": "Streched Gluon Z",
       "itemGroup.tabelementary_particle": "Elementary Particle",
       "block.elementary_craft.weak_boson": "Weak Boson",
+      "block.elementary_craft.streched_gluon_x": "Streched Gluon X",
       "block.elementary_craft.electron_field": "Electron Field",
       "item.elementary_craft.anti_down_quark_red": "Anti Downquark (Red)",
       "item.elementary_craft.down_quark_red": "Downquark (Red)",

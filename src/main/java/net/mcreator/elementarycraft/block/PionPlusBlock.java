@@ -50,7 +50,7 @@ import net.minecraft.block.Block;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.IntegerProperty;
 
-import net.mcreator.elementarycraft.procedures.PositiveChargedAddProcedure;
+import net.mcreator.elementarycraft.procedures.PionPlusBlockAddedProcedure;
 import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
 import net.mcreator.elementarycraft.procedures.ChargeRemovePositiveProcedure;
@@ -146,7 +146,7 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PositiveChargedAddProcedure.executeProcedure($_dependencies);
+				PionPlusBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
