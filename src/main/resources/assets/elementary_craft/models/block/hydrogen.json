@@ -1,8 +1,7 @@
 {
-  "parent": "elementary_craft:custom/hydrogen",
+  "parent": "block/cross",
   "textures": {
-    "all": "elementary_craft:blocks/hydrogen",
-    "particle": "elementary_craft:blocks/hydrogen",
-    "0": "elementary_craft:blocks/hydrogen"
+    "cross": "elementary_craft:blocks/hydrogen",
+    "particle": "elementary_craft:blocks/hydrogen"
   }
 }

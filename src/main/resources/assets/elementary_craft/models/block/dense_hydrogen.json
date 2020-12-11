@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "elementary_craft:blocks/densehydrogen",
+    "up": "elementary_craft:blocks/densehydrogen",
+    "north": "elementary_craft:blocks/densehydrogen",
+    "east": "elementary_craft:blocks/densehydrogen",
+    "south": "elementary_craft:blocks/densehydrogen",
+    "west": "elementary_craft:blocks/densehydrogen",
+    "particle": "elementary_craft:blocks/densehydrogen"
+  }
+}

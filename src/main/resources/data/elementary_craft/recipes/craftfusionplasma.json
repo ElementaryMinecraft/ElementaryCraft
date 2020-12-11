@@ -1,0 +1,37 @@
+{
+  "group": "elementary_craft",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elementary_craft:dense_hydrogen"
+    },
+    {
+      "item": "elementary_craft:weak_boson"
+    },
+    {
+      "item": "elementary_craft:dense_hydrogen"
+    },
+    {
+      "item": "elementary_craft:weak_boson"
+    },
+    {
+      "item": "elementary_craft:dense_hydrogen"
+    },
+    {
+      "item": "elementary_craft:weak_boson"
+    },
+    {
+      "item": "elementary_craft:dense_hydrogen"
+    },
+    {
+      "item": "elementary_craft:weak_boson"
+    },
+    {
+      "item": "elementary_craft:dense_hydrogen"
+    }
+  ],
+  "result": {
+    "item": "elementary_craft:fusionplasma",
+    "count": 1
+  }
+}

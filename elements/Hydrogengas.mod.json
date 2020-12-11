@@ -14,6 +14,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
@@ -44,7 +45,7 @@
     "canProvidePower": false,
     "lightOpacity": 60,
     "material": {
-      "value": "ROCK"
+      "value": "MISCELLANEOUS"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -74,7 +75,7 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -91,6 +92,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "AddHydrogengas"
+    },
     "onTickUpdate": {
       "name": "HydrogengasExplode"
     },

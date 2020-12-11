@@ -1,8 +1,7 @@
 {
-  "parent": "elementary_craft:custom/dihydrogen",
+  "parent": "block/cross",
   "textures": {
-    "all": "elementary_craft:blocks/dihydrogen",
-    "particle": "elementary_craft:blocks/dihydrogen",
-    "1": "elementary_craft:blocks/dihydrogen"
+    "cross": "elementary_craft:blocks/dihydrogen",
+    "particle": "elementary_craft:blocks/dihydrogen"
   }
 }
