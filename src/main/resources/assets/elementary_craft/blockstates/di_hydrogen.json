@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "elementary_craft:block/di_hydrogen"
+    },
+    "facing=east": {
+      "model": "elementary_craft:block/di_hydrogen",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "elementary_craft:block/di_hydrogen",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "elementary_craft:block/di_hydrogen",
+      "y": 270
     }
   }
 }
