@@ -53,7 +53,7 @@ public class AddHydrogengasProcedure extends ElementaryCraftModElements.ModEleme
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ConversionPeriod", (300 + Math.round((Math.random() * 200))));
+				_tileEntity.getTileData().putDouble("ConversionPeriod", (4000 + Math.round((Math.random() * 2000))));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}

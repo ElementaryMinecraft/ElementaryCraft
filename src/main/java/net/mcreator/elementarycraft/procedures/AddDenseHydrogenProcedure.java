@@ -53,7 +53,7 @@ public class AddDenseHydrogenProcedure extends ElementaryCraftModElements.ModEle
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ConversionPeriod", (100 + Math.round((Math.random() * 50))));
+				_tileEntity.getTileData().putDouble("ConversionPeriod", (800 + Math.round((Math.random() * 500))));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
