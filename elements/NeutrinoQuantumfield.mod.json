@@ -106,11 +106,19 @@
     "onDestroyedByPlayer": {
       "name": "NeutrinoQuantumfieldBlockDestroyedByPlayer"
     },
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "Surface"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
+      },
+      {
+        "value": "Blocks.SAND#0"
+      },
+      {
+        "value": "Blocks.DIRT#0"
       }
     ],
     "frequencyPerChunks": 10,
