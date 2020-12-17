@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "quark_up_antiblue"
+        "0": "quark_down_red"
       },
       "name": "default"
     }

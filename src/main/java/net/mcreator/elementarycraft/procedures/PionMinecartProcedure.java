@@ -4,6 +4,9 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.mcreator.elementarycraft.block.StrechedGluonXBlock;
 import net.mcreator.elementarycraft.block.StrechedGluonZBlock;
+import net.mcreator.elementarycraft.block.PionMinusBlock;
+import net.mcreator.elementarycraft.block.PionNulBlock;
+import net.mcreator.elementarycraft.block.PionPlusBlock;
 
 import net.minecraft.tags.BlockTags;
 
@@ -114,7 +117,7 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 					System.err.println("verkeerd geplaatst");
 					return;
 				}
-				if (Math.random() <= 0.001) {
+				if (Math.random() <= 0.02) {
 					//Nyan (vergeet niet andere waarden aan te passen als '0.001' wordt verandert(!)
 					for (int i = 0; i < 2; i++) {
 						if (minecarts1.get(i).getPosition().getX() - x < 0) {
@@ -338,7 +341,7 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 					if ((minecarts1.get(0).getPosition().getZ() - z) != -(minecarts1.get(1).getPosition().getZ() - z)) {
 						return;
 					}
-					if (Math.random() <= 0.001) {
+					if (Math.random() <= 0.02) {
 						//Nyan
 						for (int i = 0; i < 2; i++) {
 							if (minecarts1.get(i).getPosition().getZ() - z < 0) {
@@ -691,7 +694,41 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 											);
 											entityToSpawn.setPickupDelay(10);
 											pionMinecarts.get(i).get(1).world.addEntity(entityToSpawn);
-										 	}
+										 	if (Math.random() <= 0.05) {
+										 		double R = Math.random();
+												if (R <= .25) {
+													ItemEntity pionEntityToSpawn = new ItemEntity(
+														pionMinecarts.get(i).get(1).world.getWorld(),
+														mineX + k1,
+														mineY + k2,
+														j,
+														new ItemStack(PionMinusBlock.block, (int) (1))
+													);
+													pionEntityToSpawn.setPickupDelay(10);
+													pionMinecarts.get(i).get(1).world.addEntity(pionEntityToSpawn);
+												} else if (R <= .75) {
+													ItemEntity pionEntityToSpawn = new ItemEntity(
+														pionMinecarts.get(i).get(1).world.getWorld(),
+														mineX + k1,
+														mineY + k2,
+														j,
+														new ItemStack(PionNulBlock.block, (int) (1))
+													);
+													pionEntityToSpawn.setPickupDelay(10);
+													pionMinecarts.get(i).get(1).world.addEntity(pionEntityToSpawn);
+												} else {
+													ItemEntity pionEntityToSpawn = new ItemEntity(
+														pionMinecarts.get(i).get(1).world.getWorld(),
+														mineX + k1,
+														mineY + k2,
+														j,
+														new ItemStack(PionPlusBlock.block, (int) (1))
+													);
+													pionEntityToSpawn.setPickupDelay(10);
+													pionMinecarts.get(i).get(1).world.addEntity(pionEntityToSpawn);
+												}
+											}
+										}
 									}
 								}
 							}
@@ -721,6 +758,40 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 											);
 											entityToSpawn.setPickupDelay(10);
 											pionMinecarts.get(i).get(1).world.addEntity(entityToSpawn);
+											if (Math.random() <= 0.05) {
+												double R = Math.random();
+												if (R <= .25) {
+													ItemEntity pionEntityToSpawn = new ItemEntity(
+														pionMinecarts.get(i).get(1).world.getWorld(),
+														j,
+														mineY + k1,
+														mineZ + k2,
+														new ItemStack(PionMinusBlock.block, (int) (1))
+													);
+													pionEntityToSpawn.setPickupDelay(10);
+													pionMinecarts.get(i).get(1).world.addEntity(pionEntityToSpawn);
+												} else if (R <= .75) {
+													ItemEntity pionEntityToSpawn = new ItemEntity(
+														pionMinecarts.get(i).get(1).world.getWorld(),
+														j,
+														mineY + k1,
+														mineZ + k2,
+														new ItemStack(PionNulBlock.block, (int) (1))
+													);
+													pionEntityToSpawn.setPickupDelay(10);
+													pionMinecarts.get(i).get(1).world.addEntity(pionEntityToSpawn);
+												} else {
+													ItemEntity pionEntityToSpawn = new ItemEntity(
+														pionMinecarts.get(i).get(1).world.getWorld(),
+														j,
+														mineY + k1,
+														mineZ + k2,
+														new ItemStack(PionPlusBlock.block, (int) (1))
+													);
+													pionEntityToSpawn.setPickupDelay(10);
+													pionMinecarts.get(i).get(1).world.addEntity(pionEntityToSpawn);
+												}
+											}
 										}
 									}
 								}
