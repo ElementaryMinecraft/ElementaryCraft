@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "quark_up_antiblue"
+      },
+      "name": "default"
+    }
+  }
+}

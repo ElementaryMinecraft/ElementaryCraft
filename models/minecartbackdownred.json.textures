@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "quark_down_red"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "parent": "elementary_craft:custom/farmz",
+  "parent": "elementary_craft:custom/strechedgluonz",
   "textures": {
-    "all": "elementary_craft:blocks/pionplus1",
-    "particle": "elementary_craft:blocks/pionplus1",
-    "0": "elementary_craft:blocks/pionplus1"
+    "all": "elementary_craft:blocks/nyantrail",
+    "particle": "elementary_craft:blocks/nyantrail",
+    "0": "elementary_craft:blocks/nyantrail"
   }
 }

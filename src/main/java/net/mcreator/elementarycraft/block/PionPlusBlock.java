@@ -51,7 +51,6 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.IntegerProperty;
 
 import net.mcreator.elementarycraft.procedures.PionPlusBlockAddedProcedure;
-import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
 import net.mcreator.elementarycraft.procedures.ChargeRemovePositiveProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
@@ -148,26 +147,7 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("world", world);
 				PionPlusBlockAddedProcedure.executeProcedure($_dependencies);
 			}
-		}
-
-		@Override
-		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					PionMinecartProcedure.executeProcedure($_dependencies);
-				}
-			} else {
-			}
-		}
+		}
 
 		@Override
 		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {

@@ -51,7 +51,6 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.IntegerProperty;
 
 import net.mcreator.elementarycraft.procedures.PionMinusBlockAddedProcedure;
-import net.mcreator.elementarycraft.procedures.PionMinecartProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
 import net.mcreator.elementarycraft.procedures.ChargeRemoveNegativeProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;

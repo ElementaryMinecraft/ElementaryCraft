@@ -34,6 +34,7 @@ import net.mcreator.elementarycraft.ElementaryCraftMod;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
 import java.lang.Math;
+import java.util.Random;
 import java.util.List;
 import java.util.Set;
 import java.util.Map;
@@ -113,19 +114,217 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 					System.err.println("verkeerd geplaatst");
 					return;
 				}
-				for (int i = 0; i < 2; i++) {
-					if (minecarts1.get(i).getPosition().getX() - x < 0) {
-						world.getWorld().getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-							"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:gluon_minecart_back\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
-					} else {
-						world.getWorld().getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-							"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:gluon_minecart_front\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+				if (Math.random() <= 0.001) {
+					//Nyan (vergeet niet andere waarden aan te passen als '0.001' wordt verandert(!)
+					for (int i = 0; i < 2; i++) {
+						if (minecarts1.get(i).getPosition().getX() - x < 0) {
+							world.getWorld().getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+								"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_nyan\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+						} else {
+							world.getWorld().getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+								"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_nyan\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+						}
+						minecarts1.get(i).remove();
 					}
-					minecarts1.get(i).remove();
+				} else {
+					double R = Math.random();
+					if (R <= 0.08333333) {
+						//DownAntiblue
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_antiblue\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_blue\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}
+					} else if (R <= 0.16666666) {
+						//DownAntigreen
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_antigreen\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_green\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}
+					} else if (R <= 0.25) {
+						//DownAntired
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_antired\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_red\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}
+					} else if (R <= 0.33333333) {
+						//DownBlue
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_blue\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_antiblue\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else if (R <= 0.41666666) {
+						//DownGreen
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_green\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_antigreen\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else if (R <= 0.5) {
+						//DownRed
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_red\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_antired\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else if (R <= 0.58333333) {
+						//UpAntiblue
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_antiblue\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_blue\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else if (R <= 0.66666666) {
+						//UpAntigreen
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_antigreen\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_green\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else if (R <= 0.75) {
+						//UpAntired
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_antired\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_red\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}
+					} else if (R <= 0.83333333) {
+						//UpBlue
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_blue\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_antiblue\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else if (R <= 0.91666666) {
+						//UpGreen
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_green\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_antigreen\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}	
+					} else {
+						//UpRed
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getX() - x < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_red\"},DisplayOffset:1,Motion:[-0.2,0.0,0.0]}");
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX() + 0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ()+0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_antired\"},DisplayOffset:1,Motion:[0.2,0.0,0.0]}");
+							}
+							minecarts1.get(i).remove();
+						}
+					}
 				}
 				minecarts2 = world.getEntitiesWithinAABB(MinecartEntity.class, new AxisAlignedBB(x - 1, y, z, x + 2, y + 1, z + 1), null);
 			} else {
@@ -139,20 +338,230 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 					if ((minecarts1.get(0).getPosition().getZ() - z) != -(minecarts1.get(1).getPosition().getZ() - z)) {
 						return;
 					}
-					for (int i = 0; i < 2; i++) {
-						if (minecarts1.get(i).getPosition().getZ() - z < 0) {
-							world.getWorld().getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-							"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:gluon_minecart_back\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
-	
-						} else {
-							world.getWorld().getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-							"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:gluon_minecart_front\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+					if (Math.random() <= 0.001) {
+						//Nyan
+						for (int i = 0; i < 2; i++) {
+							if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+								"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_nyan\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+		
+							} else {
+								world.getWorld().getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+								"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_nyan\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+							}
+							minecarts1.get(i).remove();
 						}
-						minecarts1.get(i).remove();
+					} else {
+						double R = Math.random();
+						if (R <= 0.08333333) {
+							//DownAntiblue
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_antiblue\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_blue\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}
+						} else if (R <= 0.16666666) {
+							//DownAntigreen
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_antired\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_red\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}
+						} else if (R <= 0.25) {
+							//DownAntired
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_antired\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_red\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}
+						} else if (R <= 0.33333333) {
+							//DownBlue
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_blue\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_antiblue\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else if (R <= 0.41666666) {
+							//DownGreen
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_green\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_antigreen\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else if (R <= 0.5) {
+							//DownRed
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_down_red\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_up_antired\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else if (R <= 0.58333333) {
+							//UpAntiblue
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_antiblue\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_blue\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else if (R <= 0.66666666) {
+							//UpAntigreen
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_antigreen\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_green\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else if (R <= 0.75) {
+							//UpAntired
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_antired\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_red\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}
+						} else if (R <= 0.83333333) {
+							//UpBlue
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_blue\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_antiblue\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else if (R <= 0.91666666) {
+							//UpGreen
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_green\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_antigreen\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}	
+						} else {
+							//UpRed
+							for (int i = 0; i < 2; i++) {
+								if (minecarts1.get(i).getPosition().getZ() - z < 0) {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_back_up_red\"},DisplayOffset:1,Motion:[0.0,0.0,-0.2]}");
+			
+								} else {
+									world.getWorld().getServer().getCommandManager().handleCommand(
+										new CommandSource(ICommandSource.DUMMY, new Vec3d(minecarts1.get(i).getPosition().getX()+0.5, minecarts1.get(i).getPosition().getY()+0.5, minecarts1.get(i).getPosition().getZ() + 0.5), Vec2f.ZERO, (ServerWorld) world, 4, "",
+												new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+									"summon minecraft:minecart ~ ~ ~ {CustomDisplayTile:1b,DisplayState:{Name:\"elementary_craft:minecart_front_down_antired\"},DisplayOffset:1,Motion:[0.0,0.0,0.2]}");
+								}
+								minecarts1.get(i).remove();
+							}
+						}
 					}
 					minecarts2 = world.getEntitiesWithinAABB(MinecartEntity.class, new AxisAlignedBB(x, y, z - 1, x + 1, y + 1, z + 2), null);		
 				} else {
@@ -273,6 +682,15 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 										if ((pionMinecarts.get(i).get(1).world.getBlockState(new BlockPos(mineX + k1, mineY + k2, j))).getBlock() ==
 										 	StrechedGluonZBlock.block.getDefaultState().getBlock()) {
 										 	pionMinecarts.get(i).get(1).world.setBlockState(new BlockPos(mineX + k1, mineY + k2, j), Blocks.AIR.getDefaultState(), 3);
+										 	ItemEntity entityToSpawn = new ItemEntity(
+												pionMinecarts.get(i).get(1).world.getWorld(),
+												mineX + k1,
+												mineY + k2,
+												j,
+												new ItemStack(GluonItem.block, (int) (1))
+											);
+											entityToSpawn.setPickupDelay(10);
+											pionMinecarts.get(i).get(1).world.addEntity(entityToSpawn);
 										 	}
 									}
 								}
@@ -294,6 +712,15 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 										if ((pionMinecarts.get(i).get(1).world.getBlockState(new BlockPos(j, mineY + k1, mineZ + k2))).getBlock() ==
 										 	StrechedGluonXBlock.block.getDefaultState().getBlock()) {
 										 	pionMinecarts.get(i).get(1).world.setBlockState(new BlockPos(j, mineY + k1, mineZ + k2), Blocks.AIR.getDefaultState(), 3);
+										 	ItemEntity entityToSpawn = new ItemEntity(
+												pionMinecarts.get(i).get(1).world.getWorld(),
+												j,
+												mineY + k1,
+												mineZ + k2,
+												new ItemStack(GluonItem.block, (int) (1))
+											);
+											entityToSpawn.setPickupDelay(10);
+											pionMinecarts.get(i).get(1).world.addEntity(entityToSpawn);
 										}
 									}
 								}
@@ -316,17 +743,17 @@ public class PionMinecartProcedure extends ElementaryCraftModElements.ModElement
 						if (tempMinecarts.contains(minecart)) {
 							return;
 						}
-						ItemEntity entityToSpawn = new ItemEntity(
-							minecart.world.getWorld(),
-							minecart.getPosition().getX(),
-							minecart.getPosition().getY(),
-							minecart.getPosition().getZ(),
-							new ItemStack(GluonItem.block, (int) (1))
-						);
-						entityToSpawn.setPickupDelay(10);
-						minecart.world.addEntity(entityToSpawn);
+						//ItemEntity entityToSpawn = new ItemEntity(
+						//	minecart.world.getWorld(),
+						//	minecart.getPosition().getX(),
+						//	minecart.getPosition().getY(),
+						//	minecart.getPosition().getZ(),
+						//	new ItemStack(GluonItem.block, (int) (1))
+						//);
+						//entityToSpawn.setPickupDelay(10);
+						//minecart.world.addEntity(entityToSpawn);
 						tempMinecarts.add(minecart);
-						System.err.println("Spawning gluon (" + ticks + ") for minecart " + minecart);
+						//System.err.println("Spawning gluon (" + ticks + ") for minecart " + minecart);
 					});
 				});
 			}

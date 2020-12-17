@@ -1,0 +1,8 @@
+{
+  "parent": "elementary_craft:custom/minecartbackupgreen",
+  "textures": {
+    "all": "elementary_craft:blocks/quark_up_green",
+    "particle": "elementary_craft:blocks/quark_up_green",
+    "0": "elementary_craft:blocks/quark_up_green"
+  }
+}
