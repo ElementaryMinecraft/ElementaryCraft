@@ -10,7 +10,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class BalloonDroppedProcedure extends ElementaryCraftModElements.ModElement {
 	public BalloonDroppedProcedure(ElementaryCraftModElements instance) {
-		super(instance, 147);
+		super(instance, 187);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

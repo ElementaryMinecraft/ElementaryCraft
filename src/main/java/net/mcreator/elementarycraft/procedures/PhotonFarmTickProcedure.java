@@ -12,7 +12,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class PhotonFarmTickProcedure extends ElementaryCraftModElements.ModElement {
 	public PhotonFarmTickProcedure(ElementaryCraftModElements instance) {
-		super(instance, 115);
+		super(instance, 167);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

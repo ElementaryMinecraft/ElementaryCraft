@@ -28,7 +28,7 @@ import java.util.Comparator;
 @ElementaryCraftModElements.ModElement.Tag
 public class EntropyMobCollidesWithPlayerProcedure extends ElementaryCraftModElements.ModElement {
 	public EntropyMobCollidesWithPlayerProcedure(ElementaryCraftModElements instance) {
-		super(instance, 122);
+		super(instance, 168);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -17,7 +17,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class UpdateHydrogenNearStarProcedure extends ElementaryCraftModElements.ModElement {
 	public UpdateHydrogenNearStarProcedure(ElementaryCraftModElements instance) {
-		super(instance, 141);
+		super(instance, 180);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

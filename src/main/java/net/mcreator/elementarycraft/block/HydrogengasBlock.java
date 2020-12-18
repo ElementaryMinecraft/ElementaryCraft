@@ -67,7 +67,7 @@ public class HydrogengasBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:hydrogengas")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public HydrogengasBlock(ElementaryCraftModElements instance) {
-		super(instance, 111);
+		super(instance, 28);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

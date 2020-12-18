@@ -13,7 +13,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class AddFusionplasmaProcedure extends ElementaryCraftModElements.ModElement {
 	public AddFusionplasmaProcedure(ElementaryCraftModElements instance) {
-		super(instance, 135);
+		super(instance, 175);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -135,7 +135,7 @@ public class AddFusionplasmaProcedure extends ElementaryCraftModElements.ModElem
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("growPeriod", 10000);
+				_tileEntity.getTileData().putDouble("growPeriod", 1000);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {

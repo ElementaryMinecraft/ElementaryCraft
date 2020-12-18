@@ -13,7 +13,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class ElectronBlockAddedProcedure extends ElementaryCraftModElements.ModElement {
 	public ElectronBlockAddedProcedure(ElementaryCraftModElements instance) {
-		super(instance, 66);
+		super(instance, 125);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

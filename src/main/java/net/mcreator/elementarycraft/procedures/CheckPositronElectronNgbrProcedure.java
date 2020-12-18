@@ -14,7 +14,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class CheckPositronElectronNgbrProcedure extends ElementaryCraftModElements.ModElement {
 	public CheckPositronElectronNgbrProcedure(ElementaryCraftModElements instance) {
-		super(instance, 97);
+		super(instance, 126);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

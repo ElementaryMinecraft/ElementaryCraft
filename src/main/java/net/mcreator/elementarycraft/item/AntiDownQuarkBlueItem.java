@@ -16,7 +16,7 @@ public class AntiDownQuarkBlueItem extends ElementaryCraftModElements.ModElement
 	@ObjectHolder("elementary_craft:anti_down_quark_blue")
 	public static final Item block = null;
 	public AntiDownQuarkBlueItem(ElementaryCraftModElements instance) {
-		super(instance, 11);
+		super(instance, 15);
 	}
 
 	@Override

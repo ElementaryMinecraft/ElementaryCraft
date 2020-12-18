@@ -23,7 +23,7 @@ public class SiliconBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:silicon")
 	public static final Block block = null;
 	public SiliconBlock(ElementaryCraftModElements instance) {
-		super(instance, 145);
+		super(instance, 42);
 	}
 
 	@Override

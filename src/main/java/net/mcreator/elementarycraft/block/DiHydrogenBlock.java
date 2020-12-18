@@ -30,7 +30,7 @@ public class DiHydrogenBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:di_hydrogen")
 	public static final Block block = null;
 	public DiHydrogenBlock(ElementaryCraftModElements instance) {
-		super(instance, 109);
+		super(instance, 27);
 	}
 
 	@Override

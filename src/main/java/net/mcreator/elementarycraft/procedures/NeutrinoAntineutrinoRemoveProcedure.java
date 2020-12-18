@@ -14,7 +14,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class NeutrinoAntineutrinoRemoveProcedure extends ElementaryCraftModElements.ModElement {
 	public NeutrinoAntineutrinoRemoveProcedure(ElementaryCraftModElements instance) {
-		super(instance, 108);
+		super(instance, 138);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

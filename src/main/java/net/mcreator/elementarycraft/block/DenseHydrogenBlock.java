@@ -67,7 +67,7 @@ public class DenseHydrogenBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:dense_hydrogen")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public DenseHydrogenBlock(ElementaryCraftModElements instance) {
-		super(instance, 127);
+		super(instance, 30);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -14,7 +14,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class TorchUpdateProcedure extends ElementaryCraftModElements.ModElement {
 	public TorchUpdateProcedure(ElementaryCraftModElements instance) {
-		super(instance, 102);
+		super(instance, 132);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

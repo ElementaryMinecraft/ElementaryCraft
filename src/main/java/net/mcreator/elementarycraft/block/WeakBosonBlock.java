@@ -66,7 +66,7 @@ public class WeakBosonBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:weak_boson")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public WeakBosonBlock(ElementaryCraftModElements instance) {
-		super(instance, 48);
+		super(instance, 3);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

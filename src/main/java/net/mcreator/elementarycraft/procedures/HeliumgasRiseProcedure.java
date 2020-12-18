@@ -12,7 +12,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class HeliumgasRiseProcedure extends ElementaryCraftModElements.ModElement {
 	public HeliumgasRiseProcedure(ElementaryCraftModElements instance) {
-		super(instance, 116);
+		super(instance, 147);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

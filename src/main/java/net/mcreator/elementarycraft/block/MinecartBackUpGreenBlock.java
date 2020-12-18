@@ -33,7 +33,7 @@ public class MinecartBackUpGreenBlock extends ElementaryCraftModElements.ModElem
 	@ObjectHolder("elementary_craft:minecart_back_up_green")
 	public static final Block block = null;
 	public MinecartBackUpGreenBlock(ElementaryCraftModElements instance) {
-		super(instance, 170);
+		super(instance, 214);
 	}
 
 	@Override

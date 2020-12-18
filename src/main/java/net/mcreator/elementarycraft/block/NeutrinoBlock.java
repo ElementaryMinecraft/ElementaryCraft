@@ -68,7 +68,7 @@ public class NeutrinoBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:neutrino")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public NeutrinoBlock(ElementaryCraftModElements instance) {
-		super(instance, 19);
+		super(instance, 18);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -22,7 +22,7 @@ public class BalloonItem extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:balloon")
 	public static final Item block = null;
 	public BalloonItem(ElementaryCraftModElements instance) {
-		super(instance, 120);
+		super(instance, 40);
 	}
 
 	@Override

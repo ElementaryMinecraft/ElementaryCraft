@@ -63,7 +63,7 @@ public class SolarPlasmaBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:solar_plasma")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public SolarPlasmaBlock(ElementaryCraftModElements instance) {
-		super(instance, 131);
+		super(instance, 32);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

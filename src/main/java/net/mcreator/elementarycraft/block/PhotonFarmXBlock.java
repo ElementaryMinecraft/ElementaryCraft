@@ -41,7 +41,7 @@ public class PhotonFarmXBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:photon_farm_x")
 	public static final Block block = null;
 	public PhotonFarmXBlock(ElementaryCraftModElements instance) {
-		super(instance, 110);
+		super(instance, 162);
 	}
 
 	@Override

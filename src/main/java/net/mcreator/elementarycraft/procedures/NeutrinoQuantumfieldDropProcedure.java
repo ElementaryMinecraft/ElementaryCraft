@@ -13,7 +13,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class NeutrinoQuantumfieldDropProcedure extends ElementaryCraftModElements.ModElement {
 	public NeutrinoQuantumfieldDropProcedure(ElementaryCraftModElements instance) {
-		super(instance, 5);
+		super(instance, 50);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

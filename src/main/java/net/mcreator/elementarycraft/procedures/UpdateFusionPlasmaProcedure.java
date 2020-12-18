@@ -13,7 +13,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class UpdateFusionPlasmaProcedure extends ElementaryCraftModElements.ModElement {
 	public UpdateFusionPlasmaProcedure(ElementaryCraftModElements instance) {
-		super(instance, 136);
+		super(instance, 176);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

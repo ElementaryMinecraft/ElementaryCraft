@@ -10,7 +10,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class PositronBlockAddedProcedure extends ElementaryCraftModElements.ModElement {
 	public PositronBlockAddedProcedure(ElementaryCraftModElements instance) {
-		super(instance, 67);
+		super(instance, 124);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

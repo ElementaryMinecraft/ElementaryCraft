@@ -15,7 +15,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class SpontaneousDihydrogenProcedure extends ElementaryCraftModElements.ModElement {
 	public SpontaneousDihydrogenProcedure(ElementaryCraftModElements instance) {
-		super(instance, 113);
+		super(instance, 143);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

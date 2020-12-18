@@ -13,7 +13,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class DropElectronPositronProcedure extends ElementaryCraftModElements.ModElement {
 	public DropElectronPositronProcedure(ElementaryCraftModElements instance) {
-		super(instance, 16);
+		super(instance, 51);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

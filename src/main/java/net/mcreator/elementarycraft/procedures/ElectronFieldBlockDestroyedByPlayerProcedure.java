@@ -19,7 +19,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class ElectronFieldBlockDestroyedByPlayerProcedure extends ElementaryCraftModElements.ModElement {
 	public ElectronFieldBlockDestroyedByPlayerProcedure(ElementaryCraftModElements instance) {
-		super(instance, 106);
+		super(instance, 137);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

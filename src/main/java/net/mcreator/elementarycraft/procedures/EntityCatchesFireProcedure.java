@@ -9,7 +9,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class EntityCatchesFireProcedure extends ElementaryCraftModElements.ModElement {
 	public EntityCatchesFireProcedure(ElementaryCraftModElements instance) {
-		super(instance, 133);
+		super(instance, 173);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

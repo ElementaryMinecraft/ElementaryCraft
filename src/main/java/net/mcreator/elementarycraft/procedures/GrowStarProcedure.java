@@ -17,7 +17,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class GrowStarProcedure extends ElementaryCraftModElements.ModElement {
 	public GrowStarProcedure(ElementaryCraftModElements instance) {
-		super(instance, 141);
+		super(instance, 181);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

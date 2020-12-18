@@ -13,7 +13,7 @@ import net.mcreator.elementarycraft.ElementaryCraftModElements;
 @ElementaryCraftModElements.ModElement.Tag
 public class QuantumfieldItemGroup extends ElementaryCraftModElements.ModElement {
 	public QuantumfieldItemGroup(ElementaryCraftModElements instance) {
-		super(instance, 2);
+		super(instance, 48);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class NegativeChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 	public NegativeChargedAddProcedure(ElementaryCraftModElements instance) {
-		super(instance, 88);
+		super(instance, 120);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

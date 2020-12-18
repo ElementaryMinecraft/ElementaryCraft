@@ -16,7 +16,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class AddPhotonFarmProcedure extends ElementaryCraftModElements.ModElement {
 	public AddPhotonFarmProcedure(ElementaryCraftModElements instance) {
-		super(instance, 113);
+		super(instance, 166);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -65,7 +65,7 @@ public class AntineutrinoBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:antineutrino")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AntineutrinoBlock(ElementaryCraftModElements instance) {
-		super(instance, 20);
+		super(instance, 19);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

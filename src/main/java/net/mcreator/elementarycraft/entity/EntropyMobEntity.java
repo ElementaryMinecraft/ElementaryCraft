@@ -81,7 +81,7 @@ import io.netty.buffer.Unpooled;
 public class EntropyMobEntity extends ElementaryCraftModElements.ModElement {
 	public static EntityType entity = null;
 	public EntropyMobEntity(ElementaryCraftModElements instance) {
-		super(instance, 122);
+		super(instance, 41);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

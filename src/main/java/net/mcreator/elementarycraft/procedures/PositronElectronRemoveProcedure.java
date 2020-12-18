@@ -14,7 +14,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class PositronElectronRemoveProcedure extends ElementaryCraftModElements.ModElement {
 	public PositronElectronRemoveProcedure(ElementaryCraftModElements instance) {
-		super(instance, 99);
+		super(instance, 128);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

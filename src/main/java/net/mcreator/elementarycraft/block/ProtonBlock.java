@@ -71,7 +71,7 @@ public class ProtonBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:proton")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ProtonBlock(ElementaryCraftModElements instance) {
-		super(instance, 21);
+		super(instance, 20);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

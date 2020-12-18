@@ -12,7 +12,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class AddDenseHydrogenProcedure extends ElementaryCraftModElements.ModElement {
 	public AddDenseHydrogenProcedure(ElementaryCraftModElements instance) {
-		super(instance, 139);
+		super(instance, 178);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -53,7 +53,7 @@ public class AddDenseHydrogenProcedure extends ElementaryCraftModElements.ModEle
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ConversionPeriod", (800 + Math.round((Math.random() * 500))));
+				_tileEntity.getTileData().putDouble("ConversionPeriod", (80 + Math.round((Math.random() * 50))));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}

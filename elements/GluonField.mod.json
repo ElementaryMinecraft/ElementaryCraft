@@ -25,7 +25,9 @@
     "My": 1.0,
     "Mz": 1.0,
     "name": "Gluon Field",
-    "specialInfo": [],
+    "specialInfo": [
+      "From the gluon quantumfield you can extract gluons"
+    ],
     "hardness": 0.3,
     "resistance": 10.0,
     "hasGravity": false,
@@ -101,18 +103,21 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.TALLGRASS#1"
       },
       {
-        "value": "Blocks.SAND#0"
+        "value": "Blocks.YELLOW_FLOWER"
       },
       {
-        "value": "Blocks.DIRT#0"
+        "value": "Blocks.CORNFLOWER"
+      },
+      {
+        "value": "Blocks.RED_FLOWER#0"
       }
     ],
-    "frequencyPerChunks": 20,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
-    "maxGenerateHeight": 63
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 1,
+    "minGenerateHeight": 63,
+    "maxGenerateHeight": 100
   }
 }

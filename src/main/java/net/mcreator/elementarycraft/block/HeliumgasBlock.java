@@ -30,7 +30,7 @@ public class HeliumgasBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:heliumgas")
 	public static final Block block = null;
 	public HeliumgasBlock(ElementaryCraftModElements instance) {
-		super(instance, 111);
+		super(instance, 29);
 	}
 
 	@Override

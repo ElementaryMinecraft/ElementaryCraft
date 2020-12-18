@@ -12,7 +12,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class AddHydrogengasProcedure extends ElementaryCraftModElements.ModElement {
 	public AddHydrogengasProcedure(ElementaryCraftModElements instance) {
-		super(instance, 140);
+		super(instance, 179);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -53,7 +53,7 @@ public class AddHydrogengasProcedure extends ElementaryCraftModElements.ModEleme
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("ConversionPeriod", (4000 + Math.round((Math.random() * 2000))));
+				_tileEntity.getTileData().putDouble("ConversionPeriod", (400 + Math.round((Math.random() * 200))));
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}

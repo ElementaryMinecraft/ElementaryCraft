@@ -66,7 +66,7 @@ public class FusionplasmaBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:fusionplasma")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public FusionplasmaBlock(ElementaryCraftModElements instance) {
-		super(instance, 129);
+		super(instance, 31);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

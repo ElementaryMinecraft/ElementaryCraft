@@ -19,7 +19,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class DropGluonProcedure extends ElementaryCraftModElements.ModElement {
 	public DropGluonProcedure(ElementaryCraftModElements instance) {
-		super(instance, 2);
+		super(instance, 43);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -83,7 +83,7 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 	@ObjectHolder("elementary_craft:neutrino_quantumfield")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public NeutrinoQuantumfieldBlock(ElementaryCraftModElements instance) {
-		super(instance, 1);
+		super(instance, 39);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -116,7 +116,7 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 		@OnlyIn(Dist.CLIENT)
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("From the neutrino quantumfield pairs of neutrino and anti-neutrino can be extracted"));
+			list.add(new StringTextComponent("From the neutrino quantumfield you can extract neutrinos and anti-neutrinos"));
 		}
 
 		@Override
@@ -391,14 +391,14 @@ public class NeutrinoQuantumfieldBlock extends ElementaryCraftModElements.ModEle
 			}.withConfiguration(
 					new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("neutrino_quantumfield", "neutrino_quantumfield", blockAt -> {
 						boolean blockCriteria = false;
-						if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
+						if (blockAt.getBlock() == Blocks.GRASS.getDefaultState().getBlock())
 							blockCriteria = true;
-						if (blockAt.getBlock() == Blocks.SAND.getDefaultState().getBlock())
+						if (blockAt.getBlock() == Blocks.DANDELION.getDefaultState().getBlock())
 							blockCriteria = true;
-						if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
+						if (blockAt.getBlock() == Blocks.POPPY.getDefaultState().getBlock())
 							blockCriteria = true;
 						return blockCriteria;
-					}), block.getDefaultState(), 16)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 0, 0, 64))));
+					}), block.getDefaultState(), 1)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 63, 63, 100))));
 		}
 	}
 }

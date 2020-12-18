@@ -1,8 +1,10 @@
 package net.mcreator.elementarycraft.procedures;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.block.Blocks;
@@ -16,7 +18,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModElement {
 	public NeutrinoUpdateTickProcedure(ElementaryCraftModElements instance) {
-		super(instance, 69);
+		super(instance, 94);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -85,6 +87,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 1)) {
 					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+					}
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (x + 1), y, z, new ItemStack(PhotonItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -99,6 +104,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-1))) {
 					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+					}
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (x - 1), y, z, new ItemStack(PhotonItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -113,6 +121,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 2)) {
 					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+					}
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, (y + 1), z, new ItemStack(PhotonItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -127,6 +138,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-2))) {
 					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+					}
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, (y - 1), z, new ItemStack(PhotonItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -141,6 +155,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == 3)) {
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+					}
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, (z + 1), new ItemStack(PhotonItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -155,6 +172,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "neighbour")) == (-3))) {
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+					}
 					if (!world.getWorld().isRemote) {
 						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, (z - 1), new ItemStack(PhotonItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -162,6 +182,9 @@ public class NeutrinoUpdateTickProcedure extends ElementaryCraftModElements.ModE
 					}
 				}
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				if (world instanceof ServerWorld) {
+					((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 3, 3, 3, 1);
+				}
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(PhotonItem.block, (int) (1)));
 					entityToSpawn.setPickupDelay((int) 10);

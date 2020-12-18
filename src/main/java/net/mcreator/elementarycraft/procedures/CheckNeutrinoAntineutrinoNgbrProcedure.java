@@ -14,7 +14,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class CheckNeutrinoAntineutrinoNgbrProcedure extends ElementaryCraftModElements.ModElement {
 	public CheckNeutrinoAntineutrinoNgbrProcedure(ElementaryCraftModElements instance) {
-		super(instance, 109);
+		super(instance, 139);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

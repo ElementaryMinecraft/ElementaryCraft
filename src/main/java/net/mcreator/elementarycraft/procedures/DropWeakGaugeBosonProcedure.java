@@ -19,7 +19,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class DropWeakGaugeBosonProcedure extends ElementaryCraftModElements.ModElement {
 	public DropWeakGaugeBosonProcedure(ElementaryCraftModElements instance) {
-		super(instance, 3);
+		super(instance, 47);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

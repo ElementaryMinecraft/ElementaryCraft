@@ -25,7 +25,9 @@
     "My": 1.0,
     "Mz": 1.0,
     "name": "Down Quark Field",
-    "specialInfo": [],
+    "specialInfo": [
+      "From the downquark quantumfield you can extract downquarks and anti-downquarks"
+    ],
     "hardness": 0.3,
     "resistance": 10.0,
     "hasGravity": false,
@@ -110,18 +112,18 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.TALLGRASS#1"
       },
       {
-        "value": "Blocks.SAND#0"
+        "value": "Blocks.YELLOW_FLOWER"
       },
       {
-        "value": "Blocks.DIRT#0"
+        "value": "Blocks.RED_FLOWER#0"
       }
     ],
-    "frequencyPerChunks": 20,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
-    "maxGenerateHeight": 63
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 1,
+    "minGenerateHeight": 63,
+    "maxGenerateHeight": 100
   }
 }

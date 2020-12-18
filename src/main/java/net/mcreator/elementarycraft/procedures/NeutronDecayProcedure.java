@@ -16,7 +16,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class NeutronDecayProcedure extends ElementaryCraftModElements.ModElement {
 	public NeutronDecayProcedure(ElementaryCraftModElements instance) {
-		super(instance, 55);
+		super(instance, 89);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

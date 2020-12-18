@@ -19,7 +19,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class NeutrinoQuantumfieldBlockDestroyedByPlayerProcedure extends ElementaryCraftModElements.ModElement {
 	public NeutrinoQuantumfieldBlockDestroyedByPlayerProcedure(ElementaryCraftModElements instance) {
-		super(instance, 104);
+		super(instance, 134);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

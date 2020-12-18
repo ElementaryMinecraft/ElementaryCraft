@@ -16,7 +16,7 @@ public class PhotonItem extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:photon")
 	public static final Item block = null;
 	public PhotonItem(ElementaryCraftModElements instance) {
-		super(instance, 1);
+		super(instance, 2);
 	}
 
 	@Override

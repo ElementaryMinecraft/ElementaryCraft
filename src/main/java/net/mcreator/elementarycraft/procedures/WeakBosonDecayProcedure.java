@@ -15,7 +15,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class WeakBosonDecayProcedure extends ElementaryCraftModElements.ModElement {
 	public WeakBosonDecayProcedure(ElementaryCraftModElements instance) {
-		super(instance, 56);
+		super(instance, 90);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

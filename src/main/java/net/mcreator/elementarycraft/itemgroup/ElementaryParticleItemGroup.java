@@ -13,7 +13,7 @@ import net.mcreator.elementarycraft.ElementaryCraftModElements;
 @ElementaryCraftModElements.ModElement.Tag
 public class ElementaryParticleItemGroup extends ElementaryCraftModElements.ModElement {
 	public ElementaryParticleItemGroup(ElementaryCraftModElements instance) {
-		super(instance, 1);
+		super(instance, 49);
 	}
 
 	@Override

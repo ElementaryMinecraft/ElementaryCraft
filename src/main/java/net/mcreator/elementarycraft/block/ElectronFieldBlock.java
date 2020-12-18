@@ -12,6 +12,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
@@ -49,6 +51,7 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.Blocks;
@@ -77,7 +80,7 @@ public class ElectronFieldBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:electron_field")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ElectronFieldBlock(ElementaryCraftModElements instance) {
-		super(instance, 16);
+		super(instance, 38);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -97,6 +100,13 @@ public class ElectronFieldBlock extends ElementaryCraftModElements.ModElement {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0.3f, 10f).lightValue(0)
 					.doesNotBlockMovement());
 			setRegistryName("electron_field");
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
+			super.addInformation(itemstack, world, list, flag);
+			list.add(new StringTextComponent("From the electron quantumfield you can extract electrons and positrons"));
 		}
 
 		@Override
@@ -360,14 +370,14 @@ public class ElectronFieldBlock extends ElementaryCraftModElements.ModElement {
 				}
 			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("electron_field", "electron_field", blockAt -> {
 				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.GRASS.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.SAND.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.DANDELION.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.POPPY.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 16)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 0, 0, 64))));
+			}), block.getDefaultState(), 1)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 63, 63, 100))));
 		}
 	}
 }

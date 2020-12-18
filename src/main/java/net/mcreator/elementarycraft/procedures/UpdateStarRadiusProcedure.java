@@ -12,7 +12,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class UpdateStarRadiusProcedure extends ElementaryCraftModElements.ModElement {
 	public UpdateStarRadiusProcedure(ElementaryCraftModElements instance) {
-		super(instance, 138);
+		super(instance, 177);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

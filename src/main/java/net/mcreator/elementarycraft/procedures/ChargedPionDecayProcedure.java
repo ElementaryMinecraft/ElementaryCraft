@@ -15,7 +15,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class ChargedPionDecayProcedure extends ElementaryCraftModElements.ModElement {
 	public ChargedPionDecayProcedure(ElementaryCraftModElements instance) {
-		super(instance, 57);
+		super(instance, 91);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

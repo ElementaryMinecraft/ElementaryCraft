@@ -33,7 +33,7 @@ public class MinecartBackNyanBlock extends ElementaryCraftModElements.ModElement
 	@ObjectHolder("elementary_craft:minecart_back_nyan")
 	public static final Block block = null;
 	public MinecartBackNyanBlock(ElementaryCraftModElements instance) {
-		super(instance, 173);
+		super(instance, 217);
 	}
 
 	@Override

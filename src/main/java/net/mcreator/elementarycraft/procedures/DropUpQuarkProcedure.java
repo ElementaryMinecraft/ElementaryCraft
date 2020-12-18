@@ -17,7 +17,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class DropUpQuarkProcedure extends ElementaryCraftModElements.ModElement {
 	public DropUpQuarkProcedure(ElementaryCraftModElements instance) {
-		super(instance, 7);
+		super(instance, 45);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -14,7 +14,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class ChargeRemoveProcedure extends ElementaryCraftModElements.ModElement {
 	public ChargeRemoveProcedure(ElementaryCraftModElements instance) {
-		super(instance, 92);
+		super(instance, 123);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

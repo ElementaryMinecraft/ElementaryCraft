@@ -9,7 +9,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class EntropyMobSpawnProcedure extends ElementaryCraftModElements.ModElement {
 	public EntropyMobSpawnProcedure(ElementaryCraftModElements instance) {
-		super(instance, 125);
+		super(instance, 169);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -14,7 +14,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class PionNulDecayProcedure extends ElementaryCraftModElements.ModElement {
 	public PionNulDecayProcedure(ElementaryCraftModElements instance) {
-		super(instance, 58);
+		super(instance, 92);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

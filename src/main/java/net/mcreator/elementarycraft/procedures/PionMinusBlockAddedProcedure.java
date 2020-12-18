@@ -10,7 +10,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class PionMinusBlockAddedProcedure extends ElementaryCraftModElements.ModElement {
 	public PionMinusBlockAddedProcedure(ElementaryCraftModElements instance) {
-		super(instance, 128);
+		super(instance, 188);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -16,7 +16,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class TorchTickProcedure extends ElementaryCraftModElements.ModElement {
 	public TorchTickProcedure(ElementaryCraftModElements instance) {
-		super(instance, 103);
+		super(instance, 136);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

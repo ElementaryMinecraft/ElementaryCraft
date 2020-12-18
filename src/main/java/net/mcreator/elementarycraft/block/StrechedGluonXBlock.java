@@ -33,7 +33,7 @@ public class StrechedGluonXBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:streched_gluon_x")
 	public static final Block block = null;
 	public StrechedGluonXBlock(ElementaryCraftModElements instance) {
-		super(instance, 130);
+		super(instance, 190);
 	}
 
 	@Override

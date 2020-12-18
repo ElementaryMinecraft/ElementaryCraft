@@ -11,7 +11,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class HydrogengasExplodeProcedure extends ElementaryCraftModElements.ModElement {
 	public HydrogengasExplodeProcedure(ElementaryCraftModElements instance) {
-		super(instance, 115);
+		super(instance, 146);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -39,7 +39,7 @@ public class HydrogengasExplodeProcedure extends ElementaryCraftModElements.ModE
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((y < 150)) {
+		if ((y < 100)) {
 			if ((Math.random() < 0.6)) {
 				if (world instanceof World && !world.getWorld().isRemote) {
 					world.getWorld().createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.BREAK);

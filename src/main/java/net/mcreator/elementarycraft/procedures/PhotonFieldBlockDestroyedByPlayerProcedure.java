@@ -19,7 +19,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class PhotonFieldBlockDestroyedByPlayerProcedure extends ElementaryCraftModElements.ModElement {
 	public PhotonFieldBlockDestroyedByPlayerProcedure(ElementaryCraftModElements instance) {
-		super(instance, 2);
+		super(instance, 44);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

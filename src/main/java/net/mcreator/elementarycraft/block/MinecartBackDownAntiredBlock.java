@@ -33,7 +33,7 @@ public class MinecartBackDownAntiredBlock extends ElementaryCraftModElements.Mod
 	@ObjectHolder("elementary_craft:minecart_back_down_antired")
 	public static final Block block = null;
 	public MinecartBackDownAntiredBlock(ElementaryCraftModElements instance) {
-		super(instance, 162);
+		super(instance, 206);
 	}
 
 	@Override

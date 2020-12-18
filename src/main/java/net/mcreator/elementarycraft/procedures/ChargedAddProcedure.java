@@ -15,7 +15,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class ChargedAddProcedure extends ElementaryCraftModElements.ModElement {
 	public ChargedAddProcedure(ElementaryCraftModElements instance) {
-		super(instance, 87);
+		super(instance, 119);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

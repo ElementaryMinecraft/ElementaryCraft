@@ -72,7 +72,7 @@ public class PositronBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:positron")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public PositronBlock(ElementaryCraftModElements instance) {
-		super(instance, 18);
+		super(instance, 17);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

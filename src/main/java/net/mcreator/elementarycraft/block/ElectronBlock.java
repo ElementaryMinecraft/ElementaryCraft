@@ -72,7 +72,7 @@ public class ElectronBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:electron")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ElectronBlock(ElementaryCraftModElements instance) {
-		super(instance, 17);
+		super(instance, 16);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

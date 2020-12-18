@@ -19,7 +19,7 @@ import java.util.HashMap;
 @ElementaryCraftModElements.ModElement.Tag
 public class UpQuarkFieldBlockDestroyedByPlayerProcedure extends ElementaryCraftModElements.ModElement {
 	public UpQuarkFieldBlockDestroyedByPlayerProcedure(ElementaryCraftModElements instance) {
-		super(instance, 105);
+		super(instance, 135);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

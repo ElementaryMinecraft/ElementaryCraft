@@ -66,7 +66,7 @@ public class NeutronBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:neutron")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public NeutronBlock(ElementaryCraftModElements instance) {
-		super(instance, 22);
+		super(instance, 21);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

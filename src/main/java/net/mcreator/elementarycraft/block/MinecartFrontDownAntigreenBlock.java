@@ -33,7 +33,7 @@ public class MinecartFrontDownAntigreenBlock extends ElementaryCraftModElements.
 	@ObjectHolder("elementary_craft:minecart_front_down_antigreen")
 	public static final Block block = null;
 	public MinecartFrontDownAntigreenBlock(ElementaryCraftModElements instance) {
-		super(instance, 149);
+		super(instance, 193);
 	}
 
 	@Override

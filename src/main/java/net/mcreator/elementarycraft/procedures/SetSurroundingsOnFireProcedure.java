@@ -16,7 +16,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class SetSurroundingsOnFireProcedure extends ElementaryCraftModElements.ModElement {
 	public SetSurroundingsOnFireProcedure(ElementaryCraftModElements instance) {
-		super(instance, 134);
+		super(instance, 174);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

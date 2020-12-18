@@ -33,7 +33,7 @@ public class MinecartFrontUpBlueBlock extends ElementaryCraftModElements.ModElem
 	@ObjectHolder("elementary_craft:minecart_front_up_blue")
 	public static final Block block = null;
 	public MinecartFrontUpBlueBlock(ElementaryCraftModElements instance) {
-		super(instance, 157);
+		super(instance, 201);
 	}
 
 	@Override

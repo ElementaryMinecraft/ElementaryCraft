@@ -34,7 +34,7 @@ public class HydrogenBlock extends ElementaryCraftModElements.ModElement {
 	@ObjectHolder("elementary_craft:hydrogen")
 	public static final Block block = null;
 	public HydrogenBlock(ElementaryCraftModElements instance) {
-		super(instance, 107);
+		super(instance, 25);
 	}
 
 	@Override

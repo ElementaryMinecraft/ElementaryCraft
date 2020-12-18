@@ -18,7 +18,7 @@ import java.util.Map;
 @ElementaryCraftModElements.ModElement.Tag
 public class ExplodeStarProcedure extends ElementaryCraftModElements.ModElement {
 	public ExplodeStarProcedure(ElementaryCraftModElements instance) {
-		super(instance, 143);
+		super(instance, 185);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
