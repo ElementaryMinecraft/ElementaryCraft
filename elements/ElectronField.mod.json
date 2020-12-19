@@ -106,9 +106,7 @@
     "onDestroyedByPlayer": {
       "name": "ElectronFieldBlockDestroyedByPlayer"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

@@ -14,6 +14,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "wboson_new",
+    "particleTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
@@ -46,7 +47,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",

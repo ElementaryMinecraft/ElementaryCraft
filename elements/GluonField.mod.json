@@ -97,9 +97,7 @@
     "onDestroyedByPlayer": {
       "name": "DropGluon"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
@@ -113,9 +111,12 @@
       },
       {
         "value": "Blocks.RED_FLOWER#0"
+      },
+      {
+        "value": "Blocks.EMERALD_BLOCK"
       }
     ],
-    "frequencyPerChunks": 10,
+    "frequencyPerChunks": 64,
     "frequencyOnChunk": 1,
     "minGenerateHeight": 63,
     "maxGenerateHeight": 100

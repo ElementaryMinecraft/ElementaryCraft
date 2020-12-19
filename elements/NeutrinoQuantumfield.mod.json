@@ -106,9 +106,7 @@
     "onDestroyedByPlayer": {
       "name": "NeutrinoQuantumfieldBlockDestroyedByPlayer"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

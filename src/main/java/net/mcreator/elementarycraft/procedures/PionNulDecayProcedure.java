@@ -1,7 +1,9 @@
 package net.mcreator.elementarycraft.procedures;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.block.Blocks;
@@ -53,6 +55,9 @@ public class PionNulDecayProcedure extends ElementaryCraftModElements.ModElement
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(PhotonItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
+			}
+			if (world instanceof ServerWorld) {
+				((ServerWorld) world).spawnParticle(ParticleTypes.FLASH, x, y, z, (int) 5, 1, 1, 1, 1);
 			}
 		}
 	}

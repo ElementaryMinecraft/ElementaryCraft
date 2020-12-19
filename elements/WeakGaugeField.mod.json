@@ -97,9 +97,7 @@
     "onDestroyedByPlayer": {
       "name": "DropWeakGaugeBoson"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

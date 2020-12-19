@@ -103,9 +103,7 @@
     "onDestroyedByPlayer": {
       "name": "PhotonFieldBlockDestroyedByPlayer"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

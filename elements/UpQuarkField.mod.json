@@ -106,9 +106,7 @@
     "onDestroyedByPlayer": {
       "name": "UpQuarkFieldBlockDestroyedByPlayer"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
