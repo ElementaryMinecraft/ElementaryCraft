@@ -1,8 +1,8 @@
 {
   "parent": "elementary_craft:custom/photonfarmx",
   "textures": {
-    "all": "elementary_craft:blocks/photonfarm.png",
-    "particle": "elementary_craft:blocks/photonfarm.png",
+    "all": "elementary_craft:blocks/photonfarm",
+    "particle": "elementary_craft:blocks/photonfarm",
     "0": "elementary_craft:blocks/photonfarm"
   }
 }
