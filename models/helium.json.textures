@@ -2,7 +2,10 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "helium"
+        "0": "helium_block1",
+        "2": "helium_block4",
+        "4": "helium_block2",
+        "5": "helium_block3"
       },
       "name": "default"
     }

@@ -3,6 +3,9 @@
   "textures": {
     "all": "elementary_craft:blocks/helium",
     "particle": "elementary_craft:blocks/helium",
-    "0": "elementary_craft:blocks/helium"
+    "0": "elementary_craft:blocks/helium_block1",
+    "2": "elementary_craft:blocks/helium_block4",
+    "4": "elementary_craft:blocks/helium_block2",
+    "5": "elementary_craft:blocks/helium_block3"
   }
 }

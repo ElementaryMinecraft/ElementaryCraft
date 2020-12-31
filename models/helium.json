@@ -1,8 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "Helium",
-		"particle": "Helium"
+		"0": "helium_block1",
+		"2": "helium_block4",
+		"4": "helium_block2",
+		"5": "helium_block3",
+		"particle": "helium_block1"
 	},
 	"elements": [
 		{
@@ -34,7 +37,7 @@
 			"to": [13, 10, 8],
 			"faces": {
 				"north": {"uv": [3, 4, 13, 12], "texture": "#0"},
-				"south": {"uv": [3, 4, 13, 12], "texture": "#0"}
+				"south": {"uv": [3, 4, 13, 12], "texture": "#4"}
 			}
 		},
 		{
@@ -89,8 +92,8 @@
 			"from": [8, 2, 3],
 			"to": [8, 10, 13],
 			"faces": {
-				"east": {"uv": [3, 4, 13, 12], "texture": "#0"},
-				"west": {"uv": [3, 4, 13, 12], "texture": "#0"}
+				"east": {"uv": [3, 4, 13, 12], "texture": "#2"},
+				"west": {"uv": [3, 4, 13, 12], "texture": "#5"}
 			}
 		},
 		{
