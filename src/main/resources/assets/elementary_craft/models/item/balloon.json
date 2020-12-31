@@ -37,6 +37,6 @@
     }
   },
   "textures": {
-    "layer0": "elementary_craft:items/balloon2"
+    "layer0": "elementary_craft:items/balloon"
   }
 }
