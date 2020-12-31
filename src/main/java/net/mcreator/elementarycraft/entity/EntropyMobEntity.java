@@ -110,7 +110,7 @@ public class EntropyMobEntity extends ElementaryCraftModElements.ModElement {
 		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new CreeperModel(), 0.5f) {
 			@Override
 			public ResourceLocation getEntityTexture(Entity entity) {
-				return new ResourceLocation("elementary_craft:textures/entropymobtexture.png");
+				return new ResourceLocation("elementary_craft:textures/entropymob.png");
 			}
 		});
 	}
