@@ -5,7 +5,7 @@
     "mobName": "Entropy Mob",
     "mobLabel": "",
     "mobModelName": "Creeper",
-    "mobModelTexture": "entropymobtexture.png",
+    "mobModelTexture": "entropymob.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.7,

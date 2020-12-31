@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "balloon3",
+    "texture": "balloon2",
     "customModelName": "Normal",
     "name": "Balloon",
     "rarity": "COMMON",
