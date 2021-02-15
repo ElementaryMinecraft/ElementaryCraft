@@ -1,6 +1,9 @@
 package net.mcreator.elementarycraft.procedures;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.block.BlockState;
 
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -53,6 +56,22 @@ public class PionPlusBlockAddedProcedure extends ElementaryCraftModElements.ModE
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
 			PionMinecartProcedure.executeProcedure($_dependencies);
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
+		}
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("tickCounter", 0);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }

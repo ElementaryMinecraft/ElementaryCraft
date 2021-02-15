@@ -3119,6 +3119,93 @@
           }
         ]
       }
+    },
+    {
+      "name": "CheckPionPlusPionMinusNgbr",
+      "type": "procedure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check_pion_plus_pion_minus_ngbr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PionPlusUpdateTick",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PionPlusPionMinusRemove",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pion_plus_pion_minus_remove",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -3128,13 +3215,13 @@
       "block.elementary_craft.hydrogen": "Hydrogen",
       "block.elementary_craft.photon_field": "Photon Field",
       "block.elementary_craft.neutrino": "Neutrino",
-      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "item.elementary_craft.anti_down_quark_green": "Anti Downquark (Green)",
+      "item.elementary_craft.down_quark_blue": "Downquark (Blue)",
       "block.elementary_craft.minecart_back_up_blue": "Gluon Minecart Back",
       "block.elementary_craft.neutron": "Neutron",
       "item.elementary_craft.photon": "Photon",
-      "block.elementary_craft.silicon": "Silicon",
       "item.elementary_craft.down_quark_green": "Downquark (Green)",
+      "block.elementary_craft.silicon": "Silicon",
       "block.elementary_craft.electron": "Electron",
       "block.elementary_craft.minecart_front_up_antiblue": "Gluon Minecart Front",
       "block.elementary_craft.hydrogengas": "Hydrogengas",

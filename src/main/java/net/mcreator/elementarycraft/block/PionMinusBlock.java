@@ -53,6 +53,7 @@ import net.minecraft.state.IntegerProperty;
 import net.mcreator.elementarycraft.procedures.PionMinusBlockAddedProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
 import net.mcreator.elementarycraft.procedures.ChargeRemoveNegativeProcedure;
+import net.mcreator.elementarycraft.procedures.PionPlusPionMinusRemoveProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -179,6 +180,7 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargeRemoveNegativeProcedure.executeProcedure($_dependencies);
+				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -196,6 +198,7 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargeRemoveNegativeProcedure.executeProcedure($_dependencies);
+				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
 			}
 		}
 

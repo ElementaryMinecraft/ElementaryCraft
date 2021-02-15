@@ -53,6 +53,8 @@ import net.minecraft.state.IntegerProperty;
 import net.mcreator.elementarycraft.procedures.PionPlusBlockAddedProcedure;
 import net.mcreator.elementarycraft.procedures.ChargedPionDecayProcedure;
 import net.mcreator.elementarycraft.procedures.ChargeRemovePositiveProcedure;
+import net.mcreator.elementarycraft.procedures.PionPlusUpdateTickProcedure;
+import net.mcreator.elementarycraft.procedures.PionPlusPionMinusRemoveProcedure;
 import net.mcreator.elementarycraft.itemgroup.ElementaryParticleItemGroup;
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
 
@@ -162,6 +164,7 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargedPionDecayProcedure.executeProcedure($_dependencies);
+				PionPlusUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
@@ -179,6 +182,7 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargeRemovePositiveProcedure.executeProcedure($_dependencies);
+				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -196,6 +200,7 @@ public class PionPlusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargeRemovePositiveProcedure.executeProcedure($_dependencies);
+				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
 			}
 		}
 

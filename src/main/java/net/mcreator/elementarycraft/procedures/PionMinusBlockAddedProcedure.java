@@ -54,5 +54,13 @@ public class PionMinusBlockAddedProcedure extends ElementaryCraftModElements.Mod
 			$_dependencies.put("z", z);
 			PionMinecartProcedure.executeProcedure($_dependencies);
 		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
+		}
 	}
 }
