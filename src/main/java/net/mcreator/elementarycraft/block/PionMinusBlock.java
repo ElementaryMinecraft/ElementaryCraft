@@ -124,6 +124,25 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
+		
+		@Override
+		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
+			} else {
+			}
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
+			}
+		}
 
 		@Override
 		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
@@ -180,7 +199,6 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargeRemoveNegativeProcedure.executeProcedure($_dependencies);
-				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -198,7 +216,6 @@ public class PionMinusBlock extends ElementaryCraftModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChargeRemoveNegativeProcedure.executeProcedure($_dependencies);
-				PionPlusPionMinusRemoveProcedure.executeProcedure($_dependencies);
 			}
 		}
 

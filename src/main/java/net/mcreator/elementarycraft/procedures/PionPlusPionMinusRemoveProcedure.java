@@ -84,7 +84,7 @@ public class PionPlusPionMinusRemoveProcedure extends ElementaryCraftModElements
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					CheckNeutrinoAntineutrinoNgbrProcedure.executeProcedure($_dependencies);
+					CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
 				}
 			} else if ((((new Object() {
 				public double getValue(BlockPos pos, String tag) {
@@ -120,7 +120,7 @@ public class PionPlusPionMinusRemoveProcedure extends ElementaryCraftModElements
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					CheckNeutrinoAntineutrinoNgbrProcedure.executeProcedure($_dependencies);
+					CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
 				}
 			} else if ((((new Object() {
 				public double getValue(BlockPos pos, String tag) {
@@ -156,7 +156,7 @@ public class PionPlusPionMinusRemoveProcedure extends ElementaryCraftModElements
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					CheckNeutrinoAntineutrinoNgbrProcedure.executeProcedure($_dependencies);
+					CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
 				}
 			} else if ((((new Object() {
 				public double getValue(BlockPos pos, String tag) {
@@ -228,7 +228,7 @@ public class PionPlusPionMinusRemoveProcedure extends ElementaryCraftModElements
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					CheckNeutrinoAntineutrinoNgbrProcedure.executeProcedure($_dependencies);
+					CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
 				}
 			} else if ((((new Object() {
 				public double getValue(BlockPos pos, String tag) {
@@ -264,7 +264,7 @@ public class PionPlusPionMinusRemoveProcedure extends ElementaryCraftModElements
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					CheckNeutrinoAntineutrinoNgbrProcedure.executeProcedure($_dependencies);
+					CheckPionPlusPionMinusNgbrProcedure.executeProcedure($_dependencies);
 				}
 			}
 		}
