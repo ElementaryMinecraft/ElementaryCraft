@@ -33,7 +33,7 @@ public class BalloonInHandProcedure extends ElementaryCraftModElements.ModElemen
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(BalloonItem.block, (int) (1)).getItem())) {
-			if ((0.01 > Math.random())) {
+			if ((0.05 > Math.random())) {
 				{
 					ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY);
 					if (_ist.attemptDamageItem((int) 1, new Random(), null)) {

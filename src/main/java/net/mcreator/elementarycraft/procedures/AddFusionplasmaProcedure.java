@@ -144,7 +144,7 @@ public class AddFusionplasmaProcedure extends ElementaryCraftModElements.ModElem
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("growCorePeriod", 2);
+				_tileEntity.getTileData().putDouble("growCorePeriod", 1);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
