@@ -6,6 +6,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.elementarycraft.ElementaryCraftModElements;
+import net.mcreator.elementarycraft.ElementaryCraftMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -19,22 +20,22 @@ public class AddFusionplasmaProcedure extends ElementaryCraftModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure AddFusionplasma!");
+				ElementaryCraftMod.LOGGER.warn("Failed to load dependency x for procedure AddFusionplasma!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure AddFusionplasma!");
+				ElementaryCraftMod.LOGGER.warn("Failed to load dependency y for procedure AddFusionplasma!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure AddFusionplasma!");
+				ElementaryCraftMod.LOGGER.warn("Failed to load dependency z for procedure AddFusionplasma!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure AddFusionplasma!");
+				ElementaryCraftMod.LOGGER.warn("Failed to load dependency world for procedure AddFusionplasma!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -92,33 +93,33 @@ public class AddFusionplasmaProcedure extends ElementaryCraftModElements.ModElem
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxCoreRadius")) >= (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxCoreRadius")) >= (new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxPlasmaRadius")))) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxPlasmaRadius")))) {
 			if (!world.getWorld().isRemote) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("maxCoreRadius", ((new Object() {
-						public double getValue(BlockPos pos, String tag) {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxPlasmaRadius")) - 2));
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxPlasmaRadius")) - 2));
 				world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
@@ -135,7 +136,15 @@ public class AddFusionplasmaProcedure extends ElementaryCraftModElements.ModElem
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("growPeriod", 1000);
+				_tileEntity.getTileData().putDouble("growStarPeriod", 10);
+			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+		}
+		if (!world.getWorld().isRemote) {
+			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putDouble("growCorePeriod", 2);
 			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.getWorld().isRemote) {
